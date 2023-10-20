@@ -470,6 +470,9 @@ const docTemplate = `{
                 "id": {
                     "type": "string"
                 },
+                "receiptMetadata": {
+                    "$ref": "#/definitions/api.ReceiptMetadata"
+                },
                 "retailerId": {
                     "type": "string"
                 }
@@ -490,6 +493,26 @@ const docTemplate = `{
                 },
                 "vatRate": {
                     "type": "number"
+                }
+            }
+        },
+        "api.ReceiptMetadata": {
+            "type": "object",
+            "properties": {
+                "checkSum": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "string"
+                },
+                "signatureCount": {
+                    "type": "string"
+                },
+                "terminalId": {
+                    "type": "string"
+                },
+                "transactionId": {
+                    "type": "string"
                 }
             }
         },
