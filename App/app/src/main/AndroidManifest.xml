@@ -13,7 +13,7 @@
         android:theme="@style/Theme.BalticByteBuccaneers"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".module.home.HomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.BalticByteBuccaneers">

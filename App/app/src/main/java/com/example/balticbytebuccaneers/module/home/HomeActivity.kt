@@ -1,4 +1,4 @@
-package com.example.balticbytebuccaneers
+package com.example.balticbytebuccaneers.module.home
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
-class MainActivity : ComponentActivity() {
+class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
