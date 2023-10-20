@@ -8,8 +8,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
+import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 class HomeActivity : ComponentActivity() {
@@ -17,13 +20,8 @@ class HomeActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BalticByteBuccaneersTheme(dynamicColor = false) {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+                val viewModel = remember { ReceiptDetailViewModel(receiptId = "") }
+                ReceiptDetailView(viewModel)
             }
         }
     }
