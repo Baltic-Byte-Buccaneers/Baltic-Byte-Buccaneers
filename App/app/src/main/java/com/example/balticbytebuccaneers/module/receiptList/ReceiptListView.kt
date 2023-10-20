@@ -10,7 +10,6 @@ fun ReceiptListView(receipts: List<Receipt>) {
         // Add 5 items
         receipts.forEach { receipt ->
             ReceiptListViewItem(receipt)
-        
         }
     }
 }
