@@ -3,11 +3,13 @@ package com.example.balticbytebuccaneers.module.transactionList
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ReceiptLong
 import androidx.compose.material3.Icon
@@ -33,9 +35,12 @@ import java.util.Date
 
 @Composable
 fun TransactionView(transactions: Array<Transaction>) {
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        transactions.forEach { transaction: Transaction ->
-            TransactionCard(transaction = transaction)
+    LazyColumn {
+        items(count = transactions.size) {
+            transactions.forEach { transaction: Transaction ->
+                TransactionCard(transaction = transaction)
+                Spacer(modifier = Modifier.height(8.dp))
+            }
         }
     }
 }
@@ -44,11 +49,25 @@ fun TransactionView(transactions: Array<Transaction>) {
 fun TransactionCard(transaction: Transaction) {
     val context = LocalContext.current
     val paddingModifier = Modifier.padding(16.dp)
-    OutlinedCard(modifier = Modifier.padding(horizontal = 16.dp).clickable(true, onClick = { Toast.makeText(context, "TransactionDetailsView goes here", Toast.LENGTH_SHORT).show()})) {
+    OutlinedCard(
+        modifier = Modifier
+            .padding(horizontal = 16.dp)
+            .clickable(
+                enabled = true,
+                onClick = {
+                    Toast.makeText(
+                        context,
+                        "TransactionDetailsView goes here",
+                        Toast.LENGTH_SHORT).show()
+                }
+            )
+    ) {
         Row(modifier = paddingModifier) {
             Column(modifier = Modifier
                 .weight(1.0F)
-                .align(Alignment.CenterVertically), horizontalAlignment = Alignment.CenterHorizontally) {
+                .align(Alignment.CenterVertically),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_launcher_background),
                     contentDescription = null,
@@ -79,7 +98,10 @@ fun TransactionCard(transaction: Transaction) {
                     )
                 }
             }
-            Column(modifier = Modifier.weight(weight = 1.0F), horizontalAlignment = Alignment.End) {
+            Column(
+                modifier = Modifier.weight(weight = 1.0F),
+                horizontalAlignment = Alignment.End
+            ) {
                 if (transaction.amount != null) {
                     ColoredAmount(transaction.amount)
                 }
@@ -103,21 +125,21 @@ fun TransactionCard(transaction: Transaction) {
 fun ColoredAmount(amount: BigDecimal){
     return if (amount > BigDecimal.ZERO) {
         Text(
-            text = amount.toString() + " €",
+            text = "$amount €",
             color = Color.Green,
             fontWeight = FontWeight.Bold
         )
     }
     else if (amount < BigDecimal.ZERO) {
         Text(
-            text = amount.toString() + " €",
+            text = "$amount €",
             color = Color.Red,
             fontWeight = FontWeight.Bold
         )
     }
     else {
         Text(
-            text = amount.toString() + " €",
+            text = "$amount €",
             color = Color.Gray,
             fontWeight = FontWeight.Bold
         )
