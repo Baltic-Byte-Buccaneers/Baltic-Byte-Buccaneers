@@ -7,16 +7,32 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowCircleDown
+import androidx.compose.material.icons.filled.ArrowCircleRight
+import androidx.compose.material.icons.filled.ArrowCircleUp
+import androidx.compose.material.icons.filled.ReceiptLong
+import androidx.compose.material.icons.filled.TrendingDown
+import androidx.compose.material.icons.filled.TrendingFlat
+import androidx.compose.material.icons.filled.TrendingUp
+import androidx.compose.material.icons.outlined.ArrowCircleDown
+import androidx.compose.material.icons.outlined.ArrowCircleRight
+import androidx.compose.material.icons.outlined.ArrowCircleUp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -48,7 +64,16 @@ fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
                     modifier = Modifier.weight(1f)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                AmountLabel(amount = receiptEntry.amount.toString())
+                AmountLabel(amount = "${receiptEntry.amount} €")
+                Spacer(modifier = Modifier.width(4.dp))
+                Icon(
+                    imageVector = getIconFromTrend(receiptEntry.amountTrend),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .size(24.dp)
+                        .align(CenterVertically),
+                    tint = MaterialTheme.colorScheme.onBackground
+                )
             }
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -56,11 +81,13 @@ fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
             Row {
                 Text(
                     text = receiptEntry.category,
+                    style = MaterialTheme.typography.bodySmall,
                     modifier = Modifier.weight(1f)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = receiptEntry.producer
+                    text = receiptEntry.producer,
+                    style = MaterialTheme.typography.bodySmall,
                 )
             }
         }
@@ -68,8 +95,17 @@ fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
 }
 
 @Composable
+private fun getIconFromTrend(trend: ReceiptEntry.AmountTrend): ImageVector {
+    return when(trend) {
+        ReceiptEntry.AmountTrend.ASCENDING -> Icons.Outlined.ArrowCircleUp
+        ReceiptEntry.AmountTrend.STAGNATING -> Icons.Outlined.ArrowCircleRight
+        ReceiptEntry.AmountTrend.DESCENDING -> Icons.Outlined.ArrowCircleDown
+    }
+}
+
+@Composable
 private fun AmountLabel(amount: String, modifier: Modifier = Modifier, enabled: Boolean = true) {
-    val containterColor = with(MaterialTheme.colorScheme) {
+    val containerColor = with(MaterialTheme.colorScheme) {
         if (enabled) inverseSurface else inverseOnSurface
     }
     val contentColor = with(MaterialTheme.colorScheme) {
@@ -77,7 +113,7 @@ private fun AmountLabel(amount: String, modifier: Modifier = Modifier, enabled: 
     }
     Card(
         colors = CardDefaults.cardColors(
-            containerColor = containterColor,
+            containerColor = containerColor,
             contentColor = contentColor,
         ),
         shape = MaterialTheme.shapes.large,
@@ -103,7 +139,8 @@ private fun ReceiptEntryCardPreview() {
                 "Käse",
                 BigDecimal("12.34"),
                 "Lebensmittel",
-                "Frankfurter Mühlen"
+                "Frankfurter Mühlen",
+                ReceiptEntry.AmountTrend.ASCENDING
             )
         )
     }

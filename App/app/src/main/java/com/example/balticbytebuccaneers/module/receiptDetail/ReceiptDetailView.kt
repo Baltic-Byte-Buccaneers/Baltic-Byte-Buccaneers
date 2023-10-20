@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.balticbytebuccaneers.service.receipt.MetadataEntry
 import com.example.balticbytebuccaneers.service.receipt.ReceiptEntry
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import kotlinx.coroutines.launch
@@ -61,10 +62,13 @@ fun ReceiptDetailView(viewModel: ReceiptDetailViewModel) {
 @Composable
 private fun ReceiptDetailViewContent(viewModel: ReceiptDetailViewModel) {
 
+    val receiptEntries = viewModel.receiptEntries.observeAsState()
+    val metadata = viewModel.metadata.observeAsState()
+
     Column(
         modifier = Modifier
-        .fillMaxSize()
-        .padding(horizontal = 16.dp)
+            .fillMaxSize()
+            .padding(horizontal = 16.dp)
     ) {
         HeadlineBox(
             viewModel = viewModel,
@@ -80,16 +84,15 @@ private fun ReceiptDetailViewContent(viewModel: ReceiptDetailViewModel) {
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            for ( i in 1 .. 10) {
-                ReceiptEntryCard(
-                    ReceiptEntry(
-                        "Käse",
-                        BigDecimal("12.34"),
-                        "Lebensmittel",
-                        "Frankfurter Mühlen"
-                    )
-                )
+            receiptEntries.value?.forEach {
+                ReceiptEntryCard(it)
                 Spacer(modifier = Modifier.height(8.dp))
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            metadata.value?.let {
+                ReceiptMetadataView(it)
             }
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -107,8 +110,9 @@ private fun HeadlineBox(viewModel: ReceiptDetailViewModel, modifier: Modifier = 
     Column(modifier.fillMaxWidth()) {
         Row {
             Text(
-                text = "Ihr Einkauf bei $merchantName",
-                style = MaterialTheme.typography.headlineMedium,
+                text = "Your purchase at $merchantName",
+                style = MaterialTheme.typography.headlineLarge,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier
                     .weight(3f)
@@ -127,14 +131,14 @@ private fun HeadlineBox(viewModel: ReceiptDetailViewModel, modifier: Modifier = 
         Row {
             Text(
                 text = "$receiptIssueDate",
-                style = MaterialTheme.typography.headlineSmall,
+                style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.weight(1f)
             )
             Text(
-                text = "$amount",
+                text = "$amount €",
                 fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.headlineSmall,
+                style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.onBackground,
             )
         }
