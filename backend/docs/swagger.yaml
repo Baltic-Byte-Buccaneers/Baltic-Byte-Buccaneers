@@ -1,0 +1,181 @@
+basePath: /api
+definitions:
+  api.Receipt:
+    properties:
+      date:
+        type: string
+      description:
+        type: string
+      entries:
+        items:
+          $ref: '#/definitions/api.ReceiptEntry'
+        type: array
+      id:
+        type: string
+      transactionId:
+        type: string
+    type: object
+  api.ReceiptEntry:
+    properties:
+      id:
+        type: string
+      title:
+        type: string
+      value:
+        type: string
+    type: object
+  api.Transaction:
+    properties:
+      date:
+        type: string
+      description:
+        type: string
+      iban:
+        type: string
+      id:
+        type: string
+      purpose:
+        type: string
+      userid:
+        type: string
+      value:
+        type: number
+      valutaDate:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /receipts:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Receipt'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all receipts
+      tags:
+      - Receipt
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Receipt
+        in: body
+        name: Receipt
+        required: true
+        schema:
+          $ref: '#/definitions/api.Receipt'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Receipt'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create receipt
+      tags:
+      - Receipt
+  /receipts/{id}:
+    get:
+      parameters:
+      - description: Receipt Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Receipt'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single receipt by its id
+      tags:
+      - Receipt
+  /transactions:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Transaction'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all transactions
+      tags:
+      - Transaction
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Transaction
+        in: body
+        name: Transaction
+        required: true
+        schema:
+          $ref: '#/definitions/api.Transaction'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Transaction'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create transaction
+      tags:
+      - Transaction
+  /transactions/{id}:
+    get:
+      parameters:
+      - description: Transaction Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Transaction'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single transaction by its id
+      tags:
+      - Transaction
+swagger: "2.0"
