@@ -1,0 +1,285 @@
+{"_id":{"$oid":"65328431d4ef1a8354e7df72"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bratislava","street":"Galvániho II."}
+{"_id":{"$oid":"65328434d4ef1a8354e7df74"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Senec","street":"Trnavská ulica"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df79"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Bratislava","street":"Ivanská cesta"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df7d"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Most Pri Bratislava","street":"Bratislavská ulica"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df85"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Ivanka pri Dunaji","street":"Vajnorská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df93"},"merchantId":{"$oid":"65328434d4ef1a8354e7df92"},"merchantName":"METRO Cash & Carry SR s. r. o.","name":"","municipality":"Ivanka pri Dunaji","street":"Senecká cesta"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df96"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bernolákovo","street":"Slnečnicová"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df99"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bernolákovo","street":"Dukelská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df9d"},"merchantId":{"$oid":"65328434d4ef1a8354e7df9c"},"merchantName":"COOP Jednota Galanta, spotrebné družstvo","name":"","municipality":"Nová Dedinka","street":"Nová Ves pri Dunaji"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfad"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfac"},"merchantName":"PLAČEK PREMIUM, s. r. o.","name":"","municipality":"Bratislava","street":"Panónska cesta"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfb1"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb0"},"merchantName":"OBI Slovakia s.r.o.","name":"","municipality":"PRIEVIDZA","street":"NEDOŽERSKÁ CESTA"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfb5"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb4"},"merchantName":"OMV Slovensko, s.r.o.","name":"","municipality":"Bratislava","street":"Rožňavská 24"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfb9"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb8"},"merchantName":"RRR Plus s. r. o.","name":"","municipality":"Prievidza","street":"Veľkonecpalská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfbc"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava - Karlova Ves","street":"Segnerová ulica"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfc0"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfbf"},"merchantName":"BENU SK 43, s. r. o.","name":"","municipality":"Bratislava","street":"Harmincova"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfc3"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bratislava","street":"Vajnorská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfca"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Senec","street":"Bratislavská cesta"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e009"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Galanta","street":"Drevená"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e053"},"merchantId":{"$oid":"65328434d4ef1a8354e7e052"},"merchantName":"LAPLANT s.r.o.","name":"","municipality":"Trnava","street":"Belgická"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e056"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Galanta","street":"Ul. Esterházyovcov"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e05a"},"merchantId":{"$oid":"65328434d4ef1a8354e7e059"},"merchantName":"Food express s.r.o.","name":"","municipality":"Galanta","street":"Staničná"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e05d"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Galanta","street":"Šafárikova"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e061"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Bratislava","street":"Kresánkova"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e065"},"merchantId":{"$oid":"65328434d4ef1a8354e7e064"},"merchantName":"TERNO real estate s.r.o.","name":"","municipality":"Bratislava","street":"Kresánkova"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e068"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Senica","street":"Čačovská cesta"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e06e"},"merchantId":{"$oid":"65328434d4ef1a8354e7e06d"},"merchantName":"Peter Vranovský FIPE","name":"","municipality":"Zálesie","street":"Malinovská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e075"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Bratislava","street":"Komárnická"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e079"},"merchantId":{"$oid":"65328434d4ef1a8354e7e078"},"merchantName":"HORNBACH - Baumarkt SK spol. s r.o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Galvaniho"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e07c"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Bratislava","street":"Trnavská cesta"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e081"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb0"},"merchantName":"OBI Slovakia s.r.o.","name":"","municipality":"BRATISLAVA","street":"BAJKALSKÁ"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e090"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Sládkovičovo","street":"Fučíkova"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e09e"},"merchantId":{"$oid":"65328434d4ef1a8354e7e09d"},"merchantName":"DAREX s.r.o.","name":"","municipality":"Galanta","street":"Športová ulica"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0d8"},"merchantId":{"$oid":"65328434d4ef1a8354e7e0d7"},"merchantName":"Povega s. r. o.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0de"},"merchantId":{"$oid":"65328434d4ef1a8354e7e0dd"},"merchantName":"TCHIBO SLOVENSKO spol. s r.o.","name":"","municipality":"Banská Bystrica","street":"Na Troskách"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0e2"},"merchantId":{"$oid":"65328434d4ef1a8354e7e0e1"},"merchantName":"HAPPE s.r.o.","name":"","municipality":"Prievidza","street":"Bojnická cesta"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0e6"},"merchantId":{"$oid":"65328434d4ef1a8354e7e0e5"},"merchantName":"KARAKAM s. r. o.","name":"","municipality":"Bojnice","street":"Hurbanovo nám."}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0f8"},"merchantId":{"$oid":"65328434d4ef1a8354e7e0f7"},"merchantName":"BENU SK 21, s. r. o.","name":"","municipality":"Galanta","street":"Esterházyho"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0fc"},"merchantId":{"$oid":"65328434d4ef1a8354e7e0fb"},"merchantName":"GECO, s. r. o.","name":"","municipality":"Galanta","street":"Esterházyovcov"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e101"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Bratislava","street":"Mlynská dolina"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e105"},"merchantId":{"$oid":"65328434d4ef1a8354e7e104"},"merchantName":"Dušan Haba - Rozličný tovar","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e109"},"merchantId":{"$oid":"65328434d4ef1a8354e7e108"},"merchantName":"COOP Jednota Senica, spotrebné družstvo","name":"","municipality":"Šaštín-Stráže","street":"Šaštín-Stráže"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e111"},"merchantId":{"$oid":"65328434d4ef1a8354e7e110"},"merchantName":"Dr.Max 12 s.r.o.","name":"","municipality":"Bratislava","street":"LIDL, Karloveská ulica"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e124"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Bratislava","street":"Dudvážska"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e127"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Bajkalská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e138"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Bratislava","street":"Harmincova"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e141"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava","street":"Mýtna"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e167"},"merchantId":{"$oid":"65328434d4ef1a8354e7e166"},"merchantName":"SLOVNAFT, a.s.","name":"","municipality":"Považská Bystrica","street":"Diaľnica D1"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e16b"},"merchantId":{"$oid":"65328434d4ef1a8354e7e16a"},"merchantName":"CUKRÁREŇ LABUŽNÍK, s. r. o.","name":"","municipality":"Bratislava - mestská časť Petržalka","street":"Námestie Hraničiarov"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e16f"},"merchantId":{"$oid":"65328434d4ef1a8354e7e16e"},"merchantName":"DALITRANS, s.r.o.","name":"","municipality":"Šaštín - Stráže","street":"M. R. Štefánika"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e193"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Galanta","street":"Esterházyovcov"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e19b"},"merchantId":{"$oid":"65328434d4ef1a8354e7e19a"},"merchantName":"Glance s. r. o.","name":"","municipality":"Bratislava","street":"Bajkalská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e1f3"},"merchantId":{"$oid":"65328434d4ef1a8354e7e1f2"},"merchantName":"Zoltán Szighardt","name":"","municipality":"Nová Dedinka","street":"1. mája"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e29d"},"merchantId":{"$oid":"65328434d4ef1a8354e7e29c"},"merchantName":"Dušan Dedinsky","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e2ab"},"merchantId":{"$oid":"65328434d4ef1a8354e7e2aa"},"merchantName":"ADCOMART s.r.o.","name":"","municipality":"Bratislava","street":"Novoveská"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e2af"},"merchantId":{"$oid":"65328434d4ef1a8354e7e2ae"},"merchantName":"RYB-PO BEDEČ, s. r. o.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7e303"},"merchantId":{"$oid":"65328435d4ef1a8354e7e302"},"merchantName":"STAVEBNINY TIMA, s.r.o.","name":"","municipality":"Galanta","street":"Eszterházyovcov"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e32a"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb0"},"merchantName":"OBI Slovakia s.r.o.","name":"","municipality":"TRNAVA","street":"NOVÁ"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e381"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava","street":"Metodova ulica"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e3cd"},"merchantId":{"$oid":"65328435d4ef1a8354e7e3cc"},"merchantName":"COOP Jednota Dunajská Streda, spotrebné družstvo","name":"","municipality":"Bratislava","street":"Dulovo nám."}
+{"_id":{"$oid":"65328435d4ef1a8354e7e41f"},"merchantId":{"$oid":"65328435d4ef1a8354e7e41e"},"merchantName":"EUROPHARMA, s. r. o.","name":"","municipality":"Bratislava","street":"Pribinova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e428"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Bratislava","street":"Miletičova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e43c"},"merchantId":{"$oid":"65328435d4ef1a8354e7e43b"},"merchantName":"EMKAR market s.r.o.","name":"","municipality":"Bratislava","street":"Dulovo nám."}
+{"_id":{"$oid":"65328435d4ef1a8354e7e44a"},"merchantId":{"$oid":"65328435d4ef1a8354e7e449"},"merchantName":"Bio - Slnečnica, s. r. o.","name":"","municipality":"Bratislava","street":"Kvačalova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e495"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava","street":"Karadžičova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e4af"},"merchantId":{"$oid":"65328435d4ef1a8354e7e4ae"},"merchantName":"NITRAZDROJ, a.s.","name":"","municipality":"Galanta","street":"29.augusta"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e4bc"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava - Petržalka","street":"Zuzany Chalupovej"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e517"},"merchantId":{"$oid":"65328434d4ef1a8354e7e166"},"merchantName":"SLOVNAFT, a.s.","name":"","municipality":"Bratislava","street":"Dolnozemská"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e51c"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava - Dlhé diely","street":"Ľudovíta Fullu"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e54b"},"merchantId":{"$oid":"65328434d4ef1a8354e7e064"},"merchantName":"TERNO real estate s.r.o.","name":"","municipality":"Bratislava","street":"Einsteinova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e591"},"merchantId":{"$oid":"65328435d4ef1a8354e7e590"},"merchantName":"Daniel Bašo - Bezpecnostné uzamykacie systémy","name":"","municipality":"Galanta","street":"Šafárikova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5bb"},"merchantId":{"$oid":"65328435d4ef1a8354e7e5ba"},"merchantName":"Jozef Badánk - BADAS","name":"","municipality":"Černová","street":"Salaš Krajinka"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5c5"},"merchantId":{"$oid":"65328435d4ef1a8354e7e5c4"},"merchantName":"FAST PLUS, a.s.","name":"","municipality":"Galanta","street":"Esterházyovcov"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5c9"},"merchantId":{"$oid":"65328435d4ef1a8354e7e5c8"},"merchantName":"Erika Fraitová","name":"","municipality":"Levice","street":"Turecký rad"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5cc"},"merchantId":{"$oid":"65328434d4ef1a8354e7e166"},"merchantName":"SLOVNAFT, a.s.","name":"","municipality":"Bratislava","street":"Viedenská cesta"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5d0"},"merchantId":{"$oid":"65328435d4ef1a8354e7e5cf"},"merchantName":"Mild Cure Five, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynská dolina"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e702"},"merchantId":{"$oid":"65328435d4ef1a8354e7e701"},"merchantName":"MEDICÍNSKE ZARIADENIE MLYNSKÁ DOLINA, s. r. o.","name":"","municipality":"Bratislava - mestská časť Karlova Ves","street":"Staré grunty"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7be"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7bd"},"merchantName":"Bioaspa, spol. s r.o.","name":"","municipality":"Kúty","street":"Hollého"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7c4"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7c3"},"merchantName":"ORAVA - STAV, s.r.o.","name":"","municipality":"Stupava - Lokalita Dúbravy","street":"Botanická záhrada Stupava"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7d6"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7d5"},"merchantName":"CCC Slovakia, s. r. o.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7dc"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7db"},"merchantName":"Radovan Baránek","name":"","municipality":"Šaštín - Stráže","street":"Nám. Slobody"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7e2"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7e1"},"merchantName":"MONSTERS cafe and bar s.r.o.","name":"","municipality":"Bratislava - mestská časť Petržalka","street":"Rusovská cesta"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7f2"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7f1"},"merchantName":"Oľga Bízková Central","name":"","municipality":"Šaštín-Stráže","street":"Hollého"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7fa"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7f9"},"merchantName":"TOP- Farm, spol. s r.o.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7e801"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Kúty","street":"Štefánikova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e81f"},"merchantId":{"$oid":"65328435d4ef1a8354e7e81e"},"merchantName":"ZABEZ, s.r.o.","name":"","municipality":"Štefanov","street":"Štefanov"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e83f"},"merchantId":{"$oid":"65328435d4ef1a8354e7e83e"},"merchantName":"Jan Holický","name":"","municipality":"Šaštín-Stráže","street":"Hollého"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e847"},"merchantId":{"$oid":"65328435d4ef1a8354e7e846"},"merchantName":"ARW, s.r.o.","name":"","municipality":"Bratislava","street":"Bazová"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e84d"},"merchantId":{"$oid":"65328435d4ef1a8354e7e84c"},"merchantName":"STÉNIA a.s.","name":"","municipality":"Bratislava","street":"Obchodné centrum CENTRAL, Metodova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e8b2"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Bratislava","street":"Romanova"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e8fe"},"merchantId":{"$oid":"65328435d4ef1a8354e7e8fd"},"merchantName":"MäsoP predajne, s.r.o.","name":"","municipality":"Kúty","street":"Štefánokova ul."}
+{"_id":{"$oid":"65328435d4ef1a8354e7e904"},"merchantId":{"$oid":"65328435d4ef1a8354e7e903"},"merchantName":"Karlova pekáreň s.r.o.","name":"","municipality":"Kúty","street":"Bratislavská"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e942"},"merchantId":{"$oid":"65328435d4ef1a8354e7e941"},"merchantName":"Jánošík - NEA, s.r.o.","name":"","municipality":"Bratislava - Ružinov","street":"Drieňová"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e9ec"},"merchantId":{"$oid":"65328435d4ef1a8354e7e9eb"},"merchantName":"RPL, spol. s r.o.","name":"","municipality":"Bratislava","street":"Mlynská dolina"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e9ef"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb0"},"merchantName":"OBI Slovakia s.r.o.","name":"","municipality":"TRENČÍN","street":"KU ŠTVRTIAM"}
+{"_id":{"$oid":"65328435d4ef1a8354e7ea48"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Senica","street":"Obchodná ulica"}
+{"_id":{"$oid":"65328435d4ef1a8354e7eabe"},"merchantId":{"$oid":"65328435d4ef1a8354e7eabd"},"merchantName":"STRONG LIFE s.r.o.","name":"","municipality":"Senica","street":"Obchodná"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eb7a"},"merchantId":{"$oid":"65328436d4ef1a8354e7eb79"},"merchantName":"Mgr. Renáta Uličná","name":"","municipality":"Revúca","street":"Tomášikova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eb8d"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Revúca","street":"M. R. Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eb97"},"merchantId":{"$oid":"65328436d4ef1a8354e7eb96"},"merchantName":"Dušan Holý Expres Servis","name":"","municipality":"Revúca","street":"M.R.Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eb9b"},"merchantId":{"$oid":"65328436d4ef1a8354e7eb9a"},"merchantName":"Ján Rečník","name":"","municipality":"Revúca","street":"Jilemnického"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ebc0"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Spišská Nová Ves","street":"Medza"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ebde"},"merchantId":{"$oid":"65328436d4ef1a8354e7ebdd"},"merchantName":"C & A Mode s.r.o.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec3b"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Revúca","street":"M.R.Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec5d"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec5c"},"merchantName":"Monika Polubňáková","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec61"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec60"},"merchantName":"Mikuláš Csatlós-SecondLife","name":"","municipality":"Revúca","street":"M.R.Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec66"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Revúca","street":"M.R. Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec72"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec71"},"merchantName":"PRO. Laika spol. s r.o.","name":"","municipality":"Bratislava - mestská časť Staré Mesto","street":"Palackého"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec76"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec75"},"merchantName":"IKEA Bratislava, s.r.o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Ivanská cesta"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec8a"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec89"},"merchantName":"Teta drogérie SR s. r.o.","name":"","municipality":"Revúca","street":"Železničná ulica"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec92"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec91"},"merchantName":"WAGON SLOVAKIA KOŠICE, a.s.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec9a"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec99"},"merchantName":"GAS product & services a.s.","name":"","municipality":"Lozorno","street":"Lozorno"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec9e"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec9d"},"merchantName":"BAM - EKO a.s.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eca2"},"merchantId":{"$oid":"65328436d4ef1a8354e7eca1"},"merchantName":"MEDANTE Clinic, s.r.o.","name":"","municipality":"Bratislava","street":"Podpriehradná"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ed48"},"merchantId":{"$oid":"65328436d4ef1a8354e7ed47"},"merchantName":"Sunlight Pharmacy 01 s. r. o.","name":"","municipality":"Bratislava - mestská časť Karlova Ves","street":"Staré Grunty"}
+{"_id":{"$oid":"65328436d4ef1a8354e7edbe"},"merchantId":{"$oid":"65328436d4ef1a8354e7edbd"},"merchantName":"Dráčik DIVI, s. r. o.","name":"","municipality":"Senica","street":"Obchodná ulica"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee36"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee35"},"merchantName":"Minárik, spol. s r.o.","name":"","municipality":"Šaštín Stráže","street":"Námestie Oslobodenia"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee56"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee55"},"merchantName":"McDonald´s Slovakia spol. s r.o.","name":"","municipality":"Banská Bystrica","street":"Nám. Ľ. Štúra"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee68"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee67"},"merchantName":"IMUNITY s.r.o.","name":"","municipality":"Banská Bystrica","street":"Na Troskách - Europa SC"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee6c"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee6b"},"merchantName":"Frisör Klier, s.r.o.","name":"","municipality":"Banská Bystrica","street":"Europa SC, Na Troskách"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee7c"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee7b"},"merchantName":"Martinus, s.r.o.","name":"","municipality":"Košice","street":"Toryská"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee80"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee7f"},"merchantName":"Mijamix, s.r.o.","name":"","municipality":"Košice","street":"Námestie Osloboditeľov (AUPARK Košice)"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee84"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee83"},"merchantName":"CALZEDONIA SLOVAK s. r. o.","name":"","municipality":"Košice","street":"Námestie osloboditeľov"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee88"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee87"},"merchantName":"HÁZY, s.r.o.","name":"","municipality":"Revúca","street":"Hviezdoslavova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eecf"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec89"},"merchantName":"Teta drogérie SR s. r.o.","name":"","municipality":"Revúca","street":"M.R.Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eeda"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee7b"},"merchantName":"Martinus, s.r.o.","name":"","municipality":"Poprad","street":"Námestie sv. Egídia"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eee4"},"merchantId":{"$oid":"65328436d4ef1a8354e7eee3"},"merchantName":"Ing. Barbora Slabejová - Môj originál","name":"","municipality":"Revúca","street":"M. R. Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eef6"},"merchantId":{"$oid":"65328436d4ef1a8354e7eef5"},"merchantName":"Martin Rolinec - LIGHTS ON!","name":"","municipality":"Revúca","street":"Sládkovičova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ef04"},"merchantId":{"$oid":"65328436d4ef1a8354e7ef03"},"merchantName":"Dr.Max 37 s.r.o.","name":"","municipality":"Revúca","street":"M. R. Štefánika"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ef09"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Revúca","street":"Daxnerova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ef13"},"merchantId":{"$oid":"65328436d4ef1a8354e7ef12"},"merchantName":"ROZKVET s.r.o.","name":"","municipality":"Revúca","street":"Jilemnického"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eff7"},"merchantId":{"$oid":"65328436d4ef1a8354e7eff6"},"merchantName":"Tatiana Karabínošová UNIs-Ka","name":"","municipality":"Revúca","street":"Sládkovičova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f0e6"},"merchantId":{"$oid":"65328435d4ef1a8354e7e5c4"},"merchantName":"FAST PLUS, a.s.","name":"","municipality":"Bratislava","street":"Zuzany Chalupovej"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f0ea"},"merchantId":{"$oid":"65328436d4ef1a8354e7f0e9"},"merchantName":"Slovenský potravinársky priemysel a.s.","name":"","municipality":"Bratislava","street":"Landererova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f129"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Bratislava","street":"Zuzany Chalupovej"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f1ec"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb4"},"merchantName":"OMV Slovensko, s.r.o.","name":"","municipality":"Bratislava","street":"Pri Seči"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f1ef"},"merchantId":{"$oid":"65328436d4ef1a8354e7f0e9"},"merchantName":"Slovenský potravinársky priemysel a.s.","name":"","municipality":"Bratislava - mestská časť Nové Mesto","street":"Tomášikova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f207"},"merchantId":{"$oid":"65328436d4ef1a8354e7f206"},"merchantName":"Tatiana Kršková-KnihArt","name":"","municipality":"Revúca","street":"Hviezdoslavova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f20b"},"merchantId":{"$oid":"65328436d4ef1a8354e7f20a"},"merchantName":"LPP Slovakia, s.r.o.","name":"","municipality":"Banská Bystrica","street":"EUROPA SC, Na Troskách"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f214"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Banská Bystrica","street":"Na Troskách"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f264"},"merchantId":{"$oid":"65328436d4ef1a8354e7f263"},"merchantName":"COOP JEDNOTA REVÚCA, spotrebné družstvo","name":"","municipality":"Revúca","street":"Sládkovičova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f274"},"merchantId":{"$oid":"65328436d4ef1a8354e7f273"},"merchantName":"LUSIO s. r. o.","name":"","municipality":"Bratislava - mestská časť Petržalka","street":"Zuzany Chalupovej"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f292"},"merchantId":{"$oid":"65328436d4ef1a8354e7f291"},"merchantName":"Panta Rhei, s.r.o.","name":"","municipality":"Komárno","street":"Palatínova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f2da"},"merchantId":{"$oid":"65328436d4ef1a8354e7f2d9"},"merchantName":"SPORTISIMO SK s. r. o.","name":"","municipality":"Senica","street":"Obchodná"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f337"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f355"},"merchantId":{"$oid":"65328436d4ef1a8354e7f354"},"merchantName":"Pirex Slovakia s. r .o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Metodova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f365"},"merchantId":{"$oid":"65328436d4ef1a8354e7f364"},"merchantName":"NAY a.s.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f36b"},"merchantId":{"$oid":"65328436d4ef1a8354e7f36a"},"merchantName":"ALBI, s.r.o.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f384"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bratislava","street":"Trenčianska II."}
+{"_id":{"$oid":"65328437d4ef1a8354e7f3d3"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bratislava","street":"Karloveská"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f3d9"},"merchantId":{"$oid":"65328437d4ef1a8354e7f3d8"},"merchantName":"Xiem Hoang Minh","name":"","municipality":"Bratislava","street":"Herlianska"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f3e6"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava","street":"Bachova"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f424"},"merchantId":{"$oid":"65328437d4ef1a8354e7f423"},"merchantName":"KiK textil a Non-Food spol. s r. o.","name":"","municipality":"Revúca","street":"M. R. Štefánika"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f42a"},"merchantId":{"$oid":"65328437d4ef1a8354e7f429"},"merchantName":"Zdravcentrum IS, s.r.o.","name":"","municipality":"Komárno","street":"Senný trh"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f444"},"merchantId":{"$oid":"65328437d4ef1a8354e7f443"},"merchantName":"Textile House for EURO TRADE, s.r.o.","name":"","municipality":"Komárno","street":"Jókaiho"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f452"},"merchantId":{"$oid":"65328437d4ef1a8354e7f451"},"merchantName":"VIKTORIA & A s.r.o.","name":"","municipality":"Revúca","street":"Daxnerova"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f460"},"merchantId":{"$oid":"65328437d4ef1a8354e7f45f"},"merchantName":"RESTON s.r.o.","name":"","municipality":"Bratislava","street":"Námestie SNP"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f466"},"merchantId":{"$oid":"65328437d4ef1a8354e7f465"},"merchantName":"Queensway Restaurants Slovakia, s.r.o.","name":"","municipality":"Bratislava","street":"Einsteinova"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f4e6"},"merchantId":{"$oid":"65328437d4ef1a8354e7f4e5"},"merchantName":"Domäsko s.r.o.","name":"","municipality":"Revúca","street":"Jilemnického"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f4ea"},"merchantId":{"$oid":"65328437d4ef1a8354e7f4e9"},"merchantName":"BENU SK 46, s.r.o.","name":"","municipality":"Revúca","street":"M.R.Štefánika"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f4f4"},"merchantId":{"$oid":"65328437d4ef1a8354e7f4f3"},"merchantName":"P&D Invest s.r.o.","name":"","municipality":"Revúca","street":"Milana Rastislava Štefanika"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f561"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Kysucké Nové Mesto","street":"Nábrežná"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f58d"},"merchantId":{"$oid":"65328437d4ef1a8354e7f58c"},"merchantName":"GALAO INVEST, s.r.o.","name":"","municipality":"Bratislava","street":"Štefana Králika"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f590"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Kysucké Nové Mesto","street":"Ulica ČS Armády"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f5b8"},"merchantId":{"$oid":"65328437d4ef1a8354e7f5b7"},"merchantName":"COOP Jednota Žilina, spotrebné družstvo","name":"","municipality":"Kysucké Nové Mesto","street":"Clementisova"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f5d3"},"merchantId":{"$oid":"65328434d4ef1a8354e7e064"},"merchantName":"TERNO real estate s.r.o.","name":"","municipality":"Bratislava","street":"Hálova"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f5ff"},"merchantId":{"$oid":"65328437d4ef1a8354e7f5fe"},"merchantName":"Štefan Kuchár - Rock faun","name":"","municipality":"Žilina","street":"Národná"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f602"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Žilina","street":"Veľká okružná"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f60d"},"merchantId":{"$oid":"65328436d4ef1a8354e7f2d9"},"merchantName":"SPORTISIMO SK s. r. o.","name":"","municipality":"Žilina","street":"Veľká okružná"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f610"},"merchantId":{"$oid":"65328434d4ef1a8354e7e166"},"merchantName":"SLOVNAFT, a.s.","name":"","municipality":"Bratislava","street":"DČS Lamačská cesta"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f614"},"merchantId":{"$oid":"65328437d4ef1a8354e7f613"},"merchantName":"ANTALDENT s. r. o.","name":"","municipality":"Bratislava - mestská časť Dúbravka","street":"Pod záhradami"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f618"},"merchantId":{"$oid":"65328437d4ef1a8354e7f617"},"merchantName":"LEDart s.r.o.","name":"","municipality":"Bratislava - mestská časť Nové Mesto","street":"Vajnorská"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f61c"},"merchantId":{"$oid":"65328437d4ef1a8354e7f61b"},"merchantName":"Peek & Cloppenburg s.r.o.","name":"","municipality":"BRATISLAVA","street":"EINSTEINOVA"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f624"},"merchantId":{"$oid":"65328437d4ef1a8354e7f623"},"merchantName":"Vaprio.sk, s.r.o.","name":"","municipality":"Bratislava","street":"Pri Hrubej lúke"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f632"},"merchantId":{"$oid":"65328437d4ef1a8354e7f631"},"merchantName":"Drogéria u Kovára s. r. o.","name":"","municipality":"Bratislava","street":"Fedinova"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f675"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Žilina","street":"Námestie Andreja Hlinku"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f6b4"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Žilina","street":"Ulica 1. mája"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f6e7"},"merchantId":{"$oid":"65328434d4ef1a8354e7df84"},"merchantName":"TESCO STORES SR, a.s.","name":"","municipality":"Bratislava","street":"Ševčenkova"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f6fc"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava - Petržalka","street":"Nobelovo námestie"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f746"},"merchantId":{"$oid":"65328437d4ef1a8354e7f745"},"merchantName":"ALEX business s.r.o.","name":"","municipality":"Bratislava","street":"Kopčianska"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f74b"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Bratislava","street":"Kopčianska"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f7d4"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Kysucké Nové Mesto","street":"Belanského"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f820"},"merchantId":{"$oid":"65328437d4ef1a8354e7f81f"},"merchantName":"Tea Trade Slovakia, s. r. o.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7f823"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f84a"},"merchantId":{"$oid":"65328436d4ef1a8354e7f20a"},"merchantName":"LPP Slovakia, s.r.o.","name":"","municipality":"Bratislava","street":"NIVY Centrum, Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f89b"},"merchantId":{"$oid":"65328434d4ef1a8354e7e064"},"merchantName":"TERNO real estate s.r.o.","name":"","municipality":"Bratislava","street":"Záhradnícka"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8ae"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Stupava","street":"Hlavná ulica"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8b8"},"merchantId":{"$oid":"65328437d4ef1a8354e7f8b7"},"merchantName":"Pepco Slovakia s. r. o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8c6"},"merchantId":{"$oid":"65328437d4ef1a8354e7f8c5"},"merchantName":"EFLEK s. r. o.","name":"","municipality":"Bratislava","street":"Košická"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8ce"},"merchantId":{"$oid":"65328437d4ef1a8354e7f8cd"},"merchantName":"ALLTOYS, spol. s r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8d3"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f911"},"merchantId":{"$oid":"65328437d4ef1a8354e7f910"},"merchantName":"BENU SK 61, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f91b"},"merchantId":{"$oid":"65328437d4ef1a8354e7f91a"},"merchantName":"Pumpa SK s.r.o.","name":"","municipality":"Lozorno","street":"Lozorno"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f91f"},"merchantId":{"$oid":"65328437d4ef1a8354e7f91e"},"merchantName":"Lekáreň Centrum Stupava s. r. o.","name":"","municipality":"Stupava","street":"Hlavná"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f938"},"merchantId":{"$oid":"65328436d4ef1a8354e7f0e9"},"merchantName":"Slovenský potravinársky priemysel a.s.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f948"},"merchantId":{"$oid":"65328437d4ef1a8354e7f947"},"merchantName":"Lindex Slovakia s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f959"},"merchantId":{"$oid":"65328435d4ef1a8354e7e449"},"merchantName":"Bio - Slnečnica, s. r. o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Velehradská"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f965"},"merchantId":{"$oid":"65328437d4ef1a8354e7f964"},"merchantName":"NEW YORKER Slovakia, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské nivy"}
+{"_id":{"$oid":"65328437d4ef1a8354e7fac5"},"merchantId":{"$oid":"65328437d4ef1a8354e7fac4"},"merchantName":"Pro Solutions, s.r.o.","name":"","municipality":"Bratislava","street":"Ivánska cesta"}
+{"_id":{"$oid":"65328437d4ef1a8354e7facb"},"merchantId":{"$oid":"65328437d4ef1a8354e7faca"},"merchantName":"Quang Minh Vu, podnik zahraničnej osoby","name":"","municipality":"Bratislava","street":"Dulovo námestie"}
+{"_id":{"$oid":"65328437d4ef1a8354e7fad7"},"merchantId":{"$oid":"65328437d4ef1a8354e7fad6"},"merchantName":"MAC2 s.r.o.","name":"","municipality":"Nitra","street":"Výstavná"}
+{"_id":{"$oid":"65328437d4ef1a8354e7fae9"},"merchantId":{"$oid":"65328437d4ef1a8354e7fae8"},"merchantName":"CENTRAL PARKING, spol. s r.o.","name":"","municipality":"Bratislava - mestská časť Staré Mesto","street":"Rajská"}
+{"_id":{"$oid":"65328437d4ef1a8354e7faed"},"merchantId":{"$oid":"65328437d4ef1a8354e7faec"},"merchantName":"Svitlana Matúšová - FIALKA","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7fb16"},"merchantId":{"$oid":"65328436d4ef1a8354e7f364"},"merchantName":"NAY a.s.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fb52"},"merchantId":{"$oid":"65328438d4ef1a8354e7fb51"},"merchantName":"H & M Hennes & Mauritz SK s.r.o.","name":"","municipality":"Bratislava","street":"Pribinova"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fb5b"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Bratislava","street":"Landererova"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fb81"},"merchantId":{"$oid":"65328438d4ef1a8354e7fb80"},"merchantName":"Patty Ski Donovaly s. r. o.","name":"","municipality":"Donovaly","street":"Donovaly"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fb93"},"merchantId":{"$oid":"65328438d4ef1a8354e7fb92"},"merchantName":"JR – Spotrebný obchod s.r.o.","name":"","municipality":"Donovaly","street":"Donovaly"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fbee"},"merchantId":{"$oid":"65328437d4ef1a8354e7f61b"},"merchantName":"Peek & Cloppenburg s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc0c"},"merchantId":{"$oid":"65328438d4ef1a8354e7fc0b"},"merchantName":"GOIMPEX BRATISLAVA, a.s.","name":"","municipality":"Donovaly","street":"Pod Magurou"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc11"},"merchantId":{"$oid":"65328434d4ef1a8354e7e078"},"merchantName":"HORNBACH - Baumarkt SK spol. s r.o.","name":"","municipality":"Bratislava","street":"Devínska Nová Ves"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc31"},"merchantId":{"$oid":"65328438d4ef1a8354e7fc30"},"merchantName":"MEDIAPRESS Bratislava spol. s r.o.","name":"","municipality":"Bratislava","street":"Dulovo námestie"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc71"},"merchantId":{"$oid":"65328438d4ef1a8354e7fc70"},"merchantName":"UNITAS Group, s. r. o.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc78"},"merchantId":{"$oid":"65328434d4ef1a8354e7df7c"},"merchantName":"BILLA s.r.o.","name":"","municipality":"Bratislava","street":"Pribinova ul."}
+{"_id":{"$oid":"65328438d4ef1a8354e7fcd4"},"merchantId":{"$oid":"65328438d4ef1a8354e7fcd3"},"merchantName":"GRANDE MGN s.r.o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Trnavská cesta"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd30"},"merchantId":{"$oid":"65328438d4ef1a8354e7fd2f"},"merchantName":"Štatistické a evidenčné vydavateľstvo tlačív,a.s.ŠEVT a.s. /skrátená verzia obchodného mena/","name":"","municipality":"Bratislava","street":"Landererova"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd3c"},"merchantId":{"$oid":"65328438d4ef1a8354e7fd3b"},"merchantName":"LEON BA, s. r. o.","name":"","municipality":"Bratislava","street":"Zuzany Chalupovej, Slnečnice Market"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd45"},"merchantId":{"$oid":"65328438d4ef1a8354e7fd2f"},"merchantName":"Štatistické a evidenčné vydavateľstvo tlačív,a.s.ŠEVT a.s. /skrátená verzia obchodného mena/","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd6b"},"merchantId":{"$oid":"65328438d4ef1a8354e7fd6a"},"merchantName":"NATLEK, s.r.o.","name":"","municipality":"Kúty","street":"Bratislavská"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd7b"},"merchantId":{"$oid":"65328438d4ef1a8354e7fd7a"},"merchantName":"Eric SK s. r. o.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd83"},"merchantId":{"$oid":"65328438d4ef1a8354e7fd82"},"merchantName":"fiftyfifty s. r. o.","name":"","municipality":"Bratislava","street":"Mlynské nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd8a"},"merchantId":{"$oid":"65328437d4ef1a8354e7f8cd"},"merchantName":"ALLTOYS, spol. s r.o.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328438d4ef1a8354e7fdb6"},"merchantId":{"$oid":"65328438d4ef1a8354e7fdb5"},"merchantName":"FunArena Donovaly s.r.o.","name":"","municipality":"Donovaly","street":"Donovaly"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fdd1"},"merchantId":{"$oid":"65328436d4ef1a8354e7edbd"},"merchantName":"Dráčik DIVI, s. r. o.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fdd6"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Senica","street":"Obchodná ulica"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fe5a"},"merchantId":{"$oid":"65328438d4ef1a8354e7fe59"},"merchantName":"ONKODERMA, s. r. o.","name":"","municipality":"Bratislava - mestská časť Rača","street":"Alstrova"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fea2"},"merchantId":{"$oid":"65328438d4ef1a8354e7fea1"},"merchantName":"KOTVIČKA s.r.o.","name":"","municipality":"Šaštín Stráže","street":"Novoveská"}
+{"_id":{"$oid":"65328438d4ef1a8354e7feaf"},"merchantId":{"$oid":"65328436d4ef1a8354e7ec89"},"merchantName":"Teta drogérie SR s. r.o.","name":"","municipality":"Bratislava","street":"Pribinova"}
+{"_id":{"$oid":"65328438d4ef1a8354e7ff99"},"merchantId":{"$oid":"65328438d4ef1a8354e7ff98"},"merchantName":"Omrvinka s. r. o.","name":"","municipality":"Šaštín - Stráže","street":"J.Hollého"}
+{"_id":{"$oid":"65328438d4ef1a8354e800cb"},"merchantId":{"$oid":"65328438d4ef1a8354e800ca"},"merchantName":"Inditex Slovakia, s. r. o.","name":"","municipality":"Bratislava","street":"Mlynské nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e800d8"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Senica","street":"Čáčovská cesta"}
+{"_id":{"$oid":"65328438d4ef1a8354e801c0"},"merchantId":{"$oid":"65328438d4ef1a8354e801bf"},"merchantName":"ELEKTROSPED, a. s.","name":"","municipality":"Bratislava","street":"Vajnorská"}
+{"_id":{"$oid":"65328438d4ef1a8354e801c5"},"merchantId":{"$oid":"65328438d4ef1a8354e7fc70"},"merchantName":"UNITAS Group, s. r. o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e801c8"},"merchantId":{"$oid":"65328434d4ef1a8354e7e166"},"merchantName":"SLOVNAFT, a.s.","name":"","municipality":"Kúty","street":"Bratislavská"}
+{"_id":{"$oid":"65328438d4ef1a8354e8022e"},"merchantId":{"$oid":"65328438d4ef1a8354e8022d"},"merchantName":"FAnn-parfumérie, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e80232"},"merchantId":{"$oid":"65328438d4ef1a8354e80231"},"merchantName":"MINIT SLOVAKIA, spol. s r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e802d1"},"merchantId":{"$oid":"65328436d4ef1a8354e7f354"},"merchantName":"Pirex Slovakia s. r .o.","name":"","municipality":"Bratislava","street":"Mlynské nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e80300"},"merchantId":{"$oid":"65328434d4ef1a8354e7e060"},"merchantName":"Emil Krajčík, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328438d4ef1a8354e8032c"},"merchantId":{"$oid":"65328438d4ef1a8354e8032b"},"merchantName":"Xuan Duc Do -DHY","name":"","municipality":"Štefanov","street":"Štefanov"}
+{"_id":{"$oid":"65328438d4ef1a8354e803a2"},"merchantId":{"$oid":"65328438d4ef1a8354e803a1"},"merchantName":"Delia potraviny, s.r.o.","name":"","municipality":"Bratislava","street":"Záhradnícka"}
+{"_id":{"$oid":"65328438d4ef1a8354e803c2"},"merchantId":{"$oid":"65328438d4ef1a8354e803c1"},"merchantName":"DENTAL X-RAY s. r. o.","name":"","municipality":"BRATISLAVA 5","street":"FEDINOVA"}
+{"_id":{"$oid":"65328439d4ef1a8354e80424"},"merchantId":{"$oid":"65328439d4ef1a8354e80423"},"merchantName":"Peter Liszkay","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328439d4ef1a8354e80432"},"merchantId":{"$oid":"65328439d4ef1a8354e80431"},"merchantName":"Ďumbierska, s. r. o.","name":"","municipality":"Bratislava","street":"Mlynské nivy"}
+{"_id":{"$oid":"65328439d4ef1a8354e80438"},"merchantId":{"$oid":"65328439d4ef1a8354e80437"},"merchantName":"SUNLIGHT medical systems, s. r. o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Kvačalova"}
+{"_id":{"$oid":"65328439d4ef1a8354e80466"},"merchantId":{"$oid":"65328439d4ef1a8354e80465"},"merchantName":"TRADE BAGS s.r.o.","name":"","municipality":"Banská Bystrica","street":"Na Troskách"}
+{"_id":{"$oid":"65328439d4ef1a8354e8046a"},"merchantId":{"$oid":"65328439d4ef1a8354e80469"},"merchantName":"DEICHMANN-OBUV SK s.r.o.","name":"","municipality":"Prievidza","street":"Nábrežná ulica"}
+{"_id":{"$oid":"65328439d4ef1a8354e8046f"},"merchantId":{"$oid":"65328437d4ef1a8354e7f964"},"merchantName":"NEW YORKER Slovakia, s.r.o.","name":"","municipality":"Prievidza","street":"Nábrežná ulica"}
+{"_id":{"$oid":"65328439d4ef1a8354e80581"},"merchantId":{"$oid":"65328439d4ef1a8354e80580"},"merchantName":"KML, s.r.o.","name":"","municipality":"Ružomberok","street":"Podhora"}
+{"_id":{"$oid":"65328439d4ef1a8354e80585"},"merchantId":{"$oid":"65328439d4ef1a8354e80584"},"merchantName":"Ing. Anton Súkeník","name":"","municipality":"Radoľa","street":"Radoľa"}
+{"_id":{"$oid":"65328439d4ef1a8354e8058b"},"merchantId":{"$oid":"65328439d4ef1a8354e8058a"},"merchantName":"COOP Jednota, Vranov nad Topľou, spotrebné družstvo","name":"","municipality":"Dlhé Klčovo","street":"Dlhé Klčovo"}
+{"_id":{"$oid":"65328439d4ef1a8354e80637"},"merchantId":{"$oid":"65328439d4ef1a8354e80636"},"merchantName":"Kabiko s. r. o.","name":"","municipality":"Bratislava","street":"Cintorínska"}
+{"_id":{"$oid":"65328439d4ef1a8354e8066f"},"merchantId":{"$oid":"65328439d4ef1a8354e8066e"},"merchantName":"Leberko s.r.o.","name":"","municipality":"Bratislava","street":"Trenčianska"}
+{"_id":{"$oid":"65328439d4ef1a8354e806d3"},"merchantId":{"$oid":"65328439d4ef1a8354e806d2"},"merchantName":"Leder & Schuh SK spol. s r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"65328439d4ef1a8354e80711"},"merchantId":{"$oid":"65328439d4ef1a8354e80710"},"merchantName":"Potraviny MALINA, s. r. o.","name":"","municipality":"Bratislava","street":"Jégého"}
+{"_id":{"$oid":"65328439d4ef1a8354e8074f"},"merchantId":{"$oid":"65328439d4ef1a8354e8074e"},"merchantName":"Fertucha, s. r. o.","name":"","municipality":"Bratislava","street":"Košická"}
+{"_id":{"$oid":"65328439d4ef1a8354e80780"},"merchantId":{"$oid":"65328436d4ef1a8354e7f2d9"},"merchantName":"SPORTISIMO SK s. r. o.","name":"","municipality":"Prievidza","street":"Nábrežná"}
+{"_id":{"$oid":"65328439d4ef1a8354e80786"},"merchantId":{"$oid":"65328439d4ef1a8354e80785"},"merchantName":"Melange s. r. o.","name":"","municipality":"Bratislava","street":"Košická"}
+{"_id":{"$oid":"65328439d4ef1a8354e807e5"},"merchantId":{"$oid":"65328434d4ef1a8354e7df73"},"merchantName":"Kaufland Slovenská republika v.o.s.","name":"","municipality":"Bratislava","street":"Panónska cesta"}
+{"_id":{"$oid":"65328439d4ef1a8354e80843"},"merchantId":{"$oid":"65328439d4ef1a8354e80842"},"merchantName":"Emília Pulišová - Salaš Hron, Milan Puliš - právny nástupca","name":"","municipality":"Kováčová","street":"Bystrická"}
+{"_id":{"$oid":"65328439d4ef1a8354e80854"},"merchantId":{"$oid":"65328434d4ef1a8354e7dfb4"},"merchantName":"OMV Slovensko, s.r.o.","name":"","municipality":"Badín","street":"Osloboditeľov"}
+{"_id":{"$oid":"65328439d4ef1a8354e8085a"},"merchantId":{"$oid":"65328439d4ef1a8354e80859"},"merchantName":"Flowers Photo s. r. o.","name":"","municipality":"","street":""}
+{"_id":{"$oid":"65328439d4ef1a8354e80864"},"merchantId":{"$oid":"65328439d4ef1a8354e80863"},"merchantName":"Grapent a.s.","name":"","municipality":"Modra","street":"Piesok"}
+{"_id":{"$oid":"65328439d4ef1a8354e80878"},"merchantId":{"$oid":"65328439d4ef1a8354e80877"},"merchantName":"SCARIS s.r.o.","name":"","municipality":"Bratislava","street":"Bajkalská"}
+{"_id":{"$oid":"65328439d4ef1a8354e808e4"},"merchantId":{"$oid":"65328439d4ef1a8354e808e3"},"merchantName":"Decathlon SK s. r. o.","name":"","municipality":"Bratislava","street":"Pribinova"}
+{"_id":{"$oid":"65328439d4ef1a8354e808ee"},"merchantId":{"$oid":"65328439d4ef1a8354e808ed"},"merchantName":"Združenie G.D.S. Peter Ďurček","name":"","municipality":"Bratislava","street":"Svätoplukova"}
+{"_id":{"$oid":"65328439d4ef1a8354e808f6"},"merchantId":{"$oid":"65328439d4ef1a8354e808f5"},"merchantName":"Lyžiarsky klub Baba - Pezinok","name":"","municipality":"Modra - Piesok","street":"Modra - Piesok"}
+{"_id":{"$oid":"65328439d4ef1a8354e80952"},"merchantId":{"$oid":"65328439d4ef1a8354e80951"},"merchantName":"1. DENTÁLNE CENTRUM s. r. o.","name":"","municipality":"Bratislava","street":"Záporožská"}
+{"_id":{"$oid":"65328439d4ef1a8354e809be"},"merchantId":{"$oid":"65328439d4ef1a8354e809bd"},"merchantName":"Gastro Eurovea s. r. o.","name":"","municipality":"Bratislava","street":"Pribinova"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a0b"},"merchantId":{"$oid":"65328434d4ef1a8354e7e192"},"merchantName":"dm drogerie markt, s.r.o.","name":"","municipality":"Bratislava","street":"Námestie Hraničiarov"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a28"},"merchantId":{"$oid":"65328439d4ef1a8354e80951"},"merchantName":"1. DENTÁLNE CENTRUM s. r. o.","name":"","municipality":"Bratislava - mestská časť Petržalka","street":"Ambroseho"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a2e"},"merchantId":{"$oid":"65328439d4ef1a8354e80a2d"},"merchantName":"BAL TIP Slovakia, s.r.o.","name":"","municipality":"Šaštín-Stráže","street":"Námestie Slobody"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a43"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Senica","street":"Továrenská"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a7d"},"merchantId":{"$oid":"65328439d4ef1a8354e80a7c"},"merchantName":"Pavel Filip - Rozličný tovar","name":"","municipality":"Šaštín-Stráže","street":"Námestie Slobody"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a82"},"merchantId":{"$oid":"65328435d4ef1a8354e7e7db"},"merchantName":"Radovan Baránek","name":"","municipality":"Šaštín - Stráže","street":"Námestie Slobody"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a88"},"merchantId":{"$oid":"65328439d4ef1a8354e80a87"},"merchantName":"Jankových a syn, s.r.o.","name":"","municipality":"Šaštín - Stráže","street":"Námestie slobody"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80d1a"},"merchantId":{"$oid":"6532843ad4ef1a8354e80d19"},"merchantName":"MADICOR, s.r.o.","name":"","municipality":"Bratislava","street":"Metodova"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80d23"},"merchantId":{"$oid":"65328436d4ef1a8354e7f36a"},"merchantName":"ALBI, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80d31"},"merchantId":{"$oid":"6532843ad4ef1a8354e80d30"},"merchantName":"Tesco Franchise Stores SR, s. r. o.","name":"","municipality":"Bratislava","street":"Mliekarenská"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80d84"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee7b"},"merchantName":"Martinus, s.r.o.","name":"","municipality":"Bratislava","street":"Mlynské Nivy"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80dc6"},"merchantId":{"$oid":"6532843ad4ef1a8354e80dc5"},"merchantName":"GM Electronic Slovakia, spol. s r.o.","name":"","municipality":"Bratislava - mestská časť Ružinov","street":"Mlynské nivy"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80dcb"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bratislava","street":"Ružinovská"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80e0a"},"merchantId":{"$oid":"65328436d4ef1a8354e7f0e9"},"merchantName":"Slovenský potravinársky priemysel a.s.","name":"","municipality":"Bratislava","street":"Mlynské nivy"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80ee1"},"merchantId":{"$oid":"65328436d4ef1a8354e7ee55"},"merchantName":"McDonald´s Slovakia spol. s r.o.","name":"","municipality":"Bratislava","street":"Pribinova"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80f22"},"merchantId":{"$oid":"65328439d4ef1a8354e80710"},"merchantName":"Potraviny MALINA, s. r. o.","name":"","municipality":"Bratislava","street":"Kvačalová"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80f82"},"merchantId":{"$oid":"6532843ad4ef1a8354e80f81"},"merchantName":"Daniel Kapusta","name":"","municipality":"Banská Bystrica","street":"Kapitulská"}
+{"_id":{"$oid":"6532843ad4ef1a8354e810dd"},"merchantId":{"$oid":"65328431d4ef1a8354e7df71"},"merchantName":"Lidl Slovenská republika, v.o.s.","name":"","municipality":"Bratislava","street":"Škultétyho"}
