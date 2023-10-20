@@ -13,4 +13,5 @@ type Receipt struct {
 	Entries     []ReceiptEntry     `bson:"entries" json:"entries,omitempty"`
 	RetailerId  string             `bson:"retailerId" json:"retailerId,omitempty"`
 	BranchId    string             `bson:"branchId" json:"branchId,omitempty"`
+	Metadata    ReceiptMetadata    `bson:"metadata" json:"metadata,omitempty"`
 }
