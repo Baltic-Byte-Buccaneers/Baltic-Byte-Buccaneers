@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Gin-Gonic Testing",
+            "name": "Backend",
             "type": "go",
             "request": "launch",
             "mode": "auto",
