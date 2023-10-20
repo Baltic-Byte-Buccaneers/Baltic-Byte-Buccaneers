@@ -16,6 +16,210 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/branches": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "Get all branches",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Branch"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "Create branch",
+                "parameters": [
+                    {
+                        "description": "Add Branch",
+                        "name": "Branch",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.Branch"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Branch"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/branches/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "Get single branch by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Branch Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Branch"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/merchants": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant"
+                ],
+                "summary": "Get all merchants",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Merchant"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant"
+                ],
+                "summary": "Create merchant",
+                "parameters": [
+                    {
+                        "description": "Add Merchant",
+                        "name": "Merchant",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.Merchant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Merchant"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/merchants/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant"
+                ],
+                "summary": "Get single merchant by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Merchant Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Merchant"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/receipts": {
             "get": {
                 "consumes": [
@@ -222,9 +426,58 @@ const docTemplate = `{
         }
     },
     "definitions": {
+        "api.Branch": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "merchantId": {
+                    "type": "string"
+                },
+                "merchantName": {
+                    "type": "string"
+                },
+                "municipality": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "street": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.Merchant": {
+            "type": "object",
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "municipality": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "street": {
+                    "type": "string"
+                }
+            }
+        },
         "api.Receipt": {
             "type": "object",
             "properties": {
+                "branchId": {
+                    "type": "string"
+                },
                 "date": {
                     "type": "string"
                 },
@@ -240,7 +493,7 @@ const docTemplate = `{
                 "id": {
                     "type": "string"
                 },
-                "transactionId": {
+                "merchantId": {
                     "type": "string"
                 }
             }
@@ -248,20 +501,29 @@ const docTemplate = `{
         "api.ReceiptEntry": {
             "type": "object",
             "properties": {
+                "amount": {
+                    "type": "string"
+                },
                 "id": {
                     "type": "string"
+                },
+                "quantity": {
+                    "type": "integer"
                 },
                 "title": {
                     "type": "string"
                 },
-                "value": {
-                    "type": "string"
+                "vatRate": {
+                    "type": "number"
                 }
             }
         },
         "api.Transaction": {
             "type": "object",
             "properties": {
+                "amount": {
+                    "type": "number"
+                },
                 "date": {
                     "type": "string"
                 },
@@ -277,11 +539,11 @@ const docTemplate = `{
                 "purpose": {
                     "type": "string"
                 },
-                "userid": {
+                "receiptId": {
                     "type": "string"
                 },
-                "value": {
-                    "type": "number"
+                "userid": {
+                    "type": "string"
                 },
                 "valutaDate": {
                     "type": "string"

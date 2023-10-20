@@ -88,7 +88,7 @@ func CreateReceipt(ginContext *gin.Context) {
 		panic(err)
 	}
 
-	logger.MongoInfo(fmt.Sprintf("Document inserted: %s\n", result.InsertedID))
+	logger.MongoInfo(fmt.Sprintf("Receipt inserted: %s\n", result.InsertedID))
 
 	ginContext.JSON(http.StatusOK, gin.H{"status": fmt.Sprintf("Successfully created receipt %s", result.InsertedID)})
 }
