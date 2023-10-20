@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 fun ReceiptListViewItem(receipt: Receipt) {
     Box(
         modifier = Modifier
-            .background(MaterialTheme.colorScheme.secondaryContainer)
+            .background(MaterialTheme.colorScheme.surface)
             .padding(16.dp)
 
     ) {
