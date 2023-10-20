@@ -12,6 +12,8 @@ var MongoClient *mongo.Client
 
 var TransactionsCollection *mongo.Collection
 var ReceiptsCollection *mongo.Collection
+var MerchantsCollection *mongo.Collection
+var BranchesCollection *mongo.Collection
 
 func InitDbConnection(connectionString string) {
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(connectionString))
@@ -28,6 +30,8 @@ func InitDbConnection(connectionString string) {
 	MongoClient = client
 	TransactionsCollection = MongoClient.Database("baltic-byte-buccaneers").Collection("transactions")
 	ReceiptsCollection = MongoClient.Database("baltic-byte-buccaneers").Collection("receipts")
+	MerchantsCollection = MongoClient.Database("baltic-byte-buccaneers").Collection("merchants")
+	BranchesCollection = MongoClient.Database("baltic-byte-buccaneers").Collection("branches")
 }
 
 func DisconnectDbConnection() {

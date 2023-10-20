@@ -1,5 +1,31 @@
 basePath: /api
 definitions:
+  api.Branch:
+    properties:
+      id:
+        type: string
+      merchantId:
+        type: string
+      municipality:
+        type: string
+      name:
+        type: string
+      street:
+        type: string
+    type: object
+  api.Merchant:
+    properties:
+      category:
+        type: string
+      id:
+        type: string
+      municipality:
+        type: string
+      name:
+        type: string
+      street:
+        type: string
+    type: object
   api.Receipt:
     properties:
       date:
@@ -12,6 +38,8 @@ definitions:
         type: array
       id:
         type: string
+      merchantId:
+        type: string
       transactionId:
         type: string
     type: object
@@ -19,10 +47,14 @@ definitions:
     properties:
       id:
         type: string
+      quantity:
+        type: integer
       title:
         type: string
       value:
         type: string
+      vatRate:
+        type: number
     type: object
   api.Transaction:
     properties:
@@ -46,6 +78,138 @@ definitions:
 info:
   contact: {}
 paths:
+  /branches:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Branch'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all branches
+      tags:
+      - Branch
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Branch
+        in: body
+        name: Branch
+        required: true
+        schema:
+          $ref: '#/definitions/api.Branch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Branch'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create branch
+      tags:
+      - Branch
+  /branches/{id}:
+    get:
+      parameters:
+      - description: Branch Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Branch'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single branch by its id
+      tags:
+      - Branch
+  /merchants:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Merchant'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all merchants
+      tags:
+      - Merchant
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Merchant
+        in: body
+        name: Merchant
+        required: true
+        schema:
+          $ref: '#/definitions/api.Merchant'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Merchant'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create merchant
+      tags:
+      - Merchant
+  /merchants/{id}:
+    get:
+      parameters:
+      - description: Merchant Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Merchant'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single merchant by its id
+      tags:
+      - Merchant
   /receipts:
     get:
       consumes:
