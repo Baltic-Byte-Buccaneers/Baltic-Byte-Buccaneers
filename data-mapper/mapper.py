@@ -120,12 +120,12 @@ def __map_data():
 if __name__ == "__main__":
 
     mongo_wrapper = MongoWrapper("mongodb://localhost:27017")
-    pi_database = mongo_wrapper.get_database("baltic-byte-buccaneers")
+    bbb_database = mongo_wrapper.get_database("baltic-byte-buccaneers")
 
-    transactions_collection = pi_database["transactions"]
-    receipts_collection = pi_database["receipts"]
-    retailers_collection = pi_database["retailers"]
-    branches_collection = pi_database["branches"]
+    transactions_collection = bbb_database["transactions"]
+    receipts_collection = bbb_database["receipts"]
+    retailers_collection = bbb_database["retailers"]
+    branches_collection = bbb_database["branches"]
 
     __map_data()
 
