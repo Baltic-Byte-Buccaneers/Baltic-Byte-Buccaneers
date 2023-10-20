@@ -435,6 +435,9 @@ const docTemplate = `{
                 "merchantId": {
                     "type": "string"
                 },
+                "merchantName": {
+                    "type": "string"
+                },
                 "municipality": {
                     "type": "string"
                 },
@@ -450,6 +453,9 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "category": {
+                    "type": "string"
+                },
+                "country": {
                     "type": "string"
                 },
                 "id": {
@@ -469,6 +475,9 @@ const docTemplate = `{
         "api.Receipt": {
             "type": "object",
             "properties": {
+                "branchId": {
+                    "type": "string"
+                },
                 "date": {
                     "type": "string"
                 },
@@ -486,15 +495,15 @@ const docTemplate = `{
                 },
                 "merchantId": {
                     "type": "string"
-                },
-                "transactionId": {
-                    "type": "string"
                 }
             }
         },
         "api.ReceiptEntry": {
             "type": "object",
             "properties": {
+                "amount": {
+                    "type": "string"
+                },
                 "id": {
                     "type": "string"
                 },
@@ -502,9 +511,6 @@ const docTemplate = `{
                     "type": "integer"
                 },
                 "title": {
-                    "type": "string"
-                },
-                "value": {
                     "type": "string"
                 },
                 "vatRate": {
@@ -515,6 +521,9 @@ const docTemplate = `{
         "api.Transaction": {
             "type": "object",
             "properties": {
+                "amount": {
+                    "type": "number"
+                },
                 "date": {
                     "type": "string"
                 },
@@ -530,11 +539,11 @@ const docTemplate = `{
                 "purpose": {
                     "type": "string"
                 },
-                "userid": {
+                "receiptId": {
                     "type": "string"
                 },
-                "value": {
-                    "type": "number"
+                "userid": {
+                    "type": "string"
                 },
                 "valutaDate": {
                     "type": "string"

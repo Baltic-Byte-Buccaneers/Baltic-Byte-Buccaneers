@@ -424,6 +424,9 @@
                 "merchantId": {
                     "type": "string"
                 },
+                "merchantName": {
+                    "type": "string"
+                },
                 "municipality": {
                     "type": "string"
                 },
@@ -439,6 +442,9 @@
             "type": "object",
             "properties": {
                 "category": {
+                    "type": "string"
+                },
+                "country": {
                     "type": "string"
                 },
                 "id": {
@@ -458,6 +464,9 @@
         "api.Receipt": {
             "type": "object",
             "properties": {
+                "branchId": {
+                    "type": "string"
+                },
                 "date": {
                     "type": "string"
                 },
@@ -475,15 +484,15 @@
                 },
                 "merchantId": {
                     "type": "string"
-                },
-                "transactionId": {
-                    "type": "string"
                 }
             }
         },
         "api.ReceiptEntry": {
             "type": "object",
             "properties": {
+                "amount": {
+                    "type": "string"
+                },
                 "id": {
                     "type": "string"
                 },
@@ -491,9 +500,6 @@
                     "type": "integer"
                 },
                 "title": {
-                    "type": "string"
-                },
-                "value": {
                     "type": "string"
                 },
                 "vatRate": {
@@ -504,6 +510,9 @@
         "api.Transaction": {
             "type": "object",
             "properties": {
+                "amount": {
+                    "type": "number"
+                },
                 "date": {
                     "type": "string"
                 },
@@ -519,11 +528,11 @@
                 "purpose": {
                     "type": "string"
                 },
-                "userid": {
+                "receiptId": {
                     "type": "string"
                 },
-                "value": {
-                    "type": "number"
+                "userid": {
+                    "type": "string"
                 },
                 "valutaDate": {
                     "type": "string"
