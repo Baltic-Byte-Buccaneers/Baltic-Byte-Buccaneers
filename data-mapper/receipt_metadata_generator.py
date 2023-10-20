@@ -1,5 +1,3 @@
-from datetime import datetime
-from typing import Collection
 from db.mongo_wrapper import MongoWrapper
 from utils.random_data_generator import RandomDataGenerator
 
