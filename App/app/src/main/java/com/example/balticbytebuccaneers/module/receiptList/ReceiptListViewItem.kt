@@ -13,17 +13,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun ReceiptListViewItem(label: String, amount: String) {
+fun ReceiptListViewItem(receipt: Receipt) {
     Row(modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Text(text=label, color= Color.White)
-        Text(text=amount, color=Color.Gray)
+        Text(text=receipt.description, color= Color.White)
+        Text(text=receipt.amount, color=Color.Gray)
     }
 }
 
 @Preview
 @Composable
 fun ReceiptListViewItemPreview() {
-    ReceiptListViewItem("Wasserflasche", "12.43 €")
+    ReceiptListViewItem(Receipt("Wasserflasche", "12.43 €"))
 }
