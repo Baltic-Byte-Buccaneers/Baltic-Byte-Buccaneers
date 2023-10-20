@@ -4,7 +4,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-type Merchant struct {
+type Retailer struct {
 	Id           primitive.ObjectID `bson:"_id" json:"id,omitempty"`
 	Name         string             `bson:"name" json:"name,omitempty"`
 	Country      string             `bson:"country" json:"country,omitempty"`

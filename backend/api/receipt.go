@@ -11,6 +11,6 @@ type Receipt struct {
 	Date        time.Time          `bson:"date" json:"date,omitempty"`
 	Description string             `bson:"description" json:"description,omitempty"`
 	Entries     []ReceiptEntry     `bson:"entries" json:"entries,omitempty"`
-	MerchantId  string             `bson:"merchantId" json:"merchantId,omitempty"`
+	RetailerId  string             `bson:"retailerId" json:"retailerId,omitempty"`
 	BranchId    string             `bson:"branchId" json:"branchId,omitempty"`
 }
