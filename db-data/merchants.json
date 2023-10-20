@@ -1,0 +1,188 @@
+{"_id":{"$oid":"65328431d4ef1a8354e7df71"},"name":"Lidl Slovenská republika, v.o.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Ružinovská","category":"Stravovanie/Potraviny"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df73"},"name":"Kaufland Slovenská republika v.o.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Trnavská cesta","category":"Stravovanie/Potraviny"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df7c"},"name":"BILLA s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Bajkalská","category":"Stravovanie/Potraviny"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df84"},"name":"TESCO STORES SR, a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Cesta na Senec","category":"Stravovanie/Potraviny"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df92"},"name":"METRO Cash & Carry SR s. r. o.","country":"Slovensko","municipality":"Ivanka pri Dunaji","street":"Senecká cesta","category":"Auto-moto/Pohonné hmoty"}
+{"_id":{"$oid":"65328434d4ef1a8354e7df9c"},"name":"COOP Jednota Galanta, spotrebné družstvo","country":"Slovensko","municipality":"Galanta","street":"Revolučná štvrť","category":"Stravovanie/Potraviny"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfac"},"name":"PLAČEK PREMIUM, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Moyzesova","category":"Ostatné výdavky/"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfb0"},"name":"OBI Slovakia s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Lamač","street":"Hodonínska","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfb4"},"name":"OMV Slovensko, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Einsteinova","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfb8"},"name":"RRR Plus s. r. o.","country":"Slovensko","municipality":"Prievidza","street":"Veľkonecpalská","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7dfbf"},"name":"BENU SK 43, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Pribylinská","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e052"},"name":"LAPLANT s.r.o.","country":"Slovensko","municipality":"Nesvady","street":"Lúčna","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e059"},"name":"Food express s.r.o.","country":"Slovensko","municipality":"Galanta","street":"Nová doba","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e060"},"name":"Emil Krajčík, s.r.o.","country":"Slovensko","municipality":"Senica","street":"Dlhá","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e064"},"name":"TERNO real estate s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Bratská","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e06d"},"name":"Peter Vranovský FIPE","country":"Slovensko","municipality":"Ivanka pri Dunaji","street":"Lesná","category":"Stravovanie/Potraviny"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e078"},"name":"HORNBACH - Baumarkt SK spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Galvaniho","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e09d"},"name":"DAREX s.r.o.","country":"Slovensko","municipality":"Galanta","street":"Z. Kodálya","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0d7"},"name":"Povega s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Jasovská","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0dd"},"name":"TCHIBO SLOVENSKO spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Prievozská","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0e1"},"name":"HAPPE s.r.o.","country":"Slovensko","municipality":"Nedožery-Brezany","street":"Budovateľská","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0e5"},"name":"KARAKAM s. r. o.","country":"Slovensko","municipality":"Bojnice","street":"Lány","category":"Stravovanie/"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0f7"},"name":"BENU SK 21, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Pribylinská","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e0fb"},"name":"GECO, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Elektrárenská","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e104"},"name":"Dušan Haba - Rozličný tovar","country":"Slovensko","municipality":"Štefanov","street":"Štefanov","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e108"},"name":"COOP Jednota Senica, spotrebné družstvo","country":"Slovensko","municipality":"Senica","street":"Nám. oslobodenia","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e110"},"name":"Dr.Max 12 s.r.o.","country":"Slovensko","municipality":"Košice - mestská časť Juh","street":"Moldavská cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e166"},"name":"SLOVNAFT, a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Vlčie hrdlo","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e16a"},"name":"CUKRÁREŇ LABUŽNÍK, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Námestie Hraničiarov","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e16e"},"name":"DALITRANS, s.r.o.","country":"Slovensko","municipality":"Veľké Bierovce","street":"Veľké Bierovce","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e192"},"name":"dm drogerie markt, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Na pántoch","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e19a"},"name":"Glance s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Račianska","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e1f2"},"name":"Zoltán Szighardt","country":"Slovensko","municipality":"Nová Dedinka","street":"Slnečná","category":""}
+{"_id":{"$oid":"65328434d4ef1a8354e7e29c"},"name":"Dušan Dedinsky","country":"Slovensko","municipality":"Bratislava - m. č. Devínska Nová Ves","street":"Mlynská","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e2aa"},"name":"ADCOMART s.r.o.","country":"Slovensko","municipality":"Bratislava - m. č. Devínska Nová Ves","street":"Na vyhliadke","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328434d4ef1a8354e7e2ae"},"name":"RYB-PO BEDEČ, s. r. o.","country":"Slovensko","municipality":"Senec","street":"Železničná","category":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7e302"},"name":"STAVEBNINY TIMA, s.r.o.","country":"Slovensko","municipality":"Veľké Úľany","street":"Piesková","category":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7e3cc"},"name":"COOP Jednota Dunajská Streda, spotrebné družstvo","country":"Slovensko","municipality":"Dunajská Streda","street":"Korzo Bélu Bartóka","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e41e"},"name":"EUROPHARMA, s. r. o.","country":"Slovensko","municipality":"Košice - mestská časť Juh","street":"Moldavská cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e43b"},"name":"EMKAR market s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Dulovo nám.","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e449"},"name":"Bio - Slnečnica, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Velehradská","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e4ae"},"name":"NITRAZDROJ, a.s.","country":"Slovensko","municipality":"Nitra","street":"Dolnočermánska","category":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7e590"},"name":"Daniel Bašo - Bezpecnostné uzamykacie systémy","country":"Slovensko","municipality":"Galanta","street":"Nová","category":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5ba"},"name":"Jozef Badánk - BADAS","country":"Slovensko","municipality":"Ružomberok","street":"parc.č. 14798/1","category":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5c4"},"name":"FAST PLUS, a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Na pántoch","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5c8"},"name":"Erika Fraitová","country":"Slovensko","municipality":"Rimavská Sobota","street":"Rožňavská","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e5cf"},"name":"Mild Cure Five, s.r.o.","country":"Slovensko","municipality":"Košice - mestská časť Západ","street":"Moldavská cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e701"},"name":"MEDICÍNSKE ZARIADENIE MLYNSKÁ DOLINA, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Karlova Ves","street":"Staré grunty","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7bd"},"name":"Bioaspa, spol. s r.o.","country":"Slovensko","municipality":"Kúty","street":"Hollého","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7c3"},"name":"ORAVA - STAV, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Obchodná","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7d5"},"name":"CCC Slovakia, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Ivanská cesta","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7db"},"name":"Radovan Baránek","country":"Slovensko","municipality":"Šaštín-Stráže","street":"Slnečná","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7e1"},"name":"MONSTERS cafe and bar s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Rusovská cesta","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7f1"},"name":"Oľga Bízková Central","country":"Slovensko","municipality":"Borský Mikuláš","street":"U Sv. Jána","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e7f9"},"name":"TOP- Farm, spol. s r.o.","country":"Slovensko","municipality":"Topoľnica","street":"Topoľnica","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e81e"},"name":"ZABEZ, s.r.o.","country":"Slovensko","municipality":"Senica","street":"Robotnícka","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e83e"},"name":"Jan Holický","country":"Slovensko","municipality":"Šaštín-Stráže","street":"Metodova","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e846"},"name":"ARW, s.r.o.","country":"Slovensko","municipality":"Dunajská Streda","street":"Galantská cesta","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e84c"},"name":"STÉNIA a.s.","country":"Slovensko","municipality":"Košice - mestská časť Staré Mesto","street":"Poštová","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e8fd"},"name":"MäsoP predajne, s.r.o.","country":"Slovensko","municipality":"Senica","street":"L.Novomeského","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e903"},"name":"Karlova pekáreň s.r.o.","country":"Slovensko","municipality":"Holíč","street":"Nám. mieru","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e941"},"name":"Jánošík - NEA, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Dúbravka","street":"kpt. Jána Rašu","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328435d4ef1a8354e7e9eb"},"name":"RPL, spol. s r.o.","country":"Slovensko","municipality":"Partizánske","street":"Za riekou Nitrou","category":""}
+{"_id":{"$oid":"65328435d4ef1a8354e7eabd"},"name":"STRONG LIFE s.r.o.","country":"Slovensko","municipality":"Košice - mestská časť Juh","street":"Moldavská cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eb79"},"name":"Mgr. Renáta Uličná","country":"Slovensko","municipality":"Revúca","street":"Terézie Vansovej","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eb96"},"name":"Dušan Holý Expres Servis","country":"Slovensko","municipality":"Revúca","street":"J.Kráľa","category":"Elektronika, komunikácia a média/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eb9a"},"name":"Ján Rečník","country":"Slovensko","municipality":"Revúca","street":"Železničná","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ebdd"},"name":"C & A Mode s.r.o.","country":"Slovensko","municipality":"Kočovce","street":"Rakoľuby","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec5c"},"name":"Monika Polubňáková","country":"Slovensko","municipality":"Revúca","street":"Júliusa Bottu","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec60"},"name":"Mikuláš Csatlós-SecondLife","country":"Slovensko","municipality":"Drnava","street":"Drnava","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec71"},"name":"PRO. Laika spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Palackého","category":"Elektronika, komunikácia a média/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec75"},"name":"IKEA Bratislava, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Ivanská cesta","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec89"},"name":"Teta drogérie SR s. r.o.","country":"Slovensko","municipality":"Lužianky","street":"Hlohovecká","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec91"},"name":"WAGON SLOVAKIA KOŠICE, a.s.","country":"Slovensko","municipality":"Košice - mestská časť Staré Mesto","street":"Bencúrova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec99"},"name":"GAS product & services a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Vajnory","street":"Tuhovská","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ec9d"},"name":"BAM - EKO a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Hálkova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eca1"},"name":"MEDANTE Clinic, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Vrakuňa","street":"Podpriehradná","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ed47"},"name":"Sunlight Pharmacy 01 s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Karlova Ves","street":"Staré Grunty","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7edbd"},"name":"Dráčik DIVI, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Gajova","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee35"},"name":"Minárik, spol. s r.o.","country":"Slovensko","municipality":"Malacky","street":"L. Novomeského","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee55"},"name":"McDonald´s Slovakia spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Einsteinova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee67"},"name":"IMUNITY s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Budatínska","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee6b"},"name":"Frisör Klier, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Tomášikova","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee7b"},"name":"Martinus, s.r.o.","country":"Slovensko","municipality":"Martin","street":"Gorkého","category":"Vzdelanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee7f"},"name":"Mijamix, s.r.o.","country":"Slovensko","municipality":"Košice - mestská časť Juh","street":"Ostravská","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee83"},"name":"CALZEDONIA SLOVAK s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Svätoplukova","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ee87"},"name":"HÁZY, s.r.o.","country":"Slovensko","municipality":"Revúca","street":"Hviezdoslavova","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eee3"},"name":"Ing. Barbora Slabejová - Môj originál","country":"Slovensko","municipality":"Mokrá Lúka","street":"Mokrá Lúka","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eef5"},"name":"Martin Rolinec - LIGHTS ON!","country":"Slovensko","municipality":"Revúca","street":"1. mája","category":"Elektronika, komunikácia a média/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ef03"},"name":"Dr.Max 37 s.r.o.","country":"Slovensko","municipality":"Košice - mestská časť Juh","street":"Moldavská cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7ef12"},"name":"ROZKVET s.r.o.","country":"Slovensko","municipality":"Revúca","street":"Jilemnického","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7eff6"},"name":"Tatiana Karabínošová UNIs-Ka","country":"Slovensko","municipality":"Revúca","street":"Tomášikova","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f0e9"},"name":"Slovenský potravinársky priemysel a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Tomášikova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f206"},"name":"Tatiana Kršková-KnihArt","country":"Slovensko","municipality":"Revúca","street":"Magnezitárov","category":"Vzdelanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f20a"},"name":"LPP Slovakia, s.r.o.","country":"Slovensko","municipality":"Banská Bystrica","street":"Janka Kráľa","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f263"},"name":"COOP JEDNOTA REVÚCA, spotrebné družstvo","country":"Slovensko","municipality":"Revúca","street":"Sládkovičova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f273"},"name":"LUSIO s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Zuzany Chalupovej","category":""}
+{"_id":{"$oid":"65328436d4ef1a8354e7f291"},"name":"Panta Rhei, s.r.o.","country":"Slovensko","municipality":"Veľký Meder","street":"Kúpeľná","category":"Vzdelanie/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f2d9"},"name":"SPORTISIMO SK s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Boženy Němcovej","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f354"},"name":"Pirex Slovakia s. r .o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Metodova","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f364"},"name":"NAY a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Vajnory","street":"Tuhovská","category":"Elektronika, komunikácia a média/null"}
+{"_id":{"$oid":"65328436d4ef1a8354e7f36a"},"name":"ALBI, s.r.o.","country":"Slovensko","municipality":"Žilina","street":"Oravská ulica","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f3d8"},"name":"Xiem Hoang Minh","country":"Slovensko","municipality":"Bratislava-Nové Mesto","street":"Nobelova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f423"},"name":"KiK textil a Non-Food spol. s r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Panenská","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f429"},"name":"Zdravcentrum IS, s.r.o.","country":"Slovensko","municipality":"Komárno","street":"Senný trh","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f443"},"name":"Textile House for EURO TRADE, s.r.o.","country":"Slovensko","municipality":"Senec","street":"ProLogis Park, DC2, Diaľničná cesta","category":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7f451"},"name":"VIKTORIA & A s.r.o.","country":"Slovensko","municipality":"Revúca","street":"Železničná","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f45f"},"name":"RESTON s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Obchodná","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f465"},"name":"Queensway Restaurants Slovakia, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"EUROVEA Central 1, Pribinova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f4e5"},"name":"Domäsko s.r.o.","country":"Slovensko","municipality":"Lieskovec","street":"Lieskovská cesta","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f4e9"},"name":"BENU SK 46, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Pribylinská","category":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7f4f3"},"name":"P&D Invest s.r.o.","country":"Slovensko","municipality":"Revúca","street":"Daxnerova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f58c"},"name":"GALAO INVEST, s.r.o.","country":"Slovensko","municipality":"Bratislava - m. č. Devínska Nová Ves","street":"Milana Marečka","category":"Stravovanie/Reštaurácie a kaviarne"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f5b7"},"name":"COOP Jednota Žilina, spotrebné družstvo","country":"Slovensko","municipality":"Žilina","street":"Predmestská","category":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7f5fe"},"name":"Štefan Kuchár - Rock faun","country":"Slovensko","municipality":"Žilina","street":"Národná","category":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7f613"},"name":"ANTALDENT s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Dúbravka","street":"Pod záhradami","category":"Zdravie a osobná starostlivosť/Lekári a nemocnice"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f617"},"name":"LEDart s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Vajnorská","category":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7f61b"},"name":"Peek & Cloppenburg s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Jarošova","category":"Oblečenie a obuv/Móda"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f623"},"name":"Vaprio.sk, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Mlynarovičova","category":"Zábava a oddych/Trafika"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f631"},"name":"Drogéria u Kovára s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Karlova Ves","street":"Kuklovská","category":"Zdravie a osobná starostlivosť/Drogéria"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f745"},"name":"ALEX business s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Karpatské námestie","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f81f"},"name":"Tea Trade Slovakia, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Rastislavova","category":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8b7"},"name":"Pepco Slovakia s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Nevädzová","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8c5"},"name":"EFLEK s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Dúbravka","street":"Plachého","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f8cd"},"name":"ALLTOYS, spol. s r.o.","country":"Slovensko","municipality":"Prievidza","street":"Ciglianska cesta","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f910"},"name":"BENU SK 61, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Pribylinská","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f91a"},"name":"Pumpa SK s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Rusovská cesta","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f91e"},"name":"Lekáreň Centrum Stupava s. r. o.","country":"Slovensko","municipality":"Bratislava - m. č. Záhorská Bystrica","street":"Na Krčoch","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f947"},"name":"Lindex Slovakia s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Poštová","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7f964"},"name":"NEW YORKER Slovakia, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Cintorínska","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7fac4"},"name":"Pro Solutions, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Hroznová","category":""}
+{"_id":{"$oid":"65328437d4ef1a8354e7faca"},"name":"Quang Minh Vu, podnik zahraničnej osoby","country":"Slovensko","municipality":"Veľký Meder","street":"Tichá","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7fad6"},"name":"MAC2 s.r.o.","country":"Slovensko","municipality":"Golianovo","street":"Golianovo","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7fae8"},"name":"CENTRAL PARKING, spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Rajská","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328437d4ef1a8354e7faec"},"name":"Svitlana Matúšová - FIALKA","country":"Slovensko","municipality":"Svätý Jur","street":"Bratislavská","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fb51"},"name":"H & M Hennes & Mauritz SK s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Zochova","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fb80"},"name":"Patty Ski Donovaly s. r. o.","country":"Slovensko","municipality":"Donovaly","street":"Donovaly","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fb92"},"name":"JR – Spotrebný obchod s.r.o.","country":"Slovensko","municipality":"Banská Bystrica","street":"Gerlachovská","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc0b"},"name":"GOIMPEX BRATISLAVA, a.s.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Prešovská","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc30"},"name":"MEDIAPRESS Bratislava spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Stará Vajnorská","category":"Elektronika, komunikácia a média/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fc70"},"name":"UNITAS Group, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Malý trh","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fcd3"},"name":"GRANDE MGN s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Trnavská cesta","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd2f"},"name":"Štatistické a evidenčné vydavateľstvo tlačív,a.s.ŠEVT a.s. /skrátená verzia obchodného mena/","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Plynárenská","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd3b"},"name":"LEON BA, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Grösslingova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd6a"},"name":"NATLEK, s.r.o.","country":"Slovensko","municipality":"Senica","street":"Robotnícka","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd7a"},"name":"Eric SK s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Dúbravka","street":"Drobného","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fd82"},"name":"fiftyfifty s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Matičná","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fdb5"},"name":"FunArena Donovaly s.r.o.","country":"Slovensko","municipality":"Donovaly","street":"Donovaly","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fe59"},"name":"ONKODERMA, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Alstrova","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7fea1"},"name":"KOTVIČKA s.r.o.","country":"Slovensko","municipality":"Senica","street":"Kolónia","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e7ff98"},"name":"Omrvinka s. r. o.","country":"Slovensko","municipality":"Košice - mestská časť Západ","street":"Moldavská cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e800ca"},"name":"Inditex Slovakia, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Einsteinova","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e801bf"},"name":"ELEKTROSPED, a. s.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Pestovateľská","category":""}
+{"_id":{"$oid":"65328438d4ef1a8354e8022d"},"name":"FAnn-parfumérie, s.r.o.","country":"Slovensko","municipality":"Banská Bystrica","street":"Sládkovičova","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e80231"},"name":"MINIT SLOVAKIA, spol. s r.o.","country":"Slovensko","municipality":"Dunajská Streda","street":"Muzejná","category":"Stravovanie/"}
+{"_id":{"$oid":"65328438d4ef1a8354e8032b"},"name":"Xuan Duc Do -DHY","country":"Slovensko","municipality":"Štefanov","street":"Štefanov","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e803a1"},"name":"Delia potraviny, s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Švabinského","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328438d4ef1a8354e803c1"},"name":"DENTAL X-RAY s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Jarovce","street":"Smaragdová","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80423"},"name":"Peter Liszkay","country":"Slovensko","municipality":"Gabčíkovo","street":"Pažitná","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80431"},"name":"Ďumbierska, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Nové Mesto","street":"Tupého","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80437"},"name":"SUNLIGHT medical systems, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Drotárska cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80465"},"name":"TRADE BAGS s.r.o.","country":"Slovensko","municipality":"Banská Bystrica","street":"Nad plážou","category":""}
+{"_id":{"$oid":"65328439d4ef1a8354e80469"},"name":"DEICHMANN-OBUV SK s.r.o.","country":"Slovensko","municipality":"Dunajská Streda","street":"ulica Logistického parku","category":"Oblečenie a obuv/"}
+{"_id":{"$oid":"65328439d4ef1a8354e80580"},"name":"KML, s.r.o.","country":"Slovensko","municipality":"Ružomberok","street":"Podhora","category":""}
+{"_id":{"$oid":"65328439d4ef1a8354e80584"},"name":"Ing. Anton Súkeník","country":"Slovensko","municipality":"Kysucké Nové Mesto","street":"Oškerda","category":""}
+{"_id":{"$oid":"65328439d4ef1a8354e8058a"},"name":"COOP Jednota, Vranov nad Topľou, spotrebné družstvo","country":"SK","municipality":"Vranov nad Topľou","street":"Námestie slobody","category":""}
+{"_id":{"$oid":"65328439d4ef1a8354e80636"},"name":"Kabiko s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Dobrovského","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e8066e"},"name":"Leberko s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Muškátová","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e806d2"},"name":"Leder & Schuh SK spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Einsteinova","category":"Oblečenie a obuv/"}
+{"_id":{"$oid":"65328439d4ef1a8354e80710"},"name":"Potraviny MALINA, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Gorkého","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e8074e"},"name":"Fertucha, s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Pri strelnici","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80785"},"name":"Melange s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Vajanského Nábrežie","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80842"},"name":"Emília Pulišová - Salaš Hron, Milan Puliš - právny nástupca","country":"Slovensko","municipality":"Zvolen","street":"M. R. Štefánika","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80859"},"name":"Flowers Photo s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Rača","street":"Karpatské námestie","category":""}
+{"_id":{"$oid":"65328439d4ef1a8354e80863"},"name":"Grapent a.s.","country":"Slovensko","municipality":"Modra","street":"Piesok","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80877"},"name":"SCARIS s.r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Banšelova","category":"Auto-moto/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e808e3"},"name":"Decathlon SK s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Pri letisku","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e808ed"},"name":"Združenie G.D.S. Peter Ďurček","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Mlynarovičova","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e808f5"},"name":"Lyžiarsky klub Baba - Pezinok","country":"Slovensko","municipality":"Pezinok","street":"Holubyho","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80951"},"name":"1. DENTÁLNE CENTRUM s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Petržalka","street":"Ambroseho","category":"Zdravie a osobná starostlivosť/"}
+{"_id":{"$oid":"65328439d4ef1a8354e809bd"},"name":"Gastro Eurovea s. r. o.","country":"Slovensko","municipality":"Bratislava - mestská časť Staré Mesto","street":"Pribinova","category":"Stravovanie/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a2d"},"name":"BAL TIP Slovakia, s.r.o.","country":"Slovensko","municipality":"Skalica","street":"Dr.Clementisa","category":"Zábava a oddych/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a7c"},"name":"Pavel Filip - Rozličný tovar","country":"Slovensko","municipality":"Borský Mikuláš","street":"Štúrova","category":"Oblečenie a obuv/null"}
+{"_id":{"$oid":"65328439d4ef1a8354e80a87"},"name":"Jankových a syn, s.r.o.","country":"Slovensko","municipality":"Skalica","street":"Veľké trávniky","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80d19"},"name":"MADICOR, s.r.o.","country":"Slovensko","municipality":"Košice - mestská časť Juh","street":"Moldavská cesta","category":"Zdravie a osobná starostlivosť/null"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80d30"},"name":"Tesco Franchise Stores SR, s. r. o.","country":"Slovensko","municipality":"Trnava","street":"Veterná","category":"Stravovanie/null"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80dc5"},"name":"GM Electronic Slovakia, spol. s r.o.","country":"Slovensko","municipality":"Bratislava - mestská časť Ružinov","street":"Mlynské nivy","category":"Bývanie a energie/null"}
+{"_id":{"$oid":"6532843ad4ef1a8354e80f81"},"name":"Daniel Kapusta","country":"Slovensko","municipality":"Malachov","street":"Banícka","category":"Zábava a oddych/null"}

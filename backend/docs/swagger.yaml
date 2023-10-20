@@ -1,7 +1,24 @@
 basePath: /api
 definitions:
+  api.Branch:
+    properties:
+      id:
+        type: string
+      municipality:
+        type: string
+      name:
+        type: string
+      retailerId:
+        type: string
+      retailerName:
+        type: string
+      street:
+        type: string
+    type: object
   api.Receipt:
     properties:
+      branchId:
+        type: string
       date:
         type: string
       description:
@@ -12,20 +29,40 @@ definitions:
         type: array
       id:
         type: string
-      transactionId:
+      retailerId:
         type: string
     type: object
   api.ReceiptEntry:
     properties:
+      amount:
+        type: number
+      quantity:
+        type: integer
+      title:
+        description: Id       primitive.ObjectID `bson:"_id" json:"id,omitempty"`
+        type: string
+      vatRate:
+        type: number
+    type: object
+  api.Retailer:
+    properties:
+      category:
+        type: string
+      country:
+        type: string
       id:
         type: string
-      title:
+      municipality:
         type: string
-      value:
+      name:
+        type: string
+      street:
         type: string
     type: object
   api.Transaction:
     properties:
+      amount:
+        type: number
       date:
         type: string
       description:
@@ -36,16 +73,82 @@ definitions:
         type: string
       purpose:
         type: string
+      receiptId:
+        type: string
       userid:
         type: string
-      value:
-        type: number
       valutaDate:
         type: string
     type: object
 info:
   contact: {}
 paths:
+  /branches:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Branch'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all branches
+      tags:
+      - Branch
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Branch
+        in: body
+        name: Branch
+        required: true
+        schema:
+          $ref: '#/definitions/api.Branch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Branch'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create branch
+      tags:
+      - Branch
+  /branches/{id}:
+    get:
+      parameters:
+      - description: Branch Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Branch'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single branch by its id
+      tags:
+      - Branch
   /receipts:
     get:
       consumes:
@@ -112,6 +215,72 @@ paths:
       summary: Get single receipt by its id
       tags:
       - Receipt
+  /retailer/{id}:
+    get:
+      parameters:
+      - description: Retailer Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Retailer'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single retailer by its id
+      tags:
+      - Retailer
+  /retailers:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Retailer'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all retailers
+      tags:
+      - Retailer
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Retailer
+        in: body
+        name: Retailer
+        required: true
+        schema:
+          $ref: '#/definitions/api.Retailer'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Retailer'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create retailer
+      tags:
+      - Retailer
   /transactions:
     get:
       consumes:
