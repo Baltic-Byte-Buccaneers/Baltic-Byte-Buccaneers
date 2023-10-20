@@ -1,13 +1,15 @@
 package com.example.balticbytebuccaneers.module.transactionList
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Card
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.ReceiptLong
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -17,58 +19,78 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.R
+import com.example.balticbytebuccaneers.service.transaction.Transaction
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import java.math.BigDecimal
 import java.util.Date
 
 
 @Composable
-fun TransactionView() {
-
+fun TransactionView(transactions: Array<Transaction>) {
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        transactions.forEach { transaction: Transaction ->
+            TransactionCard(transaction = transaction)
+        }
+    }
 }
 
 @Composable
-fun TransactionCard(retailerName: String?, use: String?, amount: BigDecimal?, date: Date?, receipt: Boolean?) {
+fun TransactionCard(transaction: Transaction) {
+    val context = LocalContext.current
     val paddingModifier = Modifier.padding(16.dp)
-    OutlinedCard(modifier = paddingModifier) {
+    OutlinedCard(modifier = Modifier.padding(horizontal = 16.dp).clickable(true, onClick = { Toast.makeText(context, "TransactionDetailsView goes here", Toast.LENGTH_SHORT).show()})) {
         Row(modifier = paddingModifier) {
-            Column(modifier = Modifier.weight(1.0F).align(Alignment.CenterVertically), verticalArrangement = Arrangement.Center) {
+            Column(modifier = Modifier
+                .weight(1.0F)
+                .align(Alignment.CenterVertically), horizontalAlignment = Alignment.CenterHorizontally) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_launcher_background),
                     contentDescription = null,
+                    modifier = Modifier.size(64.dp)
                 )
             }
             Column(modifier = Modifier
                 .weight(3F)
                 .padding(horizontal = 16.dp)) {
-                if (retailerName != null) {
-                    Text(retailerName,
-                        style = MaterialTheme.typography.headlineSmall)
-                }
-                if (use != null) {
-                    Text(
-                        use,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onPrimary
+                if (transaction.description != null) {
+                    Text(transaction.description,
+                        color = MaterialTheme.colorScheme.onBackground,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold
                         )
                 }
-                if (date != null){
-                    //Text(date)
+                if (transaction.purpose != null) {
+                    Text(
+                        transaction.purpose,
+                        color = MaterialTheme.colorScheme.onBackground,
+                        style = MaterialTheme.typography.bodySmall
+                        )
+                }
+                if (transaction.date != null){
+                    Text(transaction.date.toString(),
+                        color = MaterialTheme.colorScheme.onBackground,
+                        style = MaterialTheme.typography.bodySmall
+                    )
                 }
             }
-            Column(modifier = Modifier.weight(weight = 1.0F)) {
-                if (amount != null) {
-                    ColoredAmount(amount)
+            Column(modifier = Modifier.weight(weight = 1.0F), horizontalAlignment = Alignment.End) {
+                if (transaction.amount != null) {
+                    ColoredAmount(transaction.amount)
                 }
-                if (receipt != null) {
-                    IconButton(onClick = { /*TODO*/ }) {
+                if (transaction.receiptId != null) {
+                    IconButton(
+                        onClick = { Toast.makeText(context, "Receipt Available", Toast.LENGTH_SHORT).show()}) {
                         Icon(
-                            painter = painterResource(id = R.drawable.ic_launcher_foreground),
-                            contentDescription = null,
+                            imageVector = Icons.Outlined.ReceiptLong,
+                            tint = Color.Gray,
+                            contentDescription = "",
+                            modifier = Modifier.size(64.dp)
                         )
                     }
                 }
@@ -80,28 +102,89 @@ fun TransactionCard(retailerName: String?, use: String?, amount: BigDecimal?, da
 @Composable
 fun ColoredAmount(amount: BigDecimal){
     return if (amount > BigDecimal.ZERO) {
-        Text(amount.toString() + " €", color = Color.Green)
+        Text(
+            text = amount.toString() + " €",
+            color = Color.Green,
+            fontWeight = FontWeight.Bold
+        )
     }
     else if (amount < BigDecimal.ZERO) {
-        Text(amount.toString() + " €", color = Color.Red)
+        Text(
+            text = amount.toString() + " €",
+            color = Color.Red,
+            fontWeight = FontWeight.Bold
+        )
     }
     else {
-        Text(amount.toString() + " €", color = Color.Gray)
+        Text(
+            text = amount.toString() + " €",
+            color = Color.Gray,
+            fontWeight = FontWeight.Bold
+        )
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable
-fun TransactionPreview() {
+fun TransactionItemPreview() {
     BalticByteBuccaneersTheme {
         TransactionCard(
-            retailerName = "Edeka",
-            use = "Ihr Einkauf vom 23.08.2023",
-            amount = BigDecimal("20.19"),
-            date = null,
-            receipt = false
+            Transaction(
+                id = null,
+                userId = null,
+                iban = "DE2440002345244402",
+                amount = BigDecimal("-20.19"),
+                date = Date(),
+                valutaDate = null,
+                description = "Edeka",
+                purpose = "Your purchase at Edeka",
+                receiptId = "2020"
+            )
         )
-        TransactionView()
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun TransactionListPreview() {
+    BalticByteBuccaneersTheme {
+        TransactionView(
+            arrayOf(
+                Transaction(
+                    id = null,
+                    userId = null,
+                    iban = "DE2440002345244402",
+                    amount = BigDecimal("20.19"),
+                    date = Date(),
+                    valutaDate = null,
+                    description = "Edeka",
+                    purpose = "Your purchase at Edeka",
+                    receiptId = "2020"
+                ),
+                Transaction(
+                    id = null,
+                    userId = null,
+                    iban = "DE2440002345244402",
+                    amount = BigDecimal("-20.19"),
+                    date = Date(),
+                    valutaDate = null,
+                    description = "REWE",
+                    purpose = "Your purchase at REWE",
+                    receiptId = "2020"
+                ),
+                Transaction(
+                    id = null,
+                    userId = null,
+                    iban = "DE2440002345244402",
+                    amount = BigDecimal("0.00"),
+                    date = Date(),
+                    valutaDate = null,
+                    description = "comdirect",
+                    purpose = "account maintenance charge",
+                    receiptId = null
+                )
+            )
+        )
+    }
+}
+
