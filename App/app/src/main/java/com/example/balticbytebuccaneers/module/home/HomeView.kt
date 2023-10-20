@@ -1,5 +1,4 @@
 package com.example.balticbytebuccaneers.module.home
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,4 +24,3 @@ fun HomeViewPreview() {
         HomeView()
     }
 }
-
