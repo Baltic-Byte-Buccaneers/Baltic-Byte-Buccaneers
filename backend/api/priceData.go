@@ -11,5 +11,5 @@ type PriceData struct {
 	Low      string    `bson:"low" json:"low,omitempty"`
 	Close    string    `bson:"close" json:"close,omitempty"`
 	AdjClose string    `bson:"adjClose" json:"adjClose,omitempty"`
-	Volume   string    `bson:"volume" json:"volue,omitempty"`
+	Volume   string    `bson:"volume" json:"volume,omitempty"`
 }
