@@ -1,11 +1,6 @@
 package com.example.balticbytebuccaneers.component.navigation
 
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountBalance
-import androidx.compose.material.icons.filled.ReceiptLong
-import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material.icons.filled.ShowChart
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -21,14 +16,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun AppNavigationBar(navigationBarItems: List<NavigationItem>, onItemSelected: (Int) -> Unit) {
+fun AppNavigationBar(navigationBarItems: Array<NavigationItem>, onItemSelected: (NavigationItem) -> Unit) {
     var selectedNavigationItemIndex by remember { mutableStateOf(0) }
 
     NavigationBar {
         navigationBarItems.forEachIndexed { index, navigationBarItem ->
             NavigationBarItem(
                 selected = index == selectedNavigationItemIndex,
-                onClick = { selectedNavigationItemIndex = index },
+                onClick = {
+                    selectedNavigationItemIndex = index
+                    onItemSelected(navigationBarItem)
+                          },
                 icon = { Icon(
                     imageVector = navigationBarItem.icon,
                     contentDescription = "",
@@ -44,12 +42,4 @@ fun AppNavigationBar(navigationBarItems: List<NavigationItem>, onItemSelected: (
             )
         }
     }
-}
-
-fun getNavigationBarItems(): List<NavigationItem> {
-    return listOf(
-        NavigationItem("Transactions", Icons.Filled.AccountBalance),
-        NavigationItem("Receipts", Icons.Filled.ReceiptLong),
-        NavigationItem("Shopping List", Icons.Filled.ShoppingCart),
-        NavigationItem("Analysis", Icons.Filled.ShowChart))
 }
