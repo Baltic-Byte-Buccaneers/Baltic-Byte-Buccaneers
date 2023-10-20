@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ReceiptLong
@@ -21,13 +22,17 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ReceiptListViewItem(receipt: Receipt) {
-    Box(modifier = Modifier.background(MaterialTheme.colorScheme.secondaryContainer)) {
+    Box(
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.secondaryContainer)
+            .padding(16.dp)
+
+    ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-
             Icon(
                 imageVector = Icons.Filled.ReceiptLong,
                 contentDescription = "",
