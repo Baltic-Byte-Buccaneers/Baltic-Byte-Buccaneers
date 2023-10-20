@@ -2,6 +2,7 @@ package com.example.balticbytebuccaneers.service.common
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
 object BalticByteBuccaneersService
 {
     val instance: BalticByteBuccaneersServiceInterface = Retrofit
