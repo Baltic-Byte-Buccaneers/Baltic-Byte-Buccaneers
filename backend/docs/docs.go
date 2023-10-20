@@ -118,108 +118,6 @@ const docTemplate = `{
                 }
             }
         },
-        "/merchants": {
-            "get": {
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "Merchant"
-                ],
-                "summary": "Get all merchants",
-                "responses": {
-                    "200": {
-                        "description": "ok",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/api.Merchant"
-                            }
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                }
-            },
-            "post": {
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "Merchant"
-                ],
-                "summary": "Create merchant",
-                "parameters": [
-                    {
-                        "description": "Add Merchant",
-                        "name": "Merchant",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/api.Merchant"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "ok",
-                        "schema": {
-                            "$ref": "#/definitions/api.Merchant"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                }
-            }
-        },
-        "/merchants/{id}": {
-            "get": {
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "Merchant"
-                ],
-                "summary": "Get single merchant by its id",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Merchant Id",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "ok",
-                        "schema": {
-                            "$ref": "#/definitions/api.Merchant"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                }
-            }
-        },
         "/receipts": {
             "get": {
                 "consumes": [
@@ -311,6 +209,108 @@ const docTemplate = `{
                         "description": "ok",
                         "schema": {
                             "$ref": "#/definitions/api.Receipt"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/retailer/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Retailer"
+                ],
+                "summary": "Get single retailer by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Retailer Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Retailer"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/retailers": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Retailer"
+                ],
+                "summary": "Get all retailers",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Retailer"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Retailer"
+                ],
+                "summary": "Create retailer",
+                "parameters": [
+                    {
+                        "description": "Add Retailer",
+                        "name": "Retailer",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.Retailer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Retailer"
                         }
                     },
                     "500": {
@@ -432,39 +432,16 @@ const docTemplate = `{
                 "id": {
                     "type": "string"
                 },
-                "merchantId": {
-                    "type": "string"
-                },
-                "merchantName": {
-                    "type": "string"
-                },
                 "municipality": {
                     "type": "string"
                 },
                 "name": {
                     "type": "string"
                 },
-                "street": {
-                    "type": "string"
-                }
-            }
-        },
-        "api.Merchant": {
-            "type": "object",
-            "properties": {
-                "category": {
+                "retailerId": {
                     "type": "string"
                 },
-                "country": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "municipality": {
-                    "type": "string"
-                },
-                "name": {
+                "retailerName": {
                     "type": "string"
                 },
                 "street": {
@@ -493,7 +470,7 @@ const docTemplate = `{
                 "id": {
                     "type": "string"
                 },
-                "merchantId": {
+                "retailerId": {
                     "type": "string"
                 }
             }
@@ -502,19 +479,40 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "amount": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "quantity": {
                     "type": "integer"
                 },
                 "title": {
+                    "description": "Id       primitive.ObjectID ` + "`" + `bson:\"_id\" json:\"id,omitempty\"` + "`" + `",
                     "type": "string"
                 },
                 "vatRate": {
                     "type": "number"
+                }
+            }
+        },
+        "api.Retailer": {
+            "type": "object",
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "municipality": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "street": {
+                    "type": "string"
                 }
             }
         },

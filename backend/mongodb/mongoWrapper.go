@@ -12,7 +12,7 @@ var MongoClient *mongo.Client
 
 var TransactionsCollection *mongo.Collection
 var ReceiptsCollection *mongo.Collection
-var MerchantsCollection *mongo.Collection
+var RetailersCollection *mongo.Collection
 var BranchesCollection *mongo.Collection
 
 var dbName string = "baltic-byte-buccaneers"
@@ -32,7 +32,7 @@ func InitDbConnection(connectionString string) {
 	MongoClient = client
 	TransactionsCollection = MongoClient.Database(dbName).Collection("transactions")
 	ReceiptsCollection = MongoClient.Database(dbName).Collection("receipts")
-	MerchantsCollection = MongoClient.Database(dbName).Collection("merchants")
+	RetailersCollection = MongoClient.Database(dbName).Collection("retailers")
 	BranchesCollection = MongoClient.Database(dbName).Collection("branches")
 }
 
