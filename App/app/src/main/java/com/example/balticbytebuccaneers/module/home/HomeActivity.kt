@@ -20,26 +20,14 @@ class HomeActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BalticByteBuccaneersTheme(dynamicColor = false) {
-                val viewModel = remember { ReceiptDetailViewModel(receiptId = "") }
-                ReceiptDetailView(viewModel)
+                // A surface container using the 'background' color from the theme
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    HomeView()
+                }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier,
-        color = MaterialTheme.colorScheme.primary
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    BalticByteBuccaneersTheme {
-        Greeting("Android")
     }
 }

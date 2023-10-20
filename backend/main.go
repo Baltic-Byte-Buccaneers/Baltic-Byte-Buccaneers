@@ -42,6 +42,14 @@ func setupRouter(useSwagger bool) *gin.Engine {
 		apiRouter.GET("/receipts", api.GetAllReceipts)
 		apiRouter.GET("/receipts/:id", api.GetReceiptById)
 		apiRouter.POST("/receipts", api.CreateReceipt)
+
+		apiRouter.GET("/retailers", api.GetAllRetailers)
+		apiRouter.GET("/retailers/:id", api.GetRetailerById)
+		apiRouter.POST("/retailers", api.CreateRetailer)
+
+		apiRouter.GET("/branches", api.GetAllBranches)
+		apiRouter.GET("/branches/:id", api.GetBranchById)
+		apiRouter.POST("/branches", api.CreateBranch)
 	}
 
 	if useSwagger {
