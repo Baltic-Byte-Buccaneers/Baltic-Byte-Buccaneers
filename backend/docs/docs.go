@@ -118,6 +118,108 @@ const docTemplate = `{
                 }
             }
         },
+        "/producers": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Producer"
+                ],
+                "summary": "Get all producers",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Producer"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Producer"
+                ],
+                "summary": "Create producer",
+                "parameters": [
+                    {
+                        "description": "Add Producer",
+                        "name": "Producer",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.Producer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Producer"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/producers/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Producer"
+                ],
+                "summary": "Get single producer by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Producer Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Producer"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/receipts": {
             "get": {
                 "consumes": [
@@ -449,6 +551,70 @@ const docTemplate = `{
                 }
             }
         },
+        "api.PriceData": {
+            "type": "object",
+            "properties": {
+                "adjClose": {
+                    "type": "string"
+                },
+                "close": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string"
+                },
+                "high": {
+                    "type": "string"
+                },
+                "low": {
+                    "type": "string"
+                },
+                "open": {
+                    "type": "string"
+                },
+                "volue": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.Producer": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "iconId": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "isin": {
+                    "type": "string"
+                },
+                "lastPrice": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "priceData": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/api.PriceData"
+                    }
+                },
+                "symbol": {
+                    "type": "string"
+                },
+                "tendency": {
+                    "type": "string"
+                },
+                "wkn": {
+                    "type": "string"
+                }
+            }
+        },
         "api.Receipt": {
             "type": "object",
             "properties": {
@@ -470,6 +636,9 @@ const docTemplate = `{
                 "id": {
                     "type": "string"
                 },
+                "metadata": {
+                    "$ref": "#/definitions/api.ReceiptMetadata"
+                },
                 "retailerId": {
                     "type": "string"
                 }
@@ -481,6 +650,9 @@ const docTemplate = `{
                 "amount": {
                     "type": "number"
                 },
+                "producerId": {
+                    "type": "string"
+                },
                 "quantity": {
                     "type": "integer"
                 },
@@ -490,6 +662,26 @@ const docTemplate = `{
                 },
                 "vatRate": {
                     "type": "number"
+                }
+            }
+        },
+        "api.ReceiptMetadata": {
+            "type": "object",
+            "properties": {
+                "checkSum": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "string"
+                },
+                "signatureCount": {
+                    "type": "string"
+                },
+                "terminalId": {
+                    "type": "string"
+                },
+                "transactionId": {
+                    "type": "string"
                 }
             }
         },

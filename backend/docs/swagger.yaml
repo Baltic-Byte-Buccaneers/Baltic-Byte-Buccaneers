@@ -15,6 +15,48 @@ definitions:
       street:
         type: string
     type: object
+  api.PriceData:
+    properties:
+      adjClose:
+        type: string
+      close:
+        type: string
+      date:
+        type: string
+      high:
+        type: string
+      low:
+        type: string
+      open:
+        type: string
+      volue:
+        type: string
+    type: object
+  api.Producer:
+    properties:
+      description:
+        type: string
+      iconId:
+        type: string
+      id:
+        type: string
+      isin:
+        type: string
+      lastPrice:
+        type: number
+      name:
+        type: string
+      priceData:
+        items:
+          $ref: '#/definitions/api.PriceData'
+        type: array
+      symbol:
+        type: string
+      tendency:
+        type: string
+      wkn:
+        type: string
+    type: object
   api.Receipt:
     properties:
       branchId:
@@ -29,6 +71,8 @@ definitions:
         type: array
       id:
         type: string
+      metadata:
+        $ref: '#/definitions/api.ReceiptMetadata'
       retailerId:
         type: string
     type: object
@@ -36,6 +80,8 @@ definitions:
     properties:
       amount:
         type: number
+      producerId:
+        type: string
       quantity:
         type: integer
       title:
@@ -43,6 +89,19 @@ definitions:
         type: string
       vatRate:
         type: number
+    type: object
+  api.ReceiptMetadata:
+    properties:
+      checkSum:
+        type: string
+      serialNumber:
+        type: string
+      signatureCount:
+        type: string
+      terminalId:
+        type: string
+      transactionId:
+        type: string
     type: object
   api.Retailer:
     properties:
@@ -149,6 +208,72 @@ paths:
       summary: Get single branch by its id
       tags:
       - Branch
+  /producers:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Producer'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all producers
+      tags:
+      - Producer
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Producer
+        in: body
+        name: Producer
+        required: true
+        schema:
+          $ref: '#/definitions/api.Producer'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Producer'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create producer
+      tags:
+      - Producer
+  /producers/{id}:
+    get:
+      parameters:
+      - description: Producer Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Producer'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single producer by its id
+      tags:
+      - Producer
   /receipts:
     get:
       consumes:
