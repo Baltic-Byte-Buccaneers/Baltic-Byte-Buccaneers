@@ -8,6 +8,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -26,6 +27,7 @@ fun ReceiptListView(viewModel: ReceiptListViewModel, onClick: () -> Unit) {
                 .padding(innerPadding),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
+            AnalyticsCarousel()
             ReceiptList(receipts = viewModel.receipts)
         }
     }
@@ -36,7 +38,7 @@ fun ReceiptListView(viewModel: ReceiptListViewModel, onClick: () -> Unit) {
 @Composable
 fun ReceiptListViewPreview() {
     val model = ReceiptListViewModel()
-
-    ReceiptListView(viewModel = model, onClick = {})
-
+    MaterialTheme {
+        ReceiptListView(viewModel = model, onClick = {})
+    }
 }
