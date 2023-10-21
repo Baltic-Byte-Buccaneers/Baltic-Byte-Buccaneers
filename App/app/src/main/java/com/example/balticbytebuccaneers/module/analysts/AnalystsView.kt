@@ -31,19 +31,21 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.R
+import com.example.balticbytebuccaneers.module.analysts.chartTypes.PieChartAnalysisView
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 
 @Composable
-fun AnalystsView(){
+fun AnalystsView(viewModel:AnalystsViewModel){
+
     Column {
-        PaginationView()
+        PaginationView(viewModel = viewModel)
     }
 }
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun PaginationView() {
+fun PaginationView(viewModel:AnalystsViewModel?) {
     // Display 10 items
     val pageCount = 10
     val pagerState = rememberPagerState(pageCount = {
@@ -64,36 +66,7 @@ fun PaginationView() {
             state = pagerState,
             pageSize = PageSize.Fill,
             modifier = Modifier.weight(1.0F)) { page ->
-            Column(
-                horizontalAlignment = Alignment.Start,
-                verticalArrangement = Arrangement.Top,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(
-                    text = "Evaluation $page",
-                    color = MaterialTheme.colorScheme.onBackground,
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Image(
-                    painter = painterResource(R.drawable.ic_launcher_background),
-                    contentDescription = null,
-                    alignment = Alignment.TopCenter,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .weight(1.0F)
-                )
-                Text(
-                    text = AnalysisDummyData.get_data_from_index(pagerState.currentPage).description,
-                    color = MaterialTheme.colorScheme.onBackground,
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
-
+            PieChartAnalysisView(analysisData = AnalysisDummyData().data[0])
         }
         Spacer(modifier= Modifier.height(20.dp))
         Row(
@@ -118,11 +91,19 @@ fun PaginationView() {
         }
     }
 }
+@Composable
+private fun Page(index: Int) {
+    //val pageList = listOf(
+        //PieChartAnalysisView()
+    //)
+    //pageList[index]
+}
+
 
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun PaginationPreview() {
     BalticByteBuccaneersTheme {
-        PaginationView()
+        PaginationView(null)
     }
 }
