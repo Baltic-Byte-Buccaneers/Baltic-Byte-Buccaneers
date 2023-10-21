@@ -18,7 +18,8 @@ import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigation
 import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
-import com.example.balticbytebuccaneers.module.transactionList.TransactionView
+import com.example.balticbytebuccaneers.module.transactionList.TransactionListView
+import com.example.balticbytebuccaneers.module.transactionList.TransactionListViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 class HomeActivity : ComponentActivity() {
@@ -46,8 +47,7 @@ fun MainNavigationView() {
         Column(Modifier.weight(1f)) {
             when (navDestination) {
                 NavigationItem.RECEIPTS -> ReceiptsView("6533d1f8c91e3a690d412e4a")
-                NavigationItem.TRANSACTIONS -> TransactionView(transactions = arrayOf())
-
+                NavigationItem.TRANSACTIONS -> TransactionListViewWrapper()
                 NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
             }
         }
@@ -57,6 +57,11 @@ fun MainNavigationView() {
     }
 }
 
+@Composable
+private fun TransactionListViewWrapper() {
+    val viewModel = remember { TransactionListViewModel() }
+    TransactionListView(viewModel)
+}
 @Composable
 private fun ReceiptsView(receiptId: String) {
     val viewModel = remember { ReceiptDetailViewModel(receiptId = receiptId) {} }

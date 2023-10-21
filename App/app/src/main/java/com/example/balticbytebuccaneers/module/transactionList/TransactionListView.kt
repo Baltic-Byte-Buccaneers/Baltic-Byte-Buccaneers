@@ -8,13 +8,21 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Paid
+import androidx.compose.material.icons.outlined.Paid
 import androidx.compose.material.icons.outlined.ReceiptLong
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -98,8 +106,11 @@ fun TransactionsView(viewModel: TransactionListViewModel){
 @Composable
 fun TransactionCard(transaction: Transaction) {
     val context = LocalContext.current
-    val paddingModifier = Modifier.padding(16.dp)
-    OutlinedCard(
+    Card(
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+            contentColor = MaterialTheme.colorScheme.onTertiaryContainer
+        ),
         modifier = Modifier
             .padding(horizontal = 16.dp)
             .clickable(
@@ -115,17 +126,16 @@ fun TransactionCard(transaction: Transaction) {
                 }
             )
     ) {
-        Row(modifier = paddingModifier) {
+        Row(modifier = Modifier.padding(16.dp)) {
             Column(
-                modifier = Modifier
-                    .weight(1.0F)
-                    .align(Alignment.CenterVertically),
+                modifier = Modifier.align(Alignment.CenterVertically),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_background),
+                Icon(
+                    imageVector = Icons.Outlined.Paid,
                     contentDescription = null,
-                    modifier = Modifier.size(64.dp)
+                    modifier = Modifier.size(64.dp),
+                    tint = MaterialTheme.colorScheme.onTertiaryContainer,
                 )
             }
             Column(
@@ -136,7 +146,6 @@ fun TransactionCard(transaction: Transaction) {
                 if (transaction.description != null) {
                     Text(
                         transaction.description,
-                        color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold
                     )
@@ -144,33 +153,31 @@ fun TransactionCard(transaction: Transaction) {
                 if (transaction.purpose != null) {
                     Text(
                         transaction.purpose,
-                        color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.bodySmall
                     )
                 }
                 if (transaction.date != null) {
                     Text(
                         transaction.date.toString(),
-                        color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.bodySmall
                     )
                 }
             }
             Column(
-                modifier = Modifier.weight(weight = 1.0F),
                 horizontalAlignment = Alignment.End
             ) {
                 if (transaction.amount != null) {
-                    ColoredAmount(transaction.amount)
+                    AmountLabel(transaction.amount)
                 }
                 if (transaction.receiptId != null) {
                     IconButton(
                         onClick = {
                             Toast.makeText(context, "Receipt Available", Toast.LENGTH_SHORT).show()
-                        }) {
+                        }
+                    ) {
                         Icon(
                             imageVector = Icons.Outlined.ReceiptLong,
-                            tint = Color.Gray,
+                            tint = MaterialTheme.colorScheme.onTertiaryContainer,
                             contentDescription = "",
                             modifier = Modifier.size(64.dp)
                         )
@@ -182,29 +189,41 @@ fun TransactionCard(transaction: Transaction) {
 }
 
 @Composable
+private fun AmountLabel(amount: BigDecimal, modifier: Modifier = Modifier) {
+
+    Card(
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+        ),
+        shape = MaterialTheme.shapes.large,
+        modifier = modifier.wrapContentHeight()
+    ) {
+        ColoredAmount(amount)
+    }
+}
+
+@Composable
 fun ColoredAmount(amount: BigDecimal){
     val amountString = amount.let {
         "%,.2f".format(Locale.GERMAN, it) + " €"
-    } ?: "--"
-    return if (amount > BigDecimal.ZERO) {
-        Text(
-            text = amountString,
-            color = Color.Green,
-            fontWeight = FontWeight.Bold
-        )
-    } else if (amount < BigDecimal.ZERO) {
-        Text(
-            text = amountString,
-            color = Color.Red,
-            fontWeight = FontWeight.Bold
-        )
-    } else {
-        Text(
-            text = amountString,
-            color = Color.Gray,
-            fontWeight = FontWeight.Bold
-        )
     }
+
+
+    val color =  if (amount > BigDecimal.ZERO) {
+        MaterialTheme.colorScheme.tertiary
+    } else if (amount < BigDecimal.ZERO) {
+        MaterialTheme.colorScheme.error
+    } else {
+        MaterialTheme.colorScheme.onSurfaceVariant
+    }
+
+    Text(
+        text = amountString,
+        color = color,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier.padding(8.dp)
+    )
 }
 
 @Preview(showBackground = true)
@@ -226,51 +245,3 @@ fun TransactionItemPreview() {
         )
     }
 }
-
-/*
-@Preview(showBackground = true)
-@Composable
-fun TransactionListPreview() {
-    BalticByteBuccaneersTheme {
-        TransactionView(
-            arrayOf(
-                Transaction(
-                    id = null,
-                    userid = null,
-                    iban = "DE2440002345244402",
-                    amount = BigDecimal("20.19"),
-                    date = Date(),
-                    valutaDate = null,
-                    description = "Edeka",
-                    purpose = "Your purchase at Edeka",
-                    receiptId = "2020"
-                ),
-                Transaction(
-                    id = null,
-                    userid = null,
-                    iban = "DE2440002345244402",
-                    amount = BigDecimal("-20.19"),
-                    date = Date(),
-                    valutaDate = null,
-                    description = "REWE",
-                    purpose = "Your purchase at REWE",
-                    receiptId = "2020"
-                ),
-                Transaction(
-                    id = null,
-                    userid = null,
-                    iban = "DE2440002345244402",
-                    amount = BigDecimal("0.00"),
-                    date = Date(),
-                    valutaDate = null,
-                    description = "comdirect",
-                    purpose = "account maintenance charge",
-                    receiptId = null
-                )
-            )
-        )
-    }
-
-}
-
-*/
