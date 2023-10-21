@@ -94,6 +94,7 @@ fun TransactionsView(viewModel: TransactionListViewModel){
     }
 }
 
+
 @Composable
 fun TransactionCard(transaction: Transaction) {
     val context = LocalContext.current
@@ -115,9 +116,10 @@ fun TransactionCard(transaction: Transaction) {
             )
     ) {
         Row(modifier = paddingModifier) {
-            Column(modifier = Modifier
-                .weight(1.0F)
-                .align(Alignment.CenterVertically),
+            Column(
+                modifier = Modifier
+                    .weight(1.0F)
+                    .align(Alignment.CenterVertically),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Image(
@@ -126,25 +128,29 @@ fun TransactionCard(transaction: Transaction) {
                     modifier = Modifier.size(64.dp)
                 )
             }
-            Column(modifier = Modifier
-                .weight(3F)
-                .padding(horizontal = 16.dp)) {
+            Column(
+                modifier = Modifier
+                    .weight(3F)
+                    .padding(horizontal = 16.dp)
+            ) {
                 if (transaction.description != null) {
-                    Text(transaction.description,
+                    Text(
+                        transaction.description,
                         color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold
-                        )
+                    )
                 }
                 if (transaction.purpose != null) {
                     Text(
                         transaction.purpose,
                         color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.bodySmall
-                        )
+                    )
                 }
-                if (transaction.date != null){
-                    Text(transaction.date.toString(),
+                if (transaction.date != null) {
+                    Text(
+                        transaction.date.toString(),
                         color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.bodySmall
                     )
@@ -159,7 +165,9 @@ fun TransactionCard(transaction: Transaction) {
                 }
                 if (transaction.receiptId != null) {
                     IconButton(
-                        onClick = { Toast.makeText(context, "Receipt Available", Toast.LENGTH_SHORT).show()}) {
+                        onClick = {
+                            Toast.makeText(context, "Receipt Available", Toast.LENGTH_SHORT).show()
+                        }) {
                         Icon(
                             imageVector = Icons.Outlined.ReceiptLong,
                             tint = Color.Gray,
@@ -184,15 +192,13 @@ fun ColoredAmount(amount: BigDecimal){
             color = Color.Green,
             fontWeight = FontWeight.Bold
         )
-    }
-    else if (amount < BigDecimal.ZERO) {
+    } else if (amount < BigDecimal.ZERO) {
         Text(
             text = amountString,
             color = Color.Red,
             fontWeight = FontWeight.Bold
         )
-    }
-    else {
+    } else {
         Text(
             text = amountString,
             color = Color.Gray,

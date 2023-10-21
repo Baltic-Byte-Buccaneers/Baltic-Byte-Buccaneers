@@ -1035,6 +1035,9 @@ const docTemplate = `{
                 "receiptId": {
                     "type": "string"
                 },
+                "retailerId": {
+                    "type": "string"
+                },
                 "userid": {
                     "type": "string"
                 },
