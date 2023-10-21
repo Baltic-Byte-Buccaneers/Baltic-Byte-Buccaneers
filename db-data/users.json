@@ -1,0 +1,5 @@
+{"_id":{"$oid":"6533ca7e25643666d40435f7"},"firstname":"John","lastname":"Doe"}
+{"_id":{"$oid":"6533ca7e25643666d40435f8"},"firstname":"Max","lastname":"Mustermann"}
+{"_id":{"$oid":"6533ca7e25643666d40435f9"},"firstname":"Ludwig","lastname":"Husten"}
+{"_id":{"$oid":"6533ca7e25643666d40435fa"},"firstname":"Bob Baumeister","lastname":"Doe"}
+{"_id":{"$oid":"6533ca7e25643666d40435fb"},"firstname":"Heinz","lastname":"Ketchup"}
