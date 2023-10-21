@@ -10,4 +10,8 @@ class TransactionService {
     suspend fun fetchTransactionById(id: String): Transaction {
         return BalticByteBuccaneersService.instance.fetchTransactionById(id)
     }
+
+    suspend fun fetchTransactionsOfUser(userId: String): List<Transaction> {
+        return BalticByteBuccaneersService.instance.fetchAllTransactionsOfUser(userId)
+    }
 }

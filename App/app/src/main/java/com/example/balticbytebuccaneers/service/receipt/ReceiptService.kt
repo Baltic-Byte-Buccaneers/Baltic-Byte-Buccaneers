@@ -10,4 +10,8 @@ class ReceiptService {
     suspend fun fetchReceiptById(id: String): Receipt {
         return BalticByteBuccaneersService.instance.fetchReceiptById(id)
     }
+
+    suspend fun fetchReceiptsByUserId(userId: String): List<Receipt> {
+        return BalticByteBuccaneersService.instance.fetchAllReceiptsOfUser(userId)
+    }
 }
