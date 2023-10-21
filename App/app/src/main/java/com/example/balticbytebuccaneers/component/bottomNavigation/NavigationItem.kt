@@ -1,4 +1,4 @@
-package com.example.balticbytebuccaneers.component.navigation
+package com.example.balticbytebuccaneers.component.bottomNavigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBalance

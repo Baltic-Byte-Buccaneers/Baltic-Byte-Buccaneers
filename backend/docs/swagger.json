@@ -107,6 +107,108 @@
                 }
             }
         },
+        "/producers": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Producer"
+                ],
+                "summary": "Get all producers",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Producer"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Producer"
+                ],
+                "summary": "Create producer",
+                "parameters": [
+                    {
+                        "description": "Add Producer",
+                        "name": "Producer",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.Producer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Producer"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/producers/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Producer"
+                ],
+                "summary": "Get single producer by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Producer Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Producer"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/receipts": {
             "get": {
                 "consumes": [
@@ -311,6 +413,108 @@
                 }
             }
         },
+        "/stocks": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Stock"
+                ],
+                "summary": "Get all stock datas",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Stock"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Stock"
+                ],
+                "summary": "Create price data",
+                "parameters": [
+                    {
+                        "description": "Add Stock",
+                        "name": "Stock",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.Stock"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Stock"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/stocks/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Stock"
+                ],
+                "summary": "Get single price data by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Stock Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Stock"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/transactions": {
             "get": {
                 "consumes": [
@@ -438,6 +642,49 @@
                 }
             }
         },
+        "api.PriceData": {
+            "type": "object",
+            "properties": {
+                "adjClose": {
+                    "type": "string"
+                },
+                "close": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string"
+                },
+                "high": {
+                    "type": "string"
+                },
+                "low": {
+                    "type": "string"
+                },
+                "open": {
+                    "type": "string"
+                },
+                "volume": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.Producer": {
+            "type": "object",
+            "properties": {
+                "iconId": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "stockId": {
+                    "type": "string"
+                }
+            }
+        },
         "api.Receipt": {
             "type": "object",
             "properties": {
@@ -459,6 +706,9 @@
                 "id": {
                     "type": "string"
                 },
+                "metadata": {
+                    "$ref": "#/definitions/api.ReceiptMetadata"
+                },
                 "retailerId": {
                     "type": "string"
                 }
@@ -470,15 +720,40 @@
                 "amount": {
                     "type": "number"
                 },
+                "priceTendency": {
+                    "type": "string"
+                },
+                "producerId": {
+                    "type": "string"
+                },
                 "quantity": {
                     "type": "integer"
                 },
                 "title": {
-                    "description": "Id       primitive.ObjectID `bson:\"_id\" json:\"id,omitempty\"`",
                     "type": "string"
                 },
                 "vatRate": {
                     "type": "number"
+                }
+            }
+        },
+        "api.ReceiptMetadata": {
+            "type": "object",
+            "properties": {
+                "checkSum": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "string"
+                },
+                "signatureCount": {
+                    "type": "string"
+                },
+                "terminalId": {
+                    "type": "string"
+                },
+                "transactionId": {
+                    "type": "string"
                 }
             }
         },
@@ -501,6 +776,44 @@
                     "type": "string"
                 },
                 "street": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.Stock": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "isin": {
+                    "type": "string"
+                },
+                "lastPrice": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "priceData": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/api.PriceData"
+                    }
+                },
+                "symbol": {
+                    "type": "string"
+                },
+                "tendencyWeek": {
+                    "type": "string"
+                },
+                "tendencyYear": {
+                    "type": "string"
+                },
+                "wkn": {
                     "type": "string"
                 }
             }

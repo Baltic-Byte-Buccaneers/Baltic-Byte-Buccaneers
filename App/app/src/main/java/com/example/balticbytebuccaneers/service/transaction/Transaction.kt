@@ -1,15 +1,15 @@
 package com.example.balticbytebuccaneers.service.transaction
 
 import java.math.BigDecimal
+import java.util.Date
 
-data class Transaction(
-    val amount: BigDecimal?,
-    val date: String?,
-    val description: String?,
-    val iban: String?,
+data class Transaction (
     val id: String?,
-    val purpose: String?,
-    val receiptId: String?,
     val userId: String?,
-    val valutaDate: String?
-)
+    val iban: String?,
+    val amount: BigDecimal?,
+    val date: Date?,
+    val valutaDate: Date?,
+    val description: String?,
+    val purpose: String?,
+    val receiptId: String?)
