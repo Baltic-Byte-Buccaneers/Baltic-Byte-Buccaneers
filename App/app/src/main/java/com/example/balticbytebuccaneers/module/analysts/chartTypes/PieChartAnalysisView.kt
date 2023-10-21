@@ -13,6 +13,11 @@ fun PieChartAnalysisView (analysisData: AnalysisData) {
     AbstractChartView(chart = null, analysisData = analysisData)
 }
 
+@Composable
+fun PieChart(){
+
+}
+
 @Preview(showBackground = true,
     uiMode = Configuration.UI_MODE_NIGHT_YES
 )

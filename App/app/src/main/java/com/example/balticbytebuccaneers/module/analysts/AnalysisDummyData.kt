@@ -17,6 +17,31 @@ class AnalysisDummyData {
             R.string.analysis_receipt_category_composition_title,
             R.string.analysis_receipt_category_composition_description,
             null
-            )
+            ),
+        AnalysisData(
+            R.string.analysis_receipt_category_composition_headline,
+            R.string.analysis_receipt_category_composition_title,
+            R.string.analysis_receipt_category_composition_description,
+            null
+        ),
+        AnalysisData(
+            R.string.analysis_receipt_category_composition_headline,
+            R.string.analysis_receipt_category_composition_title,
+            R.string.analysis_receipt_category_composition_description,
+            null
+        ),
+        AnalysisData(
+            R.string.analysis_receipt_category_composition_headline,
+            R.string.analysis_receipt_category_composition_title,
+            R.string.analysis_receipt_category_composition_description,
+            null
+        ),
+        AnalysisData(
+            R.string.analysis_receipt_category_composition_headline,
+            R.string.analysis_receipt_category_composition_title,
+            R.string.analysis_receipt_category_composition_description,
+            null
+        )
+
     )
 }

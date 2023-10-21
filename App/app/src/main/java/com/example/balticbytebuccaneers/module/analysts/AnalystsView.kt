@@ -65,7 +65,7 @@ private fun PaginationView(viewModel:AnalystsViewModel?) {
             state = pagerState,
             pageSize = PageSize.Fill,
             modifier = Modifier.weight(1.0F)) { page ->
-            PieChartAnalysisView(analysisData = AnalysisDummyData().data[0])
+            Page(pagerState.currentPage)
         }
         Spacer(modifier= Modifier.height(20.dp))
         Row(
@@ -91,10 +91,10 @@ private fun PaginationView(viewModel:AnalystsViewModel?) {
 }
 @Composable
 private fun Page(index: Int) {
-    //val pageList = listOf(
-        //PieChartAnalysisView()
-    //)
-    //pageList[index]
+    val pageList = listOf(
+        PieChartAnalysisView(analysisData = AnalysisDummyData().data[0])
+    )
+    pageList[index]
 }
 
 
