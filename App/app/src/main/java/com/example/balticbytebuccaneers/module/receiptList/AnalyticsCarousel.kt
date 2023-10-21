@@ -1,8 +1,11 @@
 package com.example.balticbytebuccaneers.module.receiptList
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
@@ -15,6 +18,7 @@ import co.yml.charts.ui.piechart.charts.PieChart
 import co.yml.charts.ui.piechart.models.PieChartConfig
 import co.yml.charts.ui.piechart.models.PieChartData
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AnalyticsCarousel() {
     val pieChartData = PieChartData(
@@ -25,6 +29,14 @@ fun AnalyticsCarousel() {
             PieChartData.Slice("Rotwein", 40f, Color(0xFFF53844))
         ), plotType = PlotType.Pie
     )
+    val vendorChartData = PieChartData(
+        slices = listOf(
+            PieChartData.Slice("Rewe", 15f, Color.DarkGray),
+            PieChartData.Slice("Edeka", 35f, Color.Green),
+            PieChartData.Slice("Tankstelle", 120f, Color.Yellow),
+            PieChartData.Slice("Netto", 20f, Color.Magenta)
+        ), plotType = PlotType.Pie
+    )
     val pieChartConfig = PieChartConfig(
         isAnimationEnable = false,
         showSliceLabels = false,
@@ -32,20 +44,30 @@ fun AnalyticsCarousel() {
         animationDuration = 15,
         labelVisible = true,
     )
-
+    val pagerState = rememberPagerState(pageCount = {
+        2
+    })
     Column(
         horizontalAlignment = CenterHorizontally,
         modifier = Modifier
             .fillMaxWidth()
     ) {
-
-        PieChart(
-            modifier = Modifier
-                .size(164.dp),
-            pieChartData,
-            pieChartConfig
-        )
-
+        HorizontalPager(pagerState) { page ->
+            if (page == 0)
+                PieChart(
+                    modifier = Modifier
+                        .size(164.dp),
+                    pieChartData,
+                    pieChartConfig
+                )
+            else
+                PieChart(
+                    modifier = Modifier
+                        .size(164.dp),
+                    vendorChartData,
+                    pieChartConfig
+                )
+        }
     }
 }
 
