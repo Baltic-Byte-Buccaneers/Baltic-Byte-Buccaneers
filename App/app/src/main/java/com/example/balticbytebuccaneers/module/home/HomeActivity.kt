@@ -12,7 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
+import com.example.balticbytebuccaneers.service.common.BalticByteBuccaneersService
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +29,6 @@ class HomeActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    //HomeView()
                     val context = LocalContext.current
                     val viewModel = remember {
                         ReceiptDetailViewModel("6533d1f8c91e3a690d412e4a") {
