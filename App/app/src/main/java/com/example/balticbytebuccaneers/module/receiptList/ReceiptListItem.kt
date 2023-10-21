@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ReceiptLong
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -21,6 +22,9 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ReceiptListItem(receipt: Receipt) {
     Card(
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+        ),
     ) {
         Row(
             modifier = Modifier
@@ -38,9 +42,14 @@ fun ReceiptListItem(receipt: Receipt) {
             Text(
                 text = receipt.description,
                 fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSecondaryContainer
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onPrimaryContainer
             )
-            Text(text = receipt.amount, color = MaterialTheme.colorScheme.onSecondaryContainer)
+            Text(
+                text = receipt.amount,
+                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                style = MaterialTheme.typography.labelSmall
+            )
         }
     }
 }

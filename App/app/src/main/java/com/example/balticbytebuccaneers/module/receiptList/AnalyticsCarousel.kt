@@ -15,7 +15,6 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -56,26 +55,39 @@ fun AnalyticsCarousel() {
     val pagerState = rememberPagerState(pageCount = {
         2
     })
-    Column(
-        horizontalAlignment = CenterHorizontally,
-        modifier = Modifier
-            .fillMaxWidth()
-    ) {
-        HorizontalPager(pagerState, modifier = Modifier.size(164.dp)) { page ->
-            if (page == 0)
-                PieChart(
+    Column() {
+        HorizontalPager(
+            pagerState, modifier = Modifier
+                .fillMaxWidth()
+                .height(164.dp)
+        ) { page ->
+            if (page == 0) {
+                Row(
+                    horizontalArrangement = Arrangement.Center,
                     modifier = Modifier
-                        .size(164.dp),
-                    pieChartData,
-                    pieChartConfig
-                )
-            else
-                PieChart(
+                        .fillMaxWidth()
+                ) {
+                    PieChart(
+                        modifier = Modifier
+                            .size(164.dp),
+                        pieChartData,
+                        pieChartConfig
+                    )
+                }
+            } else {
+                Row(
+                    horizontalArrangement = Arrangement.Center,
                     modifier = Modifier
-                        .size(164.dp),
-                    vendorChartData,
-                    pieChartConfig
-                )
+                        .fillMaxWidth()
+                ) {
+                    PieChart(
+                        modifier = Modifier
+                            .size(164.dp),
+                        vendorChartData,
+                        pieChartConfig
+                    )
+                }
+            }
         }
         Row(
             Modifier
@@ -85,13 +97,14 @@ fun AnalyticsCarousel() {
             horizontalArrangement = Arrangement.Center
         ) {
             repeat(pagerState.pageCount) { iteration ->
-                val color = if (pagerState.currentPage == iteration) Color.DarkGray else Color.LightGray
+                val color =
+                    if (pagerState.currentPage == iteration) Color.DarkGray else Color.LightGray
                 Box(
                     modifier = Modifier
                         .padding(2.dp)
                         .clip(CircleShape)
                         .background(color)
-                        .size(20.dp)
+                        .size(8.dp)
 
                 )
             }
