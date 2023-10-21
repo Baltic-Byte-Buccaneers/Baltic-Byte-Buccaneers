@@ -2,22 +2,30 @@ package com.example.balticbytebuccaneers.module.transactionList
 
 import android.widget.Toast
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ReceiptLong
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -29,17 +37,58 @@ import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.R
 import com.example.balticbytebuccaneers.service.transaction.Transaction
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
+import kotlinx.coroutines.launch
 import java.math.BigDecimal
 import java.util.Date
+import java.util.Locale
 
 
 @Composable
-fun TransactionView(transactions: Array<Transaction>) {
+fun TransactionListView(viewModel: TransactionListViewModel) {
+    val state by viewModel.state.observeAsState()
+    val scope = rememberCoroutineScope()
+
+    LaunchedEffect(key1 = "") {
+        scope.launch {
+            viewModel.fetchTransactions()
+        }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+    ) {
+        Text(
+            text = "Your Transactions",
+            style = MaterialTheme.typography.headlineLarge,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground,
+            modifier = Modifier.padding(16.dp)
+        )
+        if (state == TransactionListViewModel.ViewState.LOADING) {
+            Box (
+                modifier = Modifier
+                    .fillMaxSize()
+            ){
+                CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+            }
+        } else if (state == TransactionListViewModel.ViewState.DATA) {
+                TransactionsView(viewModel)
+        }
+    }
+}
+
+@Composable
+fun TransactionsView(viewModel: TransactionListViewModel){
+    val transactions = viewModel.transactions.observeAsState()
     LazyColumn {
-        items(count = transactions.size) {
-            transactions.forEach { transaction: Transaction ->
-                TransactionCard(transaction = transaction)
-                Spacer(modifier = Modifier.height(8.dp))
+        transactions.value?.let {
+            items(count = it.size) { index ->
+                transactions.value?.let {
+                    TransactionCard(transaction = it[index])
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
             }
         }
     }
@@ -55,10 +104,13 @@ fun TransactionCard(transaction: Transaction) {
             .clickable(
                 enabled = true,
                 onClick = {
-                    Toast.makeText(
-                        context,
-                        "TransactionDetailsView goes here",
-                        Toast.LENGTH_SHORT).show()
+                    Toast
+                        .makeText(
+                            context,
+                            "TransactionDetailsView goes here",
+                            Toast.LENGTH_SHORT
+                        )
+                        .show()
                 }
             )
     ) {
@@ -123,23 +175,26 @@ fun TransactionCard(transaction: Transaction) {
 
 @Composable
 fun ColoredAmount(amount: BigDecimal){
+    val amountString = amount.let {
+        "%,.2f".format(Locale.GERMAN, it) + " €"
+    } ?: "--"
     return if (amount > BigDecimal.ZERO) {
         Text(
-            text = "$amount €",
+            text = amountString,
             color = Color.Green,
             fontWeight = FontWeight.Bold
         )
     }
     else if (amount < BigDecimal.ZERO) {
         Text(
-            text = "$amount €",
+            text = amountString,
             color = Color.Red,
             fontWeight = FontWeight.Bold
         )
     }
     else {
         Text(
-            text = "$amount €",
+            text = amountString,
             color = Color.Gray,
             fontWeight = FontWeight.Bold
         )
@@ -166,6 +221,7 @@ fun TransactionItemPreview() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun TransactionListPreview() {
@@ -208,5 +264,7 @@ fun TransactionListPreview() {
             )
         )
     }
+
 }
 
+*/
