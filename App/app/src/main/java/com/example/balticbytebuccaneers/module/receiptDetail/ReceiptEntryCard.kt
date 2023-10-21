@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.service.receipt.domain.ReceiptEntry
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import java.math.BigDecimal
+import java.util.Locale
 
 @Composable
 fun ReceiptEntryCard(receiptEntry: ReceiptEntry, onProducerTapped: () -> Unit) {
@@ -58,16 +59,20 @@ fun ReceiptEntryCard(receiptEntry: ReceiptEntry, onProducerTapped: () -> Unit) {
                     modifier = Modifier.weight(1f)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                AmountLabel(amount = "${receiptEntry.amount} €")
+                AmountLabel(amount = receiptEntry.amount?.let {
+                    "%,.2f".format(Locale.GERMAN, it) + " €"
+                } ?: "--")
                 Spacer(modifier = Modifier.width(4.dp))
-                Icon(
-                    imageVector = getIconFromTrend(receiptEntry.amountTrend),
-                    contentDescription = "",
-                    modifier = Modifier
-                        .size(24.dp)
-                        .align(CenterVertically),
-                    tint = MaterialTheme.colorScheme.onBackground
-                )
+                receiptEntry.amountTrend?.let {
+                    Icon(
+                        imageVector = getIconFromTrend(receiptEntry.amountTrend),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(24.dp)
+                            .align(CenterVertically),
+                        tint = MaterialTheme.colorScheme.onBackground
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.height(8.dp))

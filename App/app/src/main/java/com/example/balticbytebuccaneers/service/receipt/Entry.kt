@@ -7,5 +7,7 @@ data class Entry(
     val producerId: String?,
     val quantity: Int?,
     val title: String?,
-    val vatRate: BigDecimal?
+    val vatRate: BigDecimal?,
+    val category: String,
+    val priceTendency: String
 )
