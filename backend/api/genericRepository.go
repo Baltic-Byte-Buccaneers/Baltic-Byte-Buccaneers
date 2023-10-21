@@ -13,16 +13,16 @@ import (
 
 func GetAll[T DataType](collection *mongo.Collection) []T {
 	var objects []T
-	branchesCursor, err := collection.Find(context.TODO(), bson.M{})
+	objectsCursor, err := collection.Find(context.TODO(), bson.M{})
 	if err != nil {
 		panic(err)
 	}
 
-	err = branchesCursor.All(context.TODO(), &objects)
+	err = objectsCursor.All(context.TODO(), &objects)
 	if err != nil {
 		panic(err)
 	}
-	branchesCursor.Close(context.TODO())
+	objectsCursor.Close(context.TODO())
 
 	logger.MongoInfo(fmt.Sprintf("Found %v documents, Type: %T\n", len(objects), objects))
 
@@ -41,6 +41,26 @@ func GetById[T DataType](collection *mongo.Collection, id string) T {
 	logger.MongoInfo(fmt.Sprintf("Document of type %T retrieved, Id: %s\n", object, objectId))
 
 	return object
+}
+
+func GetByUserId[T DataType](collection *mongo.Collection, id string) []T {
+	userId := utils.GetObjectId(id)
+
+	var objects []T
+	objectsCursor, err := collection.Find(context.TODO(), bson.M{"userId": userId})
+	if err != nil {
+		panic(err)
+	}
+
+	err = objectsCursor.All(context.TODO(), &objects)
+	if err != nil {
+		panic(err)
+	}
+	objectsCursor.Close(context.TODO())
+
+	logger.MongoInfo(fmt.Sprintf("Found %v documents, Type: %T\n", len(objects), objects))
+
+	return objects
 }
 
 func Create[T DataType](collection *mongo.Collection, object T) T {

@@ -288,6 +288,43 @@ const docTemplate = `{
                 }
             }
         },
+        "/receipts/user/{userId}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Receipt"
+                ],
+                "summary": "Get single receipt by the user id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "User Id",
+                        "name": "userId",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Receipt"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/receipts/{id}": {
             "get": {
                 "produces": [
@@ -594,6 +631,43 @@ const docTemplate = `{
                 }
             }
         },
+        "/transactions/user/{userId}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "Get single transaction by the user id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "User Id",
+                        "name": "userId",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Transaction"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/transactions/{id}": {
             "get": {
                 "produces": [
@@ -837,7 +911,7 @@ const docTemplate = `{
                     "type": "number"
                 },
                 "category": {
-                    "type": "number"
+                    "type": "string"
                 },
                 "priceTendency": {
                     "type": "string"

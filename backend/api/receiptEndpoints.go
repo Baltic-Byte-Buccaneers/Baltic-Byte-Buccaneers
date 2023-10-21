@@ -39,6 +39,21 @@ func GetReceiptById(ginContext *gin.Context) {
 	ginContext.JSON(http.StatusOK, receipt)
 }
 
+// GetReceiptsByUserId godoc
+// @Summary Get single receipt by the user id
+// @Schemes
+// @Tags Receipt
+// @Param userId path string true "User Id"
+// @Produce json
+// @Success 200 {object} []Receipt "ok"
+// @Failure 500 {string} Placeholder
+// @Router /receipts/user/{userId} [get]
+func GetReceiptsByUserId(ginContext *gin.Context) {
+	userId := ginContext.Param("userId")
+	receipts := GetByUserId[Receipt](mongodb.ReceiptsCollection, userId)
+	ginContext.JSON(http.StatusOK, receipts)
+}
+
 // CreateReceipt godoc
 // @Summary Create receipt
 // @Schemes

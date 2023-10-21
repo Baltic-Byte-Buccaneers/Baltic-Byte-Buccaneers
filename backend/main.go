@@ -37,10 +37,12 @@ func setupRouter(useSwagger bool) *gin.Engine {
 
 		apiRouter.GET("/transactions", api.GetAllTransactions)
 		apiRouter.GET("/transactions/:id", api.GetTransactionById)
+		apiRouter.GET("/transactions/user/:userId", api.GetTransactionsByUserId)
 		apiRouter.POST("/transactions", api.CreateTransaction)
 
 		apiRouter.GET("/receipts", api.GetAllReceipts)
 		apiRouter.GET("/receipts/:id", api.GetReceiptById)
+		apiRouter.GET("/receipts/user/:userId", api.GetReceiptsByUserId)
 		apiRouter.POST("/receipts", api.CreateReceipt)
 
 		apiRouter.GET("/retailers", api.GetAllRetailers)

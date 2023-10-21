@@ -69,7 +69,7 @@ definitions:
       amount:
         type: number
       category:
-        type: number
+        type: string
       priceTendency:
         type: string
       producerId:
@@ -365,6 +365,30 @@ paths:
       summary: Get single receipt by its id
       tags:
       - Receipt
+  /receipts/user/{userId}:
+    get:
+      parameters:
+      - description: User Id
+        in: path
+        name: userId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Receipt'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single receipt by the user id
+      tags:
+      - Receipt
   /retailer/{id}:
     get:
       parameters:
@@ -561,6 +585,30 @@ paths:
           schema:
             type: string
       summary: Get single transaction by its id
+      tags:
+      - Transaction
+  /transactions/user/{userId}:
+    get:
+      parameters:
+      - description: User Id
+        in: path
+        name: userId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Transaction'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single transaction by the user id
       tags:
       - Transaction
   /users:
