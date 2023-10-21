@@ -1,5 +1,7 @@
 package com.example.balticbytebuccaneers.service.stock
 
+import java.math.BigDecimal
+
 data class Stock(
     val description: String?,
     val id: String?,
