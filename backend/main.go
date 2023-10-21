@@ -66,6 +66,8 @@ func setupRouter(useSwagger bool) *gin.Engine {
 		apiRouter.POST("/users", api.CreateUser)
 	}
 
+	router.Static("/assets", "./assets")
+
 	if useSwagger {
 		router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 	}
