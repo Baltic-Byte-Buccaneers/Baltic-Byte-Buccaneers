@@ -16,6 +16,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigationBar
 import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
+import com.example.balticbytebuccaneers.module.analysts.AnalysisDummyData
+import com.example.balticbytebuccaneers.module.analysts.chartTypes.PieChartAnalysisView
 import com.example.balticbytebuccaneers.module.transactionList.TransactionView
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
@@ -29,7 +31,7 @@ class HomeActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainNavigationView()
+                    PieChartAnalysisView(AnalysisDummyData().data[0])
                 }
             }
         }
