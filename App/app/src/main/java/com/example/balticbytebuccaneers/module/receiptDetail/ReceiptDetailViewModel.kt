@@ -1,8 +1,8 @@
 package com.example.balticbytebuccaneers.module.receiptDetail
 
 import androidx.lifecycle.MutableLiveData
-import com.example.balticbytebuccaneers.service.receipt.MetadataEntry
-import com.example.balticbytebuccaneers.service.receipt.ReceiptEntry
+import com.example.balticbytebuccaneers.service.receipt.domain.MetadataEntry
+import com.example.balticbytebuccaneers.service.receipt.domain.ReceiptEntry
 import kotlinx.coroutines.delay
 import java.math.BigDecimal
 

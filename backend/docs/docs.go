@@ -424,6 +424,108 @@ const docTemplate = `{
                 }
             }
         },
+        "/stocks": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Stock"
+                ],
+                "summary": "Get all stock datas",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/api.Stock"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Stock"
+                ],
+                "summary": "Create price data",
+                "parameters": [
+                    {
+                        "description": "Add Stock",
+                        "name": "Stock",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.Stock"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Stock"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/stocks/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Stock"
+                ],
+                "summary": "Get single price data by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Stock Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Stock"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/transactions": {
             "get": {
                 "consumes": [
@@ -572,7 +674,7 @@ const docTemplate = `{
                 "open": {
                     "type": "string"
                 },
-                "volue": {
+                "volume": {
                     "type": "string"
                 }
             }
@@ -580,37 +682,16 @@ const docTemplate = `{
         "api.Producer": {
             "type": "object",
             "properties": {
-                "description": {
-                    "type": "string"
-                },
                 "iconId": {
                     "type": "string"
                 },
                 "id": {
                     "type": "string"
                 },
-                "isin": {
-                    "type": "string"
-                },
-                "lastPrice": {
-                    "type": "number"
-                },
                 "name": {
                     "type": "string"
                 },
-                "priceData": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/api.PriceData"
-                    }
-                },
-                "symbol": {
-                    "type": "string"
-                },
-                "tendency": {
-                    "type": "string"
-                },
-                "wkn": {
+                "stockId": {
                     "type": "string"
                 }
             }
@@ -650,6 +731,9 @@ const docTemplate = `{
                 "amount": {
                     "type": "number"
                 },
+                "priceTendency": {
+                    "type": "string"
+                },
                 "producerId": {
                     "type": "string"
                 },
@@ -657,7 +741,6 @@ const docTemplate = `{
                     "type": "integer"
                 },
                 "title": {
-                    "description": "Id       primitive.ObjectID ` + "`" + `bson:\"_id\" json:\"id,omitempty\"` + "`" + `",
                     "type": "string"
                 },
                 "vatRate": {
@@ -704,6 +787,44 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "street": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.Stock": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "isin": {
+                    "type": "string"
+                },
+                "lastPrice": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "priceData": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/api.PriceData"
+                    }
+                },
+                "symbol": {
+                    "type": "string"
+                },
+                "tendencyWeek": {
+                    "type": "string"
+                },
+                "tendencyYear": {
+                    "type": "string"
+                },
+                "wkn": {
                     "type": "string"
                 }
             }

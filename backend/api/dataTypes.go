@@ -1,5 +1,5 @@
 package api
 
 type DataType interface {
-	Branch | PriceData | Producer | Receipt | Retailer | Transaction
+	Branch | Producer | Receipt | Retailer | Stock | Transaction
 }
