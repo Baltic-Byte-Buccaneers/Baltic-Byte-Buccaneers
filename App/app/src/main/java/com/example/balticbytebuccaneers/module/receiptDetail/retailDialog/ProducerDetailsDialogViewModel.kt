@@ -1,7 +1,8 @@
 package com.example.balticbytebuccaneers.module.receiptDetail.retailDialog
 
 import androidx.lifecycle.MutableLiveData
-import kotlinx.coroutines.delay
+import com.example.balticbytebuccaneers.service.producer.ProducerService
+import com.example.balticbytebuccaneers.service.receipt.domain.ReceiptEntry
 
 class ProducerDetailsDialogViewModel(
     val producerId: String
@@ -24,18 +25,34 @@ class ProducerDetailsDialogViewModel(
 
     val producerName = MutableLiveData<String>()
     val description = MutableLiveData<String>()
+
+    private val producerService = ProducerService()
+
     suspend fun fetchProducerInformation() {
         viewState.value = ViewState.LOADING
-        delay(1000)
+
+        val producer = producerService.fetchProducerById(producerId)
+        producer.stockId?.let {
+
+        }
 
         lastWeekTrend.value = Trend.DESCENDING
         lastWeekTrendValue.value = "123,34 €"
         lastYearTrend.value = Trend.ASCENDING
         lastYearTrendValue.value = "167,89 €"
 
-        producerName.value = "Unilever"
+        producerName.value = producer.name ?: "--"
         description.value = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
 
         viewState.value = ViewState.DATA
+    }
+
+    private fun getTrendForTendency(tendency: String): ReceiptEntry.AmountTrend? {
+        return when(tendency) {
+            "up" -> ReceiptEntry.AmountTrend.ASCENDING
+            "down" -> ReceiptEntry.AmountTrend.DESCENDING
+            "neutral" -> ReceiptEntry.AmountTrend.STAGNATING
+            else -> null
+        }
     }
 }

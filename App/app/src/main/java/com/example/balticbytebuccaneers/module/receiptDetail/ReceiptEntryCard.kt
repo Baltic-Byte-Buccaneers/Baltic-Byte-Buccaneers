@@ -141,6 +141,7 @@ private fun ReceiptEntryCardPreview() {
                 BigDecimal("12.34"),
                 "Lebensmittel",
                 "Frankfurter Mühlen",
+                "",
                 ReceiptEntry.AmountTrend.ASCENDING
             )
         ) {}
