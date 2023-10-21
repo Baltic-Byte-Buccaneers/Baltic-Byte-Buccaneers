@@ -18,23 +18,23 @@ class AnalysisDummyData {
             R.string.analysis_receipt_category_composition_title,
             R.string.analysis_receipt_category_composition_description,
             arrayListOf(
-                ChartDataPoint("A", 2.0F),
-                ChartDataPoint("B", 5.0F),
-                ChartDataPoint("C", 7.0F),
-                ChartDataPoint("D", 12.0F),
-                ChartDataPoint("E", 8.0F),
+                ChartDataPoint("Mobility", 2.0F),
+                ChartDataPoint("Beverages", 5.0F),
+                ChartDataPoint("Food", 17.0F),
+                ChartDataPoint("Household items", 12.0F),
+                ChartDataPoint("Hygiene", 8.0F),
             )
         ),
         AnalysisData(
-            R.string.analysis_receipt_category_composition_headline,
-            R.string.analysis_receipt_category_composition_title,
-            R.string.analysis_receipt_category_composition_description,
+            R.string.analysis_receipt_food_composition_headline,
+            R.string.analysis_receipt_food_composition_title,
+            R.string.analysis_receipt_food_composition_description,
             arrayListOf(
-                ChartDataPoint("A", 2.0F),
-                ChartDataPoint("B", 5.0F),
-                ChartDataPoint("C", 7.0F),
-                ChartDataPoint("D", 12.0F),
-                ChartDataPoint("E", 8.0F),
+                ChartDataPoint("Meat", 18.0F),
+                ChartDataPoint("Dairy", 5.0F),
+                ChartDataPoint("Vegetables", 7.0F),
+                ChartDataPoint("Fruit", 3.0F),
+                ChartDataPoint("Pastries", 8.0F),
             )
         ),
         AnalysisData(

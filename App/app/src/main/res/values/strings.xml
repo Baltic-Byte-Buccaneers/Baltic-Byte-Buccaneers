@@ -9,4 +9,11 @@
         You can quickly see which categories you\'ve been shopping in the most and whether there have been any changes in your recent buying patterns.
         Use this graph to gain insights into your recent consumer behavior and preferences.
     </string>
+    <string name="analysis_receipt_food_composition_headline">Your Food Composition</string>
+    <string name="analysis_receipt_food_composition_title">You\'re a meatlover!</string>
+    <string name="analysis_receipt_food_composition_description">You\'re someone who has a deep appreciation for meat but you are also eager to make healthier dietary choices?
+        Transitioning to a healthier diet while still indulging in your love for meat is entirely achievable with the right approach.
+        One key principle to remember is to ease into this change. It\'s not about suddenly giving up meat altogether; rather, it\'s about making gradual shifts in your eating habits. A good starting point is to reduce your meat consumption. You could experiment with a \"Meatless Monday\" to initiate your journey towards a healthier diet.
+        In your quest for healthier eating, embracing plant-based protein sources is essential. Foods like tofu, beans, lentils, and quinoa can serve as excellent alternatives to meat, ensuring you still get the protein your body needs. There are numerous recipes and cooking methods that can bring out their flavors and keep your palate engaged.
+    </string>
 </resources>

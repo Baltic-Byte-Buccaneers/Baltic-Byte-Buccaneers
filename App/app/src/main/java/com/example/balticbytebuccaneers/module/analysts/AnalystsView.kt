@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
@@ -36,19 +37,19 @@ import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 
 @Composable
-fun AnalystsView(viewModel:AnalystsViewModel?){
+fun AnalystsView(){
     Column(modifier = Modifier.background(MaterialTheme.colorScheme.background)) {
-        PaginationView(viewModel = viewModel)
+        PaginationView()
     }
 }
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun PaginationView(viewModel:AnalystsViewModel?) {
+private fun PaginationView() {
     // Display 10 items
-    val pageCount = 10
+    val pageCount = AnalysisDummyData().data.size-1
     val pagerState = rememberPagerState(pageCount = {
-        10
+        pageCount
     })
     Column (modifier = Modifier
         .fillMaxSize()
@@ -65,7 +66,7 @@ private fun PaginationView(viewModel:AnalystsViewModel?) {
             state = pagerState,
             pageSize = PageSize.Fill,
             modifier = Modifier.weight(1.0F)) { page ->
-            Page(pagerState.currentPage)
+            Page(page)
         }
         Spacer(modifier= Modifier.height(20.dp))
         Row(
@@ -91,10 +92,12 @@ private fun PaginationView(viewModel:AnalystsViewModel?) {
 }
 @Composable
 private fun Page(index: Int) {
-    val pageList = listOf(
-        PieChartAnalysisView(analysisData = AnalysisDummyData().data[0])
-    )
-    pageList[index]
+    when (index) {
+        0 -> PieChartAnalysisView(analysisData = AnalysisDummyData().data[0])
+        1 -> PieChartAnalysisView(analysisData = AnalysisDummyData().data[1])
+        2 -> PieChartAnalysisView(analysisData = AnalysisDummyData().data[2])
+        3 -> PieChartAnalysisView(analysisData = AnalysisDummyData().data[3])
+    }
 }
 
 
@@ -102,6 +105,6 @@ private fun Page(index: Int) {
 @Composable
 fun PaginationPreview() {
     BalticByteBuccaneersTheme {
-        PaginationView(null)
+        PaginationView()
     }
 }
