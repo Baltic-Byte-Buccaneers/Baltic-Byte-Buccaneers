@@ -16,4 +16,5 @@ type Transaction struct {
 	Description string             `bson:"description" json:"description"`
 	Purpose     string             `bson:"purpose" json:"purpose"`
 	ReceiptId   string             `bson:"receiptId" json:"receiptId"`
+	RetailerId  string             `bson:"retailerId" json:"retailerId"`
 }
