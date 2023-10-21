@@ -1,13 +1,14 @@
 package com.example.balticbytebuccaneers.module.receiptDetail
 
 import androidx.lifecycle.MutableLiveData
-import com.example.balticbytebuccaneers.service.receipt.MetadataEntry
-import com.example.balticbytebuccaneers.service.receipt.ReceiptEntry
+import com.example.balticbytebuccaneers.service.receipt.domain.MetadataEntry
+import com.example.balticbytebuccaneers.service.receipt.domain.ReceiptEntry
 import kotlinx.coroutines.delay
 import java.math.BigDecimal
 
 class ReceiptDetailViewModel(
-    val receiptId: String
+    val receiptId: String,
+    val onBackClick: () -> Unit
 ) {
 
     enum class ViewState {
@@ -25,7 +26,7 @@ class ReceiptDetailViewModel(
     suspend fun fetchReceiptInformation() {
         state.value = ViewState.LOADING
 
-        delay(2000)
+        delay(1000)
         merchantName.value = "Rewe"
         receiptIssueDate.value = "20.10.2023"
         amount.value = BigDecimal("12.34")

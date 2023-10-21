@@ -1,7 +1,6 @@
-package com.example.balticbytebuccaneers.service.receipt
+package com.example.balticbytebuccaneers.service.receipt.domain
 
 import java.math.BigDecimal
-import java.util.Locale.Category
 
 data class ReceiptEntry(
     val name: String,

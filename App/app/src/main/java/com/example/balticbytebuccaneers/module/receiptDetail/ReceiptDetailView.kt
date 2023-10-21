@@ -23,17 +23,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.balticbytebuccaneers.service.receipt.MetadataEntry
-import com.example.balticbytebuccaneers.service.receipt.ReceiptEntry
+import com.example.balticbytebuccaneers.component.topNavigation.TopNavigationBar
+import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.ProducerDetailsDialog
+import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.ProducerDetailsDialogViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import kotlinx.coroutines.launch
-import java.math.BigDecimal
 
 @Composable
 fun ReceiptDetailView(viewModel: ReceiptDetailViewModel) {
@@ -61,41 +64,51 @@ fun ReceiptDetailView(viewModel: ReceiptDetailViewModel) {
 
 @Composable
 private fun ReceiptDetailViewContent(viewModel: ReceiptDetailViewModel) {
-
     val receiptEntries = viewModel.receiptEntries.observeAsState()
     val metadata = viewModel.metadata.observeAsState()
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(horizontal = 16.dp)
-    ) {
-        HeadlineBox(
-            viewModel = viewModel,
-            modifier = Modifier
-                .padding(top = 16.dp, bottom = 8.dp)
-        )
+    var showBottomSheet by remember { mutableStateOf(false) }
+    val bottomSheetViewModel = remember { ProducerDetailsDialogViewModel("") }
+
+    Column {
+        Spacer(modifier = Modifier.height(8.dp))
+        TopNavigationBar(onBackClick = { viewModel.onBackClick() })
+        Spacer(modifier = Modifier.height(8.dp))
 
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
+                .weight(1f)
+                .padding(horizontal = 16.dp)
         ) {
 
-            Spacer(modifier = Modifier.height(32.dp))
+            HeadlineBox(viewModel = viewModel)
+            Spacer(modifier = Modifier.height(8.dp))
 
-            receiptEntries.value?.forEach {
-                ReceiptEntryCard(it)
-                Spacer(modifier = Modifier.height(8.dp))
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+            ) {
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                receiptEntries.value?.forEach {
+                    ReceiptEntryCard(it) { showBottomSheet = true }
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                metadata.value?.let {
+                    ReceiptMetadataView(it)
+                }
+
+                Spacer(modifier = Modifier.height(32.dp))
             }
+        }
 
-            Spacer(modifier = Modifier.height(16.dp))
-
-            metadata.value?.let {
-                ReceiptMetadataView(it)
-            }
-
-            Spacer(modifier = Modifier.height(16.dp))
+        ProducerDetailsDialog(viewModel = bottomSheetViewModel, showBottomSheet = showBottomSheet) {
+            showBottomSheet = false
         }
     }
 }
@@ -149,6 +162,6 @@ private fun HeadlineBox(viewModel: ReceiptDetailViewModel, modifier: Modifier = 
 @Composable
 private fun HeadlineBoxPreview() {
     BalticByteBuccaneersTheme {
-        HeadlineBox(viewModel = ReceiptDetailViewModel(""))
+        HeadlineBox(viewModel = ReceiptDetailViewModel("") {})
     }
 }

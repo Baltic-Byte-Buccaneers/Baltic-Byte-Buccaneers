@@ -1,16 +1,12 @@
 package api
 
 import (
-	"backend/logger"
 	"backend/mongodb"
-	"backend/utils"
-	"context"
 	"fmt"
 	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
@@ -24,18 +20,7 @@ import (
 // @Failure 500 {string} Placeholder
 // @Router /branches [get]
 func GetAllBranches(ginContext *gin.Context) {
-
-	var branches []Branch
-	branchesCursor, err := mongodb.BranchesCollection.Find(context.TODO(), bson.M{})
-	if err != nil {
-		panic(err)
-	}
-
-	if err = branchesCursor.All(context.TODO(), &branches); err != nil {
-		panic(err)
-	}
-
-	branchesCursor.Close(context.TODO())
+	branches := GetAll[Branch](mongodb.BranchesCollection)
 	ginContext.JSON(http.StatusOK, branches)
 }
 
@@ -49,18 +34,8 @@ func GetAllBranches(ginContext *gin.Context) {
 // @Failure 500 {string} Placeholder
 // @Router /branches/{id} [get]
 func GetBranchById(ginContext *gin.Context) {
-
 	branchId := ginContext.Param("id")
-	objectId := utils.GetObjectId(branchId)
-
-	var branch Branch
-	err := mongodb.BranchesCollection.FindOne(context.TODO(), bson.M{"_id": objectId}).Decode(&branch)
-
-	if err != nil {
-		panic(err)
-	}
-	logger.MongoInfo(fmt.Sprintf("Branch retrieved: %s\n", objectId))
-
+	branch := GetById[Branch](mongodb.BranchesCollection, branchId)
 	ginContext.JSON(http.StatusOK, branch)
 }
 
@@ -75,20 +50,13 @@ func GetBranchById(ginContext *gin.Context) {
 // @Failure 500 {string} Placeholder
 // @Router /branches [post]
 func CreateBranch(ginContext *gin.Context) {
-	var json Branch
-	if err := ginContext.ShouldBindJSON(&json); err != nil {
+	var branch Branch
+	if err := ginContext.ShouldBindJSON(&branch); err != nil {
 		ginContext.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
-	json.Id = primitive.NewObjectIDFromTimestamp(time.Now())
-	result, err := mongodb.BranchesCollection.InsertOne(context.TODO(), json)
-
-	if err != nil {
-		panic(err)
-	}
-
-	logger.MongoInfo(fmt.Sprintf("Branch inserted: %s\n", result.InsertedID))
-
-	ginContext.JSON(http.StatusOK, gin.H{"status": fmt.Sprintf("Successfully created branch %s", result.InsertedID)})
+	branch.Id = primitive.NewObjectIDFromTimestamp(time.Now())
+	result := Create[Branch](mongodb.BranchesCollection, branch)
+	ginContext.JSON(http.StatusOK, gin.H{"status": fmt.Sprintf("Successfully created branch %s", result.Id)})
 }

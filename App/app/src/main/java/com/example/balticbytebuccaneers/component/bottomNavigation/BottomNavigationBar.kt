@@ -1,4 +1,4 @@
-package com.example.balticbytebuccaneers.component.navigation
+package com.example.balticbytebuccaneers.component.bottomNavigation
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon

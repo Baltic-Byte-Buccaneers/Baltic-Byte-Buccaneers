@@ -29,32 +29,18 @@ definitions:
         type: string
       open:
         type: string
-      volue:
+      volume:
         type: string
     type: object
   api.Producer:
     properties:
-      description:
-        type: string
       iconId:
         type: string
       id:
         type: string
-      isin:
-        type: string
-      lastPrice:
-        type: number
       name:
         type: string
-      priceData:
-        items:
-          $ref: '#/definitions/api.PriceData'
-        type: array
-      symbol:
-        type: string
-      tendency:
-        type: string
-      wkn:
+      stockId:
         type: string
     type: object
   api.Receipt:
@@ -75,17 +61,22 @@ definitions:
         $ref: '#/definitions/api.ReceiptMetadata'
       retailerId:
         type: string
+      userid:
+        type: string
     type: object
   api.ReceiptEntry:
     properties:
       amount:
         type: number
+      category:
+        type: string
+      priceTendency:
+        type: string
       producerId:
         type: string
       quantity:
         type: integer
       title:
-        description: Id       primitive.ObjectID `bson:"_id" json:"id,omitempty"`
         type: string
       vatRate:
         type: number
@@ -118,6 +109,31 @@ definitions:
       street:
         type: string
     type: object
+  api.Stock:
+    properties:
+      description:
+        type: string
+      id:
+        type: string
+      isin:
+        type: string
+      lastPrice:
+        type: number
+      name:
+        type: string
+      priceData:
+        items:
+          $ref: '#/definitions/api.PriceData'
+        type: array
+      symbol:
+        type: string
+      tendencyWeek:
+        type: string
+      tendencyYear:
+        type: string
+      wkn:
+        type: string
+    type: object
   api.Transaction:
     properties:
       amount:
@@ -137,6 +153,15 @@ definitions:
       userid:
         type: string
       valutaDate:
+        type: string
+    type: object
+  api.User:
+    properties:
+      firstname:
+        type: string
+      id:
+        type: string
+      lastname:
         type: string
     type: object
 info:
@@ -340,6 +365,30 @@ paths:
       summary: Get single receipt by its id
       tags:
       - Receipt
+  /receipts/user/{userId}:
+    get:
+      parameters:
+      - description: User Id
+        in: path
+        name: userId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Receipt'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single receipt by the user id
+      tags:
+      - Receipt
   /retailer/{id}:
     get:
       parameters:
@@ -406,6 +455,72 @@ paths:
       summary: Create retailer
       tags:
       - Retailer
+  /stocks:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Stock'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all stock datas
+      tags:
+      - Stock
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add Stock
+        in: body
+        name: Stock
+        required: true
+        schema:
+          $ref: '#/definitions/api.Stock'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Stock'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create price data
+      tags:
+      - Stock
+  /stocks/{id}:
+    get:
+      parameters:
+      - description: Stock Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Stock'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single price data by its id
+      tags:
+      - Stock
   /transactions:
     get:
       consumes:
@@ -472,4 +587,94 @@ paths:
       summary: Get single transaction by its id
       tags:
       - Transaction
+  /transactions/user/{userId}:
+    get:
+      parameters:
+      - description: User Id
+        in: path
+        name: userId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.Transaction'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single transaction by the user id
+      tags:
+      - Transaction
+  /users:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.User'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all users
+      tags:
+      - User
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add User
+        in: body
+        name: User
+        required: true
+        schema:
+          $ref: '#/definitions/api.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.User'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create user
+      tags:
+      - User
+  /users/{id}:
+    get:
+      parameters:
+      - description: User Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.User'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single user by his id
+      tags:
+      - User
 swagger: "2.0"
