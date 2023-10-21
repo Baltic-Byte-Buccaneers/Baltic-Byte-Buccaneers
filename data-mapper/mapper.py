@@ -48,6 +48,7 @@ def __createReceiptEntry(purchase: dict) -> dict:
     receipt_entry["title"] = purchase["name"]
     receipt_entry["quantity"] = purchase["quantity"]
     receipt_entry["amount"] = purchase["price"]
+    receipt_entry["category"] = purchase["product_category"]
     receipt_entry["vatRate"] = purchase["vat_rate"]
 
     return receipt_entry
