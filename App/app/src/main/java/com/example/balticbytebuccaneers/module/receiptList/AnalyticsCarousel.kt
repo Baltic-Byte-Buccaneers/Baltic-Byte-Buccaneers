@@ -52,7 +52,7 @@ fun AnalyticsCarousel() {
         modifier = Modifier
             .fillMaxWidth()
     ) {
-        HorizontalPager(pagerState) { page ->
+        HorizontalPager(pagerState, modifier = Modifier.size(164.dp)) { page ->
             if (page == 0)
                 PieChart(
                     modifier = Modifier
