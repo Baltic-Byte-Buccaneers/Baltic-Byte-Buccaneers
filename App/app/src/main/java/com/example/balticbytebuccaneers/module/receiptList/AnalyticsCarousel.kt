@@ -48,7 +48,8 @@ fun AnalyticsCarousel() {
     val pieChartConfig = PieChartConfig(
         isAnimationEnable = false,
         showSliceLabels = false,
-        backgroundColor = MaterialTheme.colorScheme.surface,
+
+        backgroundColor = Color.Transparent,
         animationDuration = 15,
         labelVisible = true,
     )
@@ -61,25 +62,20 @@ fun AnalyticsCarousel() {
                 .fillMaxWidth()
                 .height(164.dp)
         ) { page ->
-            if (page == 0) {
-                Row(
-                    horizontalArrangement = Arrangement.Center,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                ) {
+
+            Row(
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+            ) {
+                if (page == 0) {
                     PieChart(
                         modifier = Modifier
                             .size(164.dp),
                         pieChartData,
                         pieChartConfig
                     )
-                }
-            } else {
-                Row(
-                    horizontalArrangement = Arrangement.Center,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                ) {
+                } else {
                     PieChart(
                         modifier = Modifier
                             .size(164.dp),
