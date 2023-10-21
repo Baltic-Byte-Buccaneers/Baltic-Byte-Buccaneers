@@ -26,7 +26,7 @@ class ReceiptDetailViewModel(
     suspend fun fetchReceiptInformation() {
         state.value = ViewState.LOADING
 
-        delay(2000)
+        delay(1000)
         merchantName.value = "Rewe"
         receiptIssueDate.value = "20.10.2023"
         amount.value = BigDecimal("12.34")

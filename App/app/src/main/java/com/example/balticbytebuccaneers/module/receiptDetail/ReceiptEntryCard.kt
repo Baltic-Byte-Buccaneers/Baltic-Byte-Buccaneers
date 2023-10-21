@@ -1,6 +1,7 @@
 package com.example.balticbytebuccaneers.module.receiptDetail
 
 import android.content.res.Configuration
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -26,6 +27,7 @@ import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.service.receipt.domain.ReceiptEntry
@@ -33,7 +35,7 @@ import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import java.math.BigDecimal
 
 @Composable
-fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
+fun ReceiptEntryCard(receiptEntry: ReceiptEntry, onProducerTapped: () -> Unit) {
     Card(
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
@@ -80,6 +82,8 @@ fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
                 Text(
                     text = receiptEntry.producer,
                     style = MaterialTheme.typography.bodySmall,
+                    modifier = Modifier.clickable { onProducerTapped() },
+                    textDecoration = TextDecoration.Underline,
                 )
             }
         }
@@ -134,6 +138,6 @@ private fun ReceiptEntryCardPreview() {
                 "Frankfurter Mühlen",
                 ReceiptEntry.AmountTrend.ASCENDING
             )
-        )
+        ) {}
     }
 }
