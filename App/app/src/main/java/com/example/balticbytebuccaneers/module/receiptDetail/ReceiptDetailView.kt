@@ -34,7 +34,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.component.topNavigation.TopNavigationBar
 import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.ProducerDetailsDialog
-import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.ProducerDetailsDialogViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import kotlinx.coroutines.launch
 import java.util.Locale
@@ -69,7 +68,7 @@ private fun ReceiptDetailViewContent(viewModel: ReceiptDetailViewModel) {
     val metadata = viewModel.metadata.observeAsState()
 
     var showBottomSheet by remember { mutableStateOf(false) }
-    val bottomSheetViewModel = remember { ProducerDetailsDialogViewModel("") }
+    var selectedProducerID by remember { mutableStateOf<String?>(null) }
 
     Column {
         Spacer(modifier = Modifier.height(8.dp))
@@ -94,7 +93,10 @@ private fun ReceiptDetailViewContent(viewModel: ReceiptDetailViewModel) {
                 Spacer(modifier = Modifier.height(16.dp))
 
                 receiptEntries.value?.forEach {
-                    ReceiptEntryCard(it) { showBottomSheet = true }
+                    ReceiptEntryCard(it) {
+                        selectedProducerID = it.producerID
+                        showBottomSheet = true
+                    }
                     Spacer(modifier = Modifier.height(8.dp))
                 }
 
@@ -108,7 +110,7 @@ private fun ReceiptDetailViewContent(viewModel: ReceiptDetailViewModel) {
             }
         }
 
-        ProducerDetailsDialog(viewModel = bottomSheetViewModel, showBottomSheet = showBottomSheet) {
+        ProducerDetailsDialog(producerID = selectedProducerID, showBottomSheet = showBottomSheet) {
             showBottomSheet = false
         }
     }

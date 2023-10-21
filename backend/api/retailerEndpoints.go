@@ -32,7 +32,7 @@ func GetAllRetailers(ginContext *gin.Context) {
 // @Produce json
 // @Success 200 {object} Retailer "ok"
 // @Failure 500 {string} Placeholder
-// @Router /retailer/{id} [get]
+// @Router /retailers/{id} [get]
 func GetRetailerById(ginContext *gin.Context) {
 	retailerId := ginContext.Param("id")
 	retailer := GetById[Retailer](mongodb.RetailersCollection, retailerId)

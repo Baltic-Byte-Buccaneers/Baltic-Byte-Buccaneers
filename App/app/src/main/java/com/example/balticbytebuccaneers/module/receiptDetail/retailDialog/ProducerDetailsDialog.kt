@@ -28,6 +28,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,17 +40,19 @@ import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.Produc
 import kotlinx.coroutines.launch
 
 @Composable
-fun ProducerDetailsDialog(viewModel: ProducerDetailsDialogViewModel ,showBottomSheet: Boolean, onDismissSheet: () -> Unit) {
+fun ProducerDetailsDialog(producerID: String?, showBottomSheet: Boolean, onDismissSheet: () -> Unit) {
+
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
 
-    if (showBottomSheet) {
+    if (showBottomSheet && producerID != null) {
+        val bottomSheetViewModel = remember { ProducerDetailsDialogViewModel(producerID) }
         ModalBottomSheet(
             onDismissRequest = onDismissSheet,
             sheetState = sheetState
         ) {
             // Sheet content
-            ProducerDetailsDialogContent(viewModel) {
+            ProducerDetailsDialogContent(bottomSheetViewModel) {
                 scope.launch { sheetState.hide() }.invokeOnCompletion {
                     if (!sheetState.isVisible) {
                         onDismissSheet()
@@ -89,8 +92,8 @@ private fun ProducerDetailsDialogDataContent(viewModel: ProducerDetailsDialogVie
     val description = viewModel.description.observeAsState("--")
     val lastYearTrend = viewModel.lastYearTrend.observeAsState()
     val lastYearTrendValue = viewModel.lastYearTrendValue.observeAsState("--")
-    val lastWeekTrend = viewModel.lastYearTrend.observeAsState()
-    val lastWeekTrendValue = viewModel.lastYearTrendValue.observeAsState("--")
+    val lastWeekTrend = viewModel.lastWeekTrend.observeAsState()
+    val lastWeekTrendValue = viewModel.lastWeekTrendValue.observeAsState("--")
 
     Column(modifier = Modifier
         .padding(horizontal = 16.dp)
