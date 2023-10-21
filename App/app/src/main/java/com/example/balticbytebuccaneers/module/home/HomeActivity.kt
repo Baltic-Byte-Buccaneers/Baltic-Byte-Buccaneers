@@ -24,7 +24,14 @@ class HomeActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeView()
+                    //HomeView()
+                    val context = LocalContext.current
+                    val viewModel = remember {
+                        ReceiptDetailViewModel("") {
+                            Toast.makeText(context, "Back pressed", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    ReceiptDetailView(viewModel = viewModel)
                 }
             }
         }
