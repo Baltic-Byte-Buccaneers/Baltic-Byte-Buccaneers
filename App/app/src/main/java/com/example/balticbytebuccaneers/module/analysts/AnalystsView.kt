@@ -1,5 +1,6 @@
 package com.example.balticbytebuccaneers.module.analysts
 
+import android.content.res.Configuration
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -29,10 +31,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.R
+import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
+
 
 @Composable
 fun AnalystsView(){
-    Column() {
+    Column {
         PaginationView()
     }
 }
@@ -45,40 +49,53 @@ fun PaginationView() {
     val pagerState = rememberPagerState(pageCount = {
         10
     })
-    Column (modifier = Modifier.fillMaxSize().padding(16.dp)) {
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)) {
         Text(
-            text = "Analysis",
+            text = "My Evaluations",
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onBackground,
             style = MaterialTheme.typography.headlineLarge,
             fontWeight = FontWeight.Bold
         )
-
+        Spacer(modifier = Modifier.height(20.dp))
         HorizontalPager(
             state = pagerState,
             pageSize = PageSize.Fill,
             modifier = Modifier.weight(1.0F)) { page ->
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.Start,
+                verticalArrangement = Arrangement.Top,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "Analysis $page",
-                    textAlign = TextAlign.Center,
+                    text = "Evaluation $page",
                     color = MaterialTheme.colorScheme.onBackground,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.fillMaxWidth()
                 )
+                Spacer(modifier = Modifier.height(16.dp))
                 Image(
                     painter = painterResource(R.drawable.ic_launcher_background),
                     contentDescription = null,
+                    alignment = Alignment.TopCenter,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .weight(1.0F)
+                )
+                Text(
+                    text = AnalysisDummyData.get_data_from_index(pagerState.currentPage).description,
+                    color = MaterialTheme.colorScheme.onBackground,
+                    style = MaterialTheme.typography.titleLarge,
+                    fontWeight = FontWeight.Bold,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
 
         }
+        Spacer(modifier= Modifier.height(20.dp))
         Row(
             Modifier
                 .height(50.dp)
@@ -102,8 +119,10 @@ fun PaginationView() {
     }
 }
 
-@Preview
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun PaginationPreview() {
-    PaginationView()
+    BalticByteBuccaneersTheme {
+        PaginationView()
+    }
 }

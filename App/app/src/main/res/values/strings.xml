@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BalticByteBuccaneers</string>
+    <string name="analysis_receipt_category_composition_headline">Your Shopping Habits</string>
+    <string name="analysis_receipt_category_composition_title">Category Analysis</string>
+    <string name="analysis_receipt_category_composition_description">
+        This graph provides an overview of your recent shopping habits in the past month.
+        It shows the value of purchases in various product categories.
+        Each piece of the graph corresponds to a specific category, such as electronics, clothing, groceries, and more.
+        The size of each bar represents the number of purchases made in that category.
+        You can quickly see which categories you've been shopping in the most and whether there have been any changes in your recent buying patterns.
+        Use this graph to gain insights into your recent consumer behavior and preferences.
+    </string>
 </resources>
