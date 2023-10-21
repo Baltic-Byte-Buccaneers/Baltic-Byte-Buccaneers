@@ -5,10 +5,10 @@ import (
 )
 
 type Retailer struct {
-	Id           primitive.ObjectID `bson:"_id" json:"id,omitempty"`
-	Name         string             `bson:"name" json:"name,omitempty"`
-	Country      string             `bson:"country" json:"country,omitempty"`
-	Municipality string             `bson:"municipality" json:"municipality,omitempty"`
-	Street       string             `bson:"street" json:"street,omitempty"`
-	Category     string             `bson:"category" json:"category,omitempty"`
+	Id           primitive.ObjectID `bson:"_id" json:"id"`
+	Name         string             `bson:"name" json:"name"`
+	Country      string             `bson:"country" json:"country"`
+	Municipality string             `bson:"municipality" json:"municipality"`
+	Street       string             `bson:"street" json:"street"`
+	Category     string             `bson:"category" json:"category"`
 }
