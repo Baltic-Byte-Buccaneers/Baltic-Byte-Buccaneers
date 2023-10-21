@@ -1,17 +1,17 @@
-{"_id":{"$oid":"6533d2314ef68b0e9945cff8"},"name":"Associated British Foods","iconId":"abf.png","stockId":{"$oid":"6533d2314ef68b0e9945cff7"}}
-{"_id":{"$oid":"6533d2314ef68b0e9945cffa"},"name":"Bonduelle","iconId":"bonduelle.png","stockId":{"$oid":"6533d2314ef68b0e9945cff9"}}
-{"_id":{"$oid":"6533d2314ef68b0e9945cffc"},"name":"FRoSTA","iconId":"frosta.png","stockId":{"$oid":"6533d2314ef68b0e9945cffb"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945cffe"},"name":"Fromageries Bel","iconId":"bel.png","stockId":{"$oid":"6533d2314ef68b0e9945cffd"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d000"},"name":"Veganz","iconId":"veganz.png","stockId":{"$oid":"6533d2314ef68b0e9945cfff"}}
+{"_id":{"$oid":"6533d2314ef68b0e9945cff8"},"name":"Associated British Foods","iconId":"abf.png","stockId":{"$oid":"6533d2314ef68b0e9945cff7"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d002"},"name":"Unilever","iconId":"unilever.png","stockId":{"$oid":"6533d2314ef68b0e9945d001"}}
+{"_id":{"$oid":"6533d2314ef68b0e9945cffc"},"name":"FRoSTA","iconId":"frosta.png","stockId":{"$oid":"6533d2314ef68b0e9945cffb"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d004"},"name":"The Kraft Heinz Company","iconId":"kraftheinz.png","stockId":{"$oid":"6533d2314ef68b0e9945d003"}}
+{"_id":{"$oid":"6533d2314ef68b0e9945cffa"},"name":"Bonduelle","iconId":"bonduelle.png","stockId":{"$oid":"6533d2314ef68b0e9945cff9"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d006"},"name":"Südzucker","iconId":"suedzucker.png","stockId":{"$oid":"6533d2314ef68b0e9945d005"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d008"},"name":"Procter Gamble","iconId":"proctergamble.png","stockId":{"$oid":"6533d2314ef68b0e9945d007"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d00a"},"name":"PepsiCo","iconId":"pepsico.png","stockId":{"$oid":"6533d2314ef68b0e9945d009"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d00c"},"name":"Ottakringer Brauerei","iconId":"ottakringer.png","stockId":{"$oid":"6533d2314ef68b0e9945d00b"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d00e"},"name":"Josef Manner","iconId":"manner.png","stockId":{"$oid":"6533d2314ef68b0e9945d00d"}}
 {"_id":{"$oid":"6533d2314ef68b0e9945d010"},"name":"Kellogg's","iconId":"kellogs.png","stockId":{"$oid":"6533d2314ef68b0e9945d00f"}}
-{"_id":{"$oid":"6533d2314ef68b0e9945d011"},"name":"Carl Kühne KG","iconId":"kuehne.png","stockId":null}
 {"_id":{"$oid":"6533d2314ef68b0e9945d012"},"name":"Stadtfleischerei Lange","iconId":"lange.png","stockId":null}
 {"_id":{"$oid":"6533d2314ef68b0e9945d013"},"name":"Bautz'ner Senf & Feinkost GmbH","iconId":"bautzner.png","stockId":null}
+{"_id":{"$oid":"6533d2314ef68b0e9945d011"},"name":"Carl Kühne KG","iconId":"kuehne.png","stockId":null}
 {"_id":{"$oid":"6533d2314ef68b0e9945d014"},"name":"Werder Feinkost","iconId":"werder.png","stockId":null}

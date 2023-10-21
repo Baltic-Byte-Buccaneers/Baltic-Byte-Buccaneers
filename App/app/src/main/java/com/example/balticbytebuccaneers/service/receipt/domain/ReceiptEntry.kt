@@ -7,6 +7,7 @@ data class ReceiptEntry(
     val amount: BigDecimal?,
     val category: String,
     val producer: String,
+    val producerID: String?,
     val amountTrend: AmountTrend?
 ) {
     enum class AmountTrend {

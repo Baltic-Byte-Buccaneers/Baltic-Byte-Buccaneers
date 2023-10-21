@@ -66,6 +66,7 @@ class ReceiptDetailViewModel(
                 producers.firstOrNull { producer ->
                     producer.id == it.producerId
                 }?.name ?: "--",
+                it.producerId,
                 getTrendForTendency(it.priceTendency)
             )
         }

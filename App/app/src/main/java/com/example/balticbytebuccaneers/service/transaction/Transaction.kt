@@ -12,4 +12,7 @@ data class Transaction (
     val valutaDate: Date?,
     val description: String?,
     val purpose: String?,
-    val receiptId: String?)
+    val receiptId: String?,
+    val title: String?
+)
+
