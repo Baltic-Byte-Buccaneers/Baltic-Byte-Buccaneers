@@ -52,7 +52,7 @@ import java.util.Locale
 
 
 @Composable
-fun TransactionListView(viewModel: TransactionListViewModel) {
+fun TransactionListView(viewModel: TransactionListViewModel, onTransactionClicked: (receiptId: String) -> Unit) {
     val state by viewModel.state.observeAsState()
     val scope = rememberCoroutineScope()
 
@@ -82,19 +82,24 @@ fun TransactionListView(viewModel: TransactionListViewModel) {
                 CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
             }
         } else if (state == TransactionListViewModel.ViewState.DATA) {
-                TransactionsView(viewModel)
+                TransactionsView(viewModel, onTransactionClicked)
         }
     }
 }
 
 @Composable
-fun TransactionsView(viewModel: TransactionListViewModel){
+fun TransactionsView(viewModel: TransactionListViewModel, onTransactionClicked: (receiptId: String) -> Unit){
     val transactions = viewModel.transactions.observeAsState()
     LazyColumn {
         transactions.value?.let {
             items(count = it.size) { index ->
                 transactions.value?.let {
-                    TransactionCard(transaction = it[index])
+                    TransactionCard(transaction = it[index]) {
+                        it[index].receiptId?.let { receiptId ->
+                            onTransactionClicked(receiptId)
+                        }
+
+                    }
                     Spacer(modifier = Modifier.height(8.dp))
                 }
             }
@@ -104,7 +109,7 @@ fun TransactionsView(viewModel: TransactionListViewModel){
 
 
 @Composable
-fun TransactionCard(transaction: Transaction) {
+fun TransactionCard(transaction: Transaction, onTransactionClicked: () -> Unit) {
     val context = LocalContext.current
     Card(
         colors = CardDefaults.cardColors(
@@ -134,7 +139,7 @@ fun TransactionCard(transaction: Transaction) {
                 Icon(
                     imageVector = Icons.Outlined.Paid,
                     contentDescription = null,
-                    modifier = Modifier.size(64.dp),
+                    modifier = Modifier.size(48.dp),
                     tint = MaterialTheme.colorScheme.onTertiaryContainer,
                 )
             }
@@ -143,14 +148,14 @@ fun TransactionCard(transaction: Transaction) {
                     .weight(3F)
                     .padding(horizontal = 16.dp)
             ) {
-                if (transaction.description != null) {
-                    Text(
-                        transaction.description,
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold
-                    )
-                }
+                Text(
+                    transaction.title ?: "--",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+
                 if (transaction.purpose != null) {
+                    Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         transaction.purpose,
                         style = MaterialTheme.typography.bodySmall
@@ -240,8 +245,9 @@ fun TransactionItemPreview() {
                 valutaDate = null,
                 description = "Edeka",
                 purpose = "Your purchase at Edeka",
-                receiptId = "2020"
+                receiptId = "2020",
+                title = ""
             )
-        )
+        ){}
     }
 }

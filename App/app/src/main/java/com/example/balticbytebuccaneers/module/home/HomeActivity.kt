@@ -47,7 +47,7 @@ fun MainNavigationView() {
         Column(Modifier.weight(1f)) {
             when (navDestination) {
                 NavigationItem.RECEIPTS -> ReceiptsView("6533d1f8c91e3a690d412e4a")
-                NavigationItem.TRANSACTIONS -> TransactionListViewWrapper()
+                NavigationItem.TRANSACTIONS -> TransactionListViewWrapper {}
                 NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
             }
         }
@@ -58,9 +58,9 @@ fun MainNavigationView() {
 }
 
 @Composable
-private fun TransactionListViewWrapper() {
+private fun TransactionListViewWrapper(onTransactionClicked: (receiptId: String) -> Unit) {
     val viewModel = remember { TransactionListViewModel() }
-    TransactionListView(viewModel)
+    TransactionListView(viewModel, onTransactionClicked)
 }
 @Composable
 private fun ReceiptsView(receiptId: String) {
