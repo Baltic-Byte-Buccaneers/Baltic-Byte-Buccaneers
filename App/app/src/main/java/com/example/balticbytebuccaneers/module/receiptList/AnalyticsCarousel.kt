@@ -62,7 +62,6 @@ fun AnalyticsCarousel() {
                 .fillMaxWidth()
                 .height(164.dp)
         ) { page ->
-
             Row(
                 horizontalArrangement = Arrangement.Center,
                 modifier = Modifier
