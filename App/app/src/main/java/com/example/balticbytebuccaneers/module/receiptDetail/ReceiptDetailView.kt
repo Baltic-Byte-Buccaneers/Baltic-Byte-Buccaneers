@@ -37,6 +37,7 @@ import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.Produc
 import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.ProducerDetailsDialogViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import kotlinx.coroutines.launch
+import java.util.Locale
 
 @Composable
 fun ReceiptDetailView(viewModel: ReceiptDetailViewModel) {
@@ -124,7 +125,7 @@ private fun HeadlineBox(viewModel: ReceiptDetailViewModel, modifier: Modifier = 
         Row {
             Text(
                 text = "Your purchase at $merchantName",
-                style = MaterialTheme.typography.headlineLarge,
+                style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier
@@ -144,12 +145,14 @@ private fun HeadlineBox(viewModel: ReceiptDetailViewModel, modifier: Modifier = 
         Row {
             Text(
                 text = "$receiptIssueDate",
-                style = MaterialTheme.typography.titleMedium,
+                style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.weight(1f)
             )
             Text(
-                text = "$amount €",
+                text = amount?.let {
+                    "%,.2f".format(Locale.GERMAN, it) + " €"
+                } ?: "--",
                 fontWeight = FontWeight.Bold,
                 style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.onBackground,
