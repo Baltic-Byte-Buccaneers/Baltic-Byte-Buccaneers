@@ -2,43 +2,43 @@ package com.example.balticbytebuccaneers.module.receiptList
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ReceiptListView(receipts: List<Receipt>) {
-    Column(
-        verticalArrangement = Arrangement.spacedBy(10.dp),
-        modifier = Modifier.verticalScroll(rememberScrollState())
-    ) {
-        // Add 5 items
-        receipts.forEach { receipt ->
-            ReceiptListViewItem(receipt)
+fun ReceiptListView(viewModel: ReceiptListViewModel, onClick: () -> Unit) {
+    Scaffold(floatingActionButton = {
+        FloatingActionButton(onClick = { onClick() }, shape = CircleShape) {
+            Icon(Icons.Filled.ExpandLess, "Scroll to top")
+        }
+    }) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            AnalyticsCarousel()
+            ReceiptList(receipts = viewModel.receipts)
         }
     }
+
 }
 
 @Preview
 @Composable
 fun ReceiptListViewPreview() {
-    val receipts: List<Receipt> =
-        listOf(
-            Receipt(
-                "Einkauf Rewe",
-                "12,40 €"
-            ),
-            Receipt(
-                "Einkauf Kaufland",
-                "153,30 €"
-            ),
-            Receipt(
-                "Raststätte Neuland",
-                "232,18 €"
-            )
-        )
-    ReceiptListView(receipts)
+    val model = ReceiptListViewModel()
+    MaterialTheme {
+        ReceiptListView(viewModel = model, onClick = {})
+    }
 }
