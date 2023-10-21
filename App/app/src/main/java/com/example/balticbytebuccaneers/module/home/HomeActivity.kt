@@ -16,6 +16,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigationBar
 import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
+import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
+import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
 import com.example.balticbytebuccaneers.module.receiptList.Receipt
 import com.example.balticbytebuccaneers.module.receiptList.ReceiptList
 import com.example.balticbytebuccaneers.module.receiptList.ReceiptListScreen
@@ -44,19 +46,28 @@ class HomeActivity : ComponentActivity() {
 @Composable
 fun MainNavigationView() {
     var navDestination by remember { mutableStateOf(NavigationItem.TRANSACTIONS) }
+    var receiptIdForDetailView by remember { mutableStateOf("") }
 
     Column(Modifier.fillMaxSize()) {
         Column(Modifier.weight(1f)) {
             when (navDestination) {
-                NavigationItem.RECEIPTS -> ReceiptListScreen() {
-
+                NavigationItem.RECEIPTS -> {
+                    if (receiptIdForDetailView != "") {
+                        ReceiptDetailView(viewModel = ReceiptDetailViewModel(receiptIdForDetailView) { receiptIdForDetailView = "" })
+                    } else {
+                        ReceiptListScreen{ receiptId ->
+                            receiptIdForDetailView = receiptId
+                        }
+                    }
                 }
                 NavigationItem.TRANSACTIONS -> TransactionView(transactions = arrayOf())
-
                 NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
             }
         }
         AppNavigationBar { newSelectedNavigationItem ->
+            if (newSelectedNavigationItem == NavigationItem.RECEIPTS) {
+                receiptIdForDetailView = ""
+            }
             navDestination = newSelectedNavigationItem
         }
     }

@@ -48,7 +48,6 @@ class ReceiptDetailViewModel(
             setData(receipt, retailer, producers)
             return
         }
-
     }
 
     private fun setData(receipt: Receipt, retailer: Retailer, producers: List<Producer>) {

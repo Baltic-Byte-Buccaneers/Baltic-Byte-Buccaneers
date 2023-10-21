@@ -20,12 +20,12 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 
 @Composable
-fun ReceiptListScreen(onClick: () -> Unit) {
+fun ReceiptListScreen(onClick: (String) -> Unit) {
     ReceiptListView(viewModel = ReceiptListViewModel(), onClick = onClick)
 }
 
 @Composable
-fun ReceiptListView(viewModel: ReceiptListViewModel, onClick: () -> Unit) {
+fun ReceiptListView(viewModel: ReceiptListViewModel, onClick: (String) -> Unit) {
     val composableCoroutineScope  = rememberCoroutineScope()
     val receipts = viewModel.receipts.observeAsState()
 
@@ -36,7 +36,7 @@ fun ReceiptListView(viewModel: ReceiptListViewModel, onClick: () -> Unit) {
     }
 
     Scaffold(floatingActionButton = {
-        FloatingActionButton(onClick = { onClick() }, shape = CircleShape) {
+        FloatingActionButton(onClick = { }, shape = CircleShape) {
             Icon(Icons.Filled.ExpandLess, "Scroll to top")
         }
     }) { innerPadding ->
@@ -46,7 +46,7 @@ fun ReceiptListView(viewModel: ReceiptListViewModel, onClick: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             AnalyticsCarousel()
-            ReceiptList(receipts = receipts.value ?: listOf())
+            ReceiptList(receipts = receipts.value ?: listOf(), onClick)
         }
     }
 
