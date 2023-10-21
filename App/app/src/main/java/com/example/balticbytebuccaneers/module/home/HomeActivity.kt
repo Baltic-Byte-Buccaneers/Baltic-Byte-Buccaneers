@@ -18,13 +18,9 @@ import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigation
 import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
-import com.example.balticbytebuccaneers.module.receiptList.Receipt
-import com.example.balticbytebuccaneers.module.receiptList.ReceiptList
 import com.example.balticbytebuccaneers.module.receiptList.ReceiptListScreen
-import com.example.balticbytebuccaneers.module.receiptList.ReceiptListView
 import com.example.balticbytebuccaneers.module.transactionList.TransactionView
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
-import java.math.BigDecimal
 
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
