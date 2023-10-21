@@ -8,6 +8,7 @@ import (
 
 type Transaction struct {
 	Id          primitive.ObjectID `bson:"_id" json:"id"`
+	Title       string             `bson:"title" json:"title"`
 	UserId      string             `bson:"userid" json:"userid"`
 	Iban        string             `bson:"iban" json:"iban"`
 	Amount      float64            `bson:"amount" json:"amount"`

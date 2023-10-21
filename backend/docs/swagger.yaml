@@ -152,6 +152,8 @@ definitions:
         type: string
       retailerId:
         type: string
+      title:
+        type: string
       userid:
         type: string
       valutaDate:
@@ -391,28 +393,6 @@ paths:
       summary: Get single receipt by the user id
       tags:
       - Receipt
-  /retailer/{id}:
-    get:
-      parameters:
-      - description: Retailer Id
-        in: path
-        name: id
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: ok
-          schema:
-            $ref: '#/definitions/api.Retailer'
-        "500":
-          description: Internal Server Error
-          schema:
-            type: string
-      summary: Get single retailer by its id
-      tags:
-      - Retailer
   /retailers:
     get:
       consumes:
@@ -455,6 +435,28 @@ paths:
           schema:
             type: string
       summary: Create retailer
+      tags:
+      - Retailer
+  /retailers/{id}:
+    get:
+      parameters:
+      - description: Retailer Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.Retailer'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single retailer by its id
       tags:
       - Retailer
   /stocks:

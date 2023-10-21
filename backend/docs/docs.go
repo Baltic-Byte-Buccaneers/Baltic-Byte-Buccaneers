@@ -359,40 +359,6 @@ const docTemplate = `{
                 }
             }
         },
-        "/retailer/{id}": {
-            "get": {
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "Retailer"
-                ],
-                "summary": "Get single retailer by its id",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Retailer Id",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "ok",
-                        "schema": {
-                            "$ref": "#/definitions/api.Retailer"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                }
-            }
-        },
         "/retailers": {
             "get": {
                 "consumes": [
@@ -443,6 +409,40 @@ const docTemplate = `{
                         "schema": {
                             "$ref": "#/definitions/api.Retailer"
                         }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/api.Retailer"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/retailers/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Retailer"
+                ],
+                "summary": "Get single retailer by its id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Retailer Id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -1036,6 +1036,9 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "retailerId": {
+                    "type": "string"
+                },
+                "title": {
                     "type": "string"
                 },
                 "userid": {
