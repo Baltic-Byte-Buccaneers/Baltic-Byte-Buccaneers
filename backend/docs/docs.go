@@ -836,6 +836,9 @@ const docTemplate = `{
                 "amount": {
                     "type": "number"
                 },
+                "category": {
+                    "type": "number"
+                },
                 "priceTendency": {
                     "type": "string"
                 },

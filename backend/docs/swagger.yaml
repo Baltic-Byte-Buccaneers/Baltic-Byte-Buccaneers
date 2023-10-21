@@ -68,6 +68,8 @@ definitions:
     properties:
       amount:
         type: number
+      category:
+        type: number
       priceTendency:
         type: string
       producerId:
