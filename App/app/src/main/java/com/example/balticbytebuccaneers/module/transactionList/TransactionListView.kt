@@ -45,6 +45,7 @@ fun TransactionView(transactions: Array<Transaction>) {
     }
 }
 
+
 @Composable
 fun TransactionCard(transaction: Transaction) {
     val context = LocalContext.current
@@ -55,17 +56,21 @@ fun TransactionCard(transaction: Transaction) {
             .clickable(
                 enabled = true,
                 onClick = {
-                    Toast.makeText(
-                        context,
-                        "TransactionDetailsView goes here",
-                        Toast.LENGTH_SHORT).show()
+                    Toast
+                        .makeText(
+                            context,
+                            "TransactionDetailsView goes here",
+                            Toast.LENGTH_SHORT
+                        )
+                        .show()
                 }
             )
     ) {
         Row(modifier = paddingModifier) {
-            Column(modifier = Modifier
-                .weight(1.0F)
-                .align(Alignment.CenterVertically),
+            Column(
+                modifier = Modifier
+                    .weight(1.0F)
+                    .align(Alignment.CenterVertically),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Image(
@@ -74,25 +79,29 @@ fun TransactionCard(transaction: Transaction) {
                     modifier = Modifier.size(64.dp)
                 )
             }
-            Column(modifier = Modifier
-                .weight(3F)
-                .padding(horizontal = 16.dp)) {
+            Column(
+                modifier = Modifier
+                    .weight(3F)
+                    .padding(horizontal = 16.dp)
+            ) {
                 if (transaction.description != null) {
-                    Text(transaction.description,
+                    Text(
+                        transaction.description,
                         color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold
-                        )
+                    )
                 }
                 if (transaction.purpose != null) {
                     Text(
                         transaction.purpose,
                         color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.bodySmall
-                        )
+                    )
                 }
-                if (transaction.date != null){
-                    Text(transaction.date.toString(),
+                if (transaction.date != null) {
+                    Text(
+                        transaction.date.toString(),
                         color = MaterialTheme.colorScheme.onBackground,
                         style = MaterialTheme.typography.bodySmall
                     )
@@ -107,7 +116,9 @@ fun TransactionCard(transaction: Transaction) {
                 }
                 if (transaction.receiptId != null) {
                     IconButton(
-                        onClick = { Toast.makeText(context, "Receipt Available", Toast.LENGTH_SHORT).show()}) {
+                        onClick = {
+                            Toast.makeText(context, "Receipt Available", Toast.LENGTH_SHORT).show()
+                        }) {
                         Icon(
                             imageVector = Icons.Outlined.ReceiptLong,
                             tint = Color.Gray,
@@ -122,22 +133,20 @@ fun TransactionCard(transaction: Transaction) {
 }
 
 @Composable
-fun ColoredAmount(amount: BigDecimal){
+fun ColoredAmount(amount: BigDecimal) {
     return if (amount > BigDecimal.ZERO) {
         Text(
             text = "$amount €",
             color = Color.Green,
             fontWeight = FontWeight.Bold
         )
-    }
-    else if (amount < BigDecimal.ZERO) {
+    } else if (amount < BigDecimal.ZERO) {
         Text(
             text = "$amount €",
             color = Color.Red,
             fontWeight = FontWeight.Bold
         )
-    }
-    else {
+    } else {
         Text(
             text = "$amount €",
             color = Color.Gray,
@@ -153,7 +162,7 @@ fun TransactionItemPreview() {
         TransactionCard(
             Transaction(
                 id = null,
-                userId = null,
+                userid = null,
                 iban = "DE2440002345244402",
                 amount = BigDecimal("-20.19"),
                 date = Date(),
@@ -174,7 +183,7 @@ fun TransactionListPreview() {
             arrayOf(
                 Transaction(
                     id = null,
-                    userId = null,
+                    userid = null,
                     iban = "DE2440002345244402",
                     amount = BigDecimal("20.19"),
                     date = Date(),
@@ -185,7 +194,7 @@ fun TransactionListPreview() {
                 ),
                 Transaction(
                     id = null,
-                    userId = null,
+                    userid = null,
                     iban = "DE2440002345244402",
                     amount = BigDecimal("-20.19"),
                     date = Date(),
@@ -196,7 +205,7 @@ fun TransactionListPreview() {
                 ),
                 Transaction(
                     id = null,
-                    userId = null,
+                    userid = null,
                     iban = "DE2440002345244402",
                     amount = BigDecimal("0.00"),
                     date = Date(),

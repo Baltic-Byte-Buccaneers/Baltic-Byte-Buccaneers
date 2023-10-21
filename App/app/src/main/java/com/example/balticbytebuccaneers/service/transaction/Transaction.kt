@@ -5,12 +5,11 @@ import java.util.Date
 
 data class Transaction (
     val id: String?,
-    val userId: String?,
+    val userid: String?,
     val iban: String?,
     val amount: BigDecimal?,
     val date: Date?,
     val valutaDate: Date?,
     val description: String?,
     val purpose: String?,
-    val receiptId: String?
-    ) {}
+    val receiptId: String?)

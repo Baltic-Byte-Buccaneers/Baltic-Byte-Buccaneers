@@ -1,4 +1,4 @@
-package com.example.balticbytebuccaneers.component.navigation
+package com.example.balticbytebuccaneers.component.bottomNavigation
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
@@ -16,11 +16,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun AppNavigationBar(navigationBarItems: Array<NavigationItem>, onItemSelected: (NavigationItem) -> Unit) {
+fun AppNavigationBar(onItemSelected: (NavigationItem) -> Unit) {
     var selectedNavigationItemIndex by remember { mutableStateOf(0) }
 
     NavigationBar {
-        navigationBarItems.forEachIndexed { index, navigationBarItem ->
+        NavigationItem.values().forEachIndexed { index, navigationBarItem ->
             NavigationBarItem(
                 selected = index == selectedNavigationItemIndex,
                 onClick = {

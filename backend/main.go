@@ -37,10 +37,12 @@ func setupRouter(useSwagger bool) *gin.Engine {
 
 		apiRouter.GET("/transactions", api.GetAllTransactions)
 		apiRouter.GET("/transactions/:id", api.GetTransactionById)
+		apiRouter.GET("/transactions/user/:userId", api.GetTransactionsByUserId)
 		apiRouter.POST("/transactions", api.CreateTransaction)
 
 		apiRouter.GET("/receipts", api.GetAllReceipts)
 		apiRouter.GET("/receipts/:id", api.GetReceiptById)
+		apiRouter.GET("/receipts/user/:userId", api.GetReceiptsByUserId)
 		apiRouter.POST("/receipts", api.CreateReceipt)
 
 		apiRouter.GET("/retailers", api.GetAllRetailers)
@@ -54,7 +56,17 @@ func setupRouter(useSwagger bool) *gin.Engine {
 		apiRouter.GET("/producers", api.GetAllProducers)
 		apiRouter.GET("/producers/:id", api.GetProducerById)
 		apiRouter.POST("/producers", api.CreateProducer)
+
+		apiRouter.GET("/stocks", api.GetAllStocks)
+		apiRouter.GET("/stocks/:id", api.GetStockById)
+		apiRouter.POST("/stocks", api.CreateStock)
+
+		apiRouter.GET("/users", api.GetAllUsers)
+		apiRouter.GET("/users/:id", api.GetUserById)
+		apiRouter.POST("/users", api.CreateUser)
 	}
+
+	router.Static("/assets", "./assets")
 
 	if useSwagger {
 		router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))

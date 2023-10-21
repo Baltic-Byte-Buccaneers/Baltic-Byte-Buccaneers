@@ -5,7 +5,7 @@ import (
 )
 
 type PriceData struct {
-	Date     time.Time `bson:"date" json:"date,omitempty"`
+	Date     time.Time `bson:"date" json:"date"`
 	Open     string    `bson:"open" json:"open,omitempty"`
 	High     string    `bson:"high" json:"high,omitempty"`
 	Low      string    `bson:"low" json:"low,omitempty"`
