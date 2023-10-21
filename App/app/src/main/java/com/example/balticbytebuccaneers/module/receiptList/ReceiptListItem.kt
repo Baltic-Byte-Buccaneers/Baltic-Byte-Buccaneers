@@ -18,6 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 @Composable
 fun ReceiptListItem(receipt: Receipt) {
@@ -46,7 +48,7 @@ fun ReceiptListItem(receipt: Receipt) {
                 color = MaterialTheme.colorScheme.onPrimaryContainer
             )
             Text(
-                text = receipt.amount,
+                text = receipt.amount.setScale(2, RoundingMode.HALF_EVEN).toString(),
                 color = MaterialTheme.colorScheme.onPrimaryContainer,
                 style = MaterialTheme.typography.labelSmall
             )
@@ -57,5 +59,5 @@ fun ReceiptListItem(receipt: Receipt) {
 @Preview
 @Composable
 fun ReceiptListItemPreview() {
-    ReceiptListItem(Receipt("Edeka Sunwold", "12.43 €"))
+    ReceiptListItem(Receipt("Edeka Sunwold", BigDecimal(100)))
 }

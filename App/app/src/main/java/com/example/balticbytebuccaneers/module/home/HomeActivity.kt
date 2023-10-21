@@ -16,8 +16,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigationBar
 import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
+import com.example.balticbytebuccaneers.module.receiptList.Receipt
+import com.example.balticbytebuccaneers.module.receiptList.ReceiptList
+import com.example.balticbytebuccaneers.module.receiptList.ReceiptListScreen
+import com.example.balticbytebuccaneers.module.receiptList.ReceiptListView
 import com.example.balticbytebuccaneers.module.transactionList.TransactionView
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
+import java.math.BigDecimal
 
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +48,9 @@ fun MainNavigationView() {
     Column(Modifier.fillMaxSize()) {
         Column(Modifier.weight(1f)) {
             when (navDestination) {
-                NavigationItem.RECEIPTS -> Text(text = "RECEIPTS")
+                NavigationItem.RECEIPTS -> ReceiptListScreen() {
+
+                }
                 NavigationItem.TRANSACTIONS -> TransactionView(transactions = arrayOf())
 
                 NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
