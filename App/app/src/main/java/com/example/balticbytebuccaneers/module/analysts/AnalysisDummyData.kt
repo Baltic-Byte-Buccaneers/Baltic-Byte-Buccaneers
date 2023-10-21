@@ -5,17 +5,17 @@ import com.example.balticbytebuccaneers.R
 
 
 data class AnalysisData (
-    val headline: String,
-    val title: String,
-    val description: String,
+    val headline: Int,
+    val title: Int,
+    val description: Int,
     val chart_data: String?
 )
 class AnalysisDummyData {
     val data = listOf(
         AnalysisData(
-            Resources.getSystem().getString(R.string.analysis_receipt_category_composition_headline),
-            Resources.getSystem().getString(R.string.analysis_receipt_category_composition_title),
-            Resources.getSystem().getString(R.string.analysis_receipt_category_composition_description),
+            R.string.analysis_receipt_category_composition_headline,
+            R.string.analysis_receipt_category_composition_title,
+            R.string.analysis_receipt_category_composition_description,
             null
             )
     )

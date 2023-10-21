@@ -36,16 +36,15 @@ import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 
 @Composable
-fun AnalystsView(viewModel:AnalystsViewModel){
-
-    Column {
+fun AnalystsView(viewModel:AnalystsViewModel?){
+    Column(modifier = Modifier.background(MaterialTheme.colorScheme.background)) {
         PaginationView(viewModel = viewModel)
     }
 }
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun PaginationView(viewModel:AnalystsViewModel?) {
+private fun PaginationView(viewModel:AnalystsViewModel?) {
     // Display 10 items
     val pageCount = 10
     val pagerState = rememberPagerState(pageCount = {
@@ -73,12 +72,11 @@ fun PaginationView(viewModel:AnalystsViewModel?) {
             Modifier
                 .height(50.dp)
                 .fillMaxWidth(),
-                //.align(Alignment.BottomCenter),
             horizontalArrangement = Arrangement.Center
         ) {
             repeat(pageCount) { iteration ->
                 val color =
-                    if (pagerState.currentPage == iteration) Color.DarkGray else Color.LightGray
+                    if (pagerState.currentPage == iteration) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onPrimary
                 Box(
                     modifier = Modifier
                         .padding(2.dp)
