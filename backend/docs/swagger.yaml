@@ -61,6 +61,8 @@ definitions:
         $ref: '#/definitions/api.ReceiptMetadata'
       retailerId:
         type: string
+      userid:
+        type: string
     type: object
   api.ReceiptEntry:
     properties:
@@ -149,6 +151,15 @@ definitions:
       userid:
         type: string
       valutaDate:
+        type: string
+    type: object
+  api.User:
+    properties:
+      firstname:
+        type: string
+      id:
+        type: string
+      lastname:
         type: string
     type: object
 info:
@@ -550,4 +561,70 @@ paths:
       summary: Get single transaction by its id
       tags:
       - Transaction
+  /users:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            items:
+              $ref: '#/definitions/api.User'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get all users
+      tags:
+      - User
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Add User
+        in: body
+        name: User
+        required: true
+        schema:
+          $ref: '#/definitions/api.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.User'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create user
+      tags:
+      - User
+  /users/{id}:
+    get:
+      parameters:
+      - description: User Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            $ref: '#/definitions/api.User'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get single user by his id
+      tags:
+      - User
 swagger: "2.0"

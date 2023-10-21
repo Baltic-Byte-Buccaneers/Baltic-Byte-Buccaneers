@@ -20,7 +20,7 @@ import (
 // @Failure 500 {string} Placeholder
 // @Router /stocks [get]
 func GetAllStocks(ginContext *gin.Context) {
-	stocks := GetAll[Stock](mongodb.StockCollection)
+	stocks := GetAll[Stock](mongodb.StocksCollection)
 	ginContext.JSON(http.StatusOK, stocks)
 }
 
@@ -35,7 +35,7 @@ func GetAllStocks(ginContext *gin.Context) {
 // @Router /stocks/{id} [get]
 func GetStockById(ginContext *gin.Context) {
 	stockId := ginContext.Param("id")
-	stock := GetById[Stock](mongodb.StockCollection, stockId)
+	stock := GetById[Stock](mongodb.StocksCollection, stockId)
 	ginContext.JSON(http.StatusOK, stock)
 }
 
@@ -57,6 +57,6 @@ func CreateStock(ginContext *gin.Context) {
 	}
 
 	stock.Id = primitive.NewObjectIDFromTimestamp(time.Now())
-	result := Create[Stock](mongodb.StockCollection, stock)
+	result := Create[Stock](mongodb.StocksCollection, stock)
 	ginContext.JSON(http.StatusOK, gin.H{"status": fmt.Sprintf("Successfully created stock %s", result.Id)})
 }
