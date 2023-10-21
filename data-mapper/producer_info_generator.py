@@ -157,6 +157,50 @@ def __add_producer(producers_collection: any):
     producer["wkn"] = "853265"
     producers_collection.insert_one(producer)
 
+    producer = dict()
+    producer["description"] = "Carl Kühne KG is a German food manufacturer which mainly produces vinegars and delicacies. As one of the largest vinegar, pickled gherkin and mustard producers in Europe, the family-owned business sells its products in over 50 countries."
+    producer["isin"] = None
+    producer["lastPrice"] = None
+    producer["name"] = "Carl Kühne KG"
+    producer["symbol"] = None
+    producer["tendency"] = None
+    producer["priceData"] = None
+    producer["wkn"] = None
+    producers_collection.insert_one(producer)
+
+    producer = dict()
+    producer["description"] = "Stadtfleischerei Lange Taste with tradition - since 1878 Daily fresh meat from pork and beef in eight branches in Schwerin - meat enjoyment from Stadtfleischerei Lange We stand for freshness & quality"
+    producer["isin"] = None
+    producer["lastPrice"] = None
+    producer["name"] = "Stadtfleischerei Lange"
+    producer["symbol"] = None
+    producer["tendency"] = None
+    producer["priceData"] = None
+    producer["wkn"] = None
+    producers_collection.insert_one(producer)
+
+    producer = dict()
+    producer["description"] = "Bautz'ner Senf mittelscharf. Bautz'ner Senf & Feinkost GmbH is a food company in Bautzen of Develey Senf & Feinkost. The most important product is Bautz'ner mustard. This mustard is one of the most famous East German products."
+    producer["isin"] = None
+    producer["lastPrice"] = None
+    producer["name"] = "Bautz'ner Senf & Feinkost GmbH"
+    producer["symbol"] = None
+    producer["tendency"] = None
+    producer["priceData"] = None
+    producer["wkn"] = None
+    producers_collection.insert_one(producer)
+
+    producer = dict()
+    producer["description"] = "WERDER quality from Havelland. We are pleased that you have found the way to the beautiful Havelland to us in Werder. Here we have been producing all kinds of tasty products with a lot of heart and passion since 1873. By the way, our name Werder means: island in the river."
+    producer["isin"] = None
+    producer["lastPrice"] = None
+    producer["name"] = "Werder Feinkost"
+    producer["symbol"] = None
+    producer["tendency"] = None
+    producer["priceData"] = None
+    producer["wkn"] = None
+    producers_collection.insert_one(producer)
+
 
 if __name__ == "__main__":
 

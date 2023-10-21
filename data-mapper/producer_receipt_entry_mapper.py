@@ -1,18 +1,6 @@
-from datetime import datetime
 from random import choice
-from typing import Collection
 from db.mongo_wrapper import MongoWrapper
-from utils.file_loader import FileLoader
-from utils.random_data_generator import RandomDataGenerator
 
-
-def __create_price_data(path: str) -> list:
-    price_datas =  FileLoader.load_file_as_csv(path)
-
-    for price_data in price_datas:
-        price_data["date"] = datetime.strptime(price_data["date"], "%Y-%m-%d")
-
-    return price_datas
 
 def map_producer_to_receipt_entry(producers_collection: any, receipts_collection: any):
     producers_cursor = producers_collection.find()
