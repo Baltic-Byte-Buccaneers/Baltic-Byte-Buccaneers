@@ -5,8 +5,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.balticbytebuccaneers.component.navigation.AppNavigationBar
-import com.example.balticbytebuccaneers.component.navigation.NavigationItem
+import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigationBar
+import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 @Composable
