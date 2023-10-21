@@ -44,7 +44,7 @@ class ProducerDetailsDialogViewModel(
             val stock = stockService.fetchStockById(it)
             setData(producer, stock)
         }
-
+        
         viewState.value = ViewState.DATA
     }
 
@@ -58,23 +58,13 @@ class ProducerDetailsDialogViewModel(
         producerName.value = producer.name ?: "--"
         description.value = stock.description ?: "--"
     }
-
-    private fun getTrendForTendency(tendency: String?): Trend? {
-        return when(tendency) {
-            "up" -> Trend.ASCENDING
-            "down" -> Trend.DESCENDING
-            "neutral" -> Trend.NEUTRAL
-            else -> null
-        }
-    }
-
     private fun getPriceOverTimeDifference(lastPriceString: String?, priceData: PriceData?): String {
         onNonNull(lastPriceString, priceData) { lastPriceNonNull, priceDataNonNull ->
             val lastPrice = BigDecimal(lastPriceNonNull)
-                return priceDataNonNull.low?.let {
-                    val difference = BigDecimal(it) - lastPrice
-                    return "%,.2f".format(Locale.GERMAN, difference) + " €"
-                } ?: "--"
+            return priceDataNonNull.low?.let {
+                val difference = BigDecimal(it) - lastPrice
+                return "%,.2f".format(Locale.GERMAN, difference) + " €"
+            } ?: "--"
         }
         return "--"
     }

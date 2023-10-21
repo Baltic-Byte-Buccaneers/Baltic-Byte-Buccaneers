@@ -34,7 +34,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.balticbytebuccaneers.component.topNavigation.TopNavigationBar
 import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.ProducerDetailsDialog
-import com.example.balticbytebuccaneers.module.receiptDetail.retailDialog.ProducerDetailsDialogViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import kotlinx.coroutines.launch
 import java.util.Locale
