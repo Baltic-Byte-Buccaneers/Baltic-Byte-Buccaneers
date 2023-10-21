@@ -54,6 +54,10 @@ func setupRouter(useSwagger bool) *gin.Engine {
 		apiRouter.GET("/producers", api.GetAllProducers)
 		apiRouter.GET("/producers/:id", api.GetProducerById)
 		apiRouter.POST("/producers", api.CreateProducer)
+
+		apiRouter.GET("/stocks", api.GetAllStocks)
+		apiRouter.GET("/stocks/:id", api.GetStockById)
+		apiRouter.POST("/stocks", api.CreateStock)
 	}
 
 	if useSwagger {
