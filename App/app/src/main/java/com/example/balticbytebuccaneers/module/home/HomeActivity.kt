@@ -19,7 +19,8 @@ import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationIte
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
 import com.example.balticbytebuccaneers.module.receiptList.ReceiptListScreen
-import com.example.balticbytebuccaneers.module.transactionList.TransactionView
+import com.example.balticbytebuccaneers.module.transactionList.TransactionListView
+import com.example.balticbytebuccaneers.module.transactionList.TransactionListViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 class HomeActivity : ComponentActivity() {
@@ -56,7 +57,10 @@ fun MainNavigationView() {
                         }
                     }
                 }
-                NavigationItem.TRANSACTIONS -> TransactionView(transactions = arrayOf())
+                NavigationItem.TRANSACTIONS -> TransactionListViewWrapper { receiptId ->
+                    receiptIdForDetailView = receiptId
+                    navDestination = NavigationItem.RECEIPTS
+                }
                 NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
             }
         }
@@ -67,4 +71,15 @@ fun MainNavigationView() {
             navDestination = newSelectedNavigationItem
         }
     }
+}
+
+@Composable
+private fun TransactionListViewWrapper(onTransactionClicked: (receiptId: String) -> Unit) {
+    val viewModel = remember { TransactionListViewModel() }
+    TransactionListView(viewModel, onTransactionClicked)
+}
+@Composable
+private fun ReceiptsView(receiptId: String) {
+    val viewModel = remember { ReceiptDetailViewModel(receiptId = receiptId) {} }
+    ReceiptDetailView(viewModel = viewModel)
 }
