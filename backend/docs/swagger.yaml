@@ -150,6 +150,8 @@ definitions:
         type: string
       receiptId:
         type: string
+      retailerId:
+        type: string
       userid:
         type: string
       valutaDate:
