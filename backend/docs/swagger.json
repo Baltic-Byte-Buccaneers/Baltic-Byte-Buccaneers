@@ -822,25 +822,25 @@
             "type": "object",
             "properties": {
                 "adjClose": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "close": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "date": {
                     "type": "string"
                 },
                 "high": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "low": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "open": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "volume": {
-                    "type": "string"
+                    "type": "integer"
                 }
             }
         },
