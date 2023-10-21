@@ -1,6 +1,7 @@
 package com.example.balticbytebuccaneers.module.receiptDetail
 
 import android.content.res.Configuration
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -13,13 +14,6 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowCircleDown
-import androidx.compose.material.icons.filled.ArrowCircleRight
-import androidx.compose.material.icons.filled.ArrowCircleUp
-import androidx.compose.material.icons.filled.ReceiptLong
-import androidx.compose.material.icons.filled.TrendingDown
-import androidx.compose.material.icons.filled.TrendingFlat
-import androidx.compose.material.icons.filled.TrendingUp
 import androidx.compose.material.icons.outlined.ArrowCircleDown
 import androidx.compose.material.icons.outlined.ArrowCircleRight
 import androidx.compose.material.icons.outlined.ArrowCircleUp
@@ -29,19 +23,20 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.balticbytebuccaneers.service.receipt.ReceiptEntry
+import com.example.balticbytebuccaneers.service.receipt.domain.ReceiptEntry
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 import java.math.BigDecimal
+import java.util.Locale
 
 @Composable
-fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
+fun ReceiptEntryCard(receiptEntry: ReceiptEntry, onProducerTapped: () -> Unit) {
     Card(
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
@@ -64,16 +59,20 @@ fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
                     modifier = Modifier.weight(1f)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                AmountLabel(amount = "${receiptEntry.amount} €")
+                AmountLabel(amount = receiptEntry.amount?.let {
+                    "%,.2f".format(Locale.GERMAN, it) + " €"
+                } ?: "--")
                 Spacer(modifier = Modifier.width(4.dp))
-                Icon(
-                    imageVector = getIconFromTrend(receiptEntry.amountTrend),
-                    contentDescription = "",
-                    modifier = Modifier
-                        .size(24.dp)
-                        .align(CenterVertically),
-                    tint = MaterialTheme.colorScheme.onBackground
-                )
+                receiptEntry.amountTrend?.let {
+                    Icon(
+                        imageVector = getIconFromTrend(receiptEntry.amountTrend),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(24.dp)
+                            .align(CenterVertically),
+                        tint = MaterialTheme.colorScheme.onBackground
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -88,6 +87,8 @@ fun ReceiptEntryCard(receiptEntry: ReceiptEntry) {
                 Text(
                     text = receiptEntry.producer,
                     style = MaterialTheme.typography.bodySmall,
+                    modifier = Modifier.clickable { onProducerTapped() },
+                    textDecoration = TextDecoration.Underline,
                 )
             }
         }
@@ -142,6 +143,6 @@ private fun ReceiptEntryCardPreview() {
                 "Frankfurter Mühlen",
                 ReceiptEntry.AmountTrend.ASCENDING
             )
-        )
+        ) {}
     }
 }

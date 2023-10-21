@@ -8,6 +8,7 @@ import (
 
 type Receipt struct {
 	Id          primitive.ObjectID `bson:"_id" json:"id"`
+	UserId      string             `bson:"userid" json:"userid"`
 	Date        time.Time          `bson:"date" json:"date"`
 	Description string             `bson:"description" json:"description"`
 	Entries     []ReceiptEntry     `bson:"entries" json:"entries"`

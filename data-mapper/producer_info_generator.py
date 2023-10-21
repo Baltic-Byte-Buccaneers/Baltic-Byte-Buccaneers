@@ -29,6 +29,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Associated British Foods"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "abf.png"
     producers_collection.insert_one(producer)
 
 
@@ -47,6 +48,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Bonduelle"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "bonduelle.png"
     producers_collection.insert_one(producer)
 
 
@@ -65,6 +67,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "FRoSTA"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "frosta.png"
     producers_collection.insert_one(producer)
 
 
@@ -83,6 +86,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Fromageries Bel"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "bel.png"
     producers_collection.insert_one(producer)
 
 
@@ -101,6 +105,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Veganz"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "veganz.png"
     producers_collection.insert_one(producer)
 
 
@@ -119,6 +124,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Unilever"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "unilever.png"
     producers_collection.insert_one(producer)
 
 
@@ -137,6 +143,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "The Kraft Heinz Company"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "kraftheinz.png"
     producers_collection.insert_one(producer)
 
 
@@ -155,6 +162,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Südzucker"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "suedzucker.png"
     producers_collection.insert_one(producer)
 
 
@@ -173,6 +181,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Procter Gamble"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "proctergamble.png"
     producers_collection.insert_one(producer)
 
 
@@ -191,6 +200,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "PepsiCo"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "pepsico.png"
     producers_collection.insert_one(producer)
 
 
@@ -209,6 +219,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Ottakringer Brauerei"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "ottakringer.png"
     producers_collection.insert_one(producer)
 
 
@@ -227,6 +238,7 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Josef Manner"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "manner.png"
     producers_collection.insert_one(producer)
 
 
@@ -245,26 +257,31 @@ def __add_producers(producers_collection: any, stocks_collections: any):
     producer = dict()
     producer["name"] = "Kellogg's"
     producer["stockId"] = result.inserted_id
+    producer["iconId"] = "kellogs.png"
     producers_collection.insert_one(producer)
 
     producer = dict()
     producer["name"] = "Carl Kühne KG"
     producer["stockId"] = None
+    producer["iconId"] = "kuehne.png"
     producers_collection.insert_one(producer)
 
     producer = dict()
     producer["name"] = "Stadtfleischerei Lange"
     producer["stockId"] = None
+    producer["iconId"] = "lange.png"
     producers_collection.insert_one(producer)
 
     producer = dict()
     producer["name"] = "Bautz'ner Senf & Feinkost GmbH"
     producer["stockId"] = None
+    producer["iconId"] = "bautzner.png"
     producers_collection.insert_one(producer)
 
     producer = dict()
     producer["name"] = "Werder Feinkost"
     producer["stockId"] = None
+    producer["iconId"] = "werder.png"
     producers_collection.insert_one(producer)
 
 

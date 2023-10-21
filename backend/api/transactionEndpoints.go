@@ -39,6 +39,21 @@ func GetTransactionById(ginContext *gin.Context) {
 	ginContext.JSON(http.StatusOK, transaction)
 }
 
+// GetTransactionsByUserId godoc
+// @Summary Get single transaction by the user id
+// @Schemes
+// @Tags Transaction
+// @Param userId path string true "User Id"
+// @Produce json
+// @Success 200 {object} []Transaction "ok"
+// @Failure 500 {string} Placeholder
+// @Router /transactions/user/{userId} [get]
+func GetTransactionsByUserId(ginContext *gin.Context) {
+	userId := ginContext.Param("userId")
+	transactions := GetByUserId[Transaction](mongodb.TransactionsCollection, userId)
+	ginContext.JSON(http.StatusOK, transactions)
+}
+
 // CreateTransaction godoc
 // @Summary Create transaction
 // @Schemes
