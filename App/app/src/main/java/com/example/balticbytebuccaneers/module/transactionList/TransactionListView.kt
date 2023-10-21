@@ -162,7 +162,7 @@ fun TransactionItemPreview() {
         TransactionCard(
             Transaction(
                 id = null,
-                userId = null,
+                userid = null,
                 iban = "DE2440002345244402",
                 amount = BigDecimal("-20.19"),
                 date = Date(),
@@ -183,7 +183,7 @@ fun TransactionListPreview() {
             arrayOf(
                 Transaction(
                     id = null,
-                    userId = null,
+                    userid = null,
                     iban = "DE2440002345244402",
                     amount = BigDecimal("20.19"),
                     date = Date(),
@@ -194,7 +194,7 @@ fun TransactionListPreview() {
                 ),
                 Transaction(
                     id = null,
-                    userId = null,
+                    userid = null,
                     iban = "DE2440002345244402",
                     amount = BigDecimal("-20.19"),
                     date = Date(),
@@ -205,7 +205,7 @@ fun TransactionListPreview() {
                 ),
                 Transaction(
                     id = null,
-                    userId = null,
+                    userid = null,
                     iban = "DE2440002345244402",
                     amount = BigDecimal("0.00"),
                     date = Date(),
