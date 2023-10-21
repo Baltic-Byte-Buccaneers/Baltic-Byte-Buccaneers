@@ -98,7 +98,6 @@ fun TransactionsView(viewModel: TransactionListViewModel, onTransactionClicked: 
                         it[index].receiptId?.let { receiptId ->
                             onTransactionClicked(receiptId)
                         }
-
                     }
                     Spacer(modifier = Modifier.height(8.dp))
                 }
@@ -120,15 +119,7 @@ fun TransactionCard(transaction: Transaction, onTransactionClicked: () -> Unit) 
             .padding(horizontal = 16.dp)
             .clickable(
                 enabled = true,
-                onClick = {
-                    Toast
-                        .makeText(
-                            context,
-                            "TransactionDetailsView goes here",
-                            Toast.LENGTH_SHORT
-                        )
-                        .show()
-                }
+                onClick = onTransactionClicked
             )
     ) {
         Row(modifier = Modifier.padding(16.dp)) {
@@ -176,9 +167,7 @@ fun TransactionCard(transaction: Transaction, onTransactionClicked: () -> Unit) 
                 }
                 if (transaction.receiptId != null) {
                     IconButton(
-                        onClick = {
-                            Toast.makeText(context, "Receipt Available", Toast.LENGTH_SHORT).show()
-                        }
+                        onClick = onTransactionClicked
                     ) {
                         Icon(
                             imageVector = Icons.Outlined.ReceiptLong,
