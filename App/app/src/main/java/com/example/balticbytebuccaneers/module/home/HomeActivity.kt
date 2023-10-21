@@ -12,12 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
-import com.example.balticbytebuccaneers.service.common.BalticByteBuccaneersService
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

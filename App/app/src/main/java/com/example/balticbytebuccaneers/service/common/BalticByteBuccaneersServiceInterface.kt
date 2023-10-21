@@ -4,6 +4,7 @@ import com.example.balticbytebuccaneers.service.branch.Branch
 import com.example.balticbytebuccaneers.service.producer.Producer
 import com.example.balticbytebuccaneers.service.receipt.Receipt
 import com.example.balticbytebuccaneers.service.retailer.Retailer
+import com.example.balticbytebuccaneers.service.stock.Stock
 import com.example.balticbytebuccaneers.service.transaction.Transaction
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -44,4 +45,10 @@ interface BalticByteBuccaneersServiceInterface {
 
     @GET("transactions/user/{userId}")
     suspend fun fetchAllTransactionsOfUser(@Path("userId") userId: String): List<Transaction>
+
+    @GET("stocks")
+    suspend fun fetchAllStocks(): List<Stock>
+
+    @GET("stocks/{id}")
+    suspend fun fetchStockById(@Path("id") stockId: String): Stock
 }
