@@ -7,7 +7,8 @@ import kotlinx.coroutines.delay
 import java.math.BigDecimal
 
 class ReceiptDetailViewModel(
-    val receiptId: String
+    val receiptId: String,
+    val onBackClick: () -> Unit
 ) {
 
     enum class ViewState {
