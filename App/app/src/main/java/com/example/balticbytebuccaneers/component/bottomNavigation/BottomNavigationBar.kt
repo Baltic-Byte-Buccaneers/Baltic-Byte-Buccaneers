@@ -16,15 +16,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun AppNavigationBar(onItemSelected: (NavigationItem) -> Unit) {
-    var selectedNavigationItemIndex by remember { mutableStateOf(0) }
+fun AppNavigationBar(selectedItem: NavigationItem, onItemSelected: (NavigationItem) -> Unit) {
 
     NavigationBar {
         NavigationItem.values().forEachIndexed { index, navigationBarItem ->
             NavigationBarItem(
-                selected = index == selectedNavigationItemIndex,
+                selected = navigationBarItem == selectedItem,
                 onClick = {
-                    selectedNavigationItemIndex = index
                     onItemSelected(navigationBarItem)
                           },
                 icon = { Icon(
