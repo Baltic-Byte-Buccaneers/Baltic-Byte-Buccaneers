@@ -39,13 +39,22 @@ class ProducerDetailsDialogViewModel(
     suspend fun fetchProducerInformation() {
         viewState.value = ViewState.LOADING
 
-        val producer = producerService.fetchProducerById(producerId)
-        producer.stockId?.let {
-            val stock = stockService.fetchStockById(it)
-            setData(producer, stock)
+        val result = kotlin.runCatching {
+            val producer = producerService.fetchProducerById(producerId)
+            producer.stockId?.let {
+                val stock = stockService.fetchStockById(it)
+                return@runCatching Pair(producer, stock)
+            }
         }
-        
-        viewState.value = ViewState.DATA
+
+        if (result.isSuccess) {
+            result.getOrNull()?.let {
+                setData(it.first, it.second)
+            }
+            viewState.value = ViewState.DATA
+        } else {
+            viewState.value = ViewState.ERROR
+        }
     }
 
     private fun setData(producer: Producer, stock: Stock) {

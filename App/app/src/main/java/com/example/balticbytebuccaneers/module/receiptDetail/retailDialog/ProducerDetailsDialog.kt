@@ -83,6 +83,24 @@ private fun ProducerDetailsDialogContent(viewModel: ProducerDetailsDialogViewMod
         }
     } else if (viewState.value == ProducerDetailsDialogViewModel.ViewState.DATA) {
         ProducerDetailsDialogDataContent(viewModel, onClick)
+    } else if (viewState.value == ProducerDetailsDialogViewModel.ViewState.ERROR) {
+        Column {
+            Text(
+                text = "Sorry, there is no data Available for this Producer.",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 32.dp)
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = onClick, modifier = Modifier.align(Alignment.CenterHorizontally)) {
+                Text("Close")
+            }
+            Spacer(modifier = Modifier.height(32.dp))
+        }
+
     }
 }
 
