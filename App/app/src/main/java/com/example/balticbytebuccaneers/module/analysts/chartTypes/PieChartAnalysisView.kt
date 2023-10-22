@@ -2,28 +2,19 @@ package com.example.balticbytebuccaneers.module.analysts.chartTypes
 
 import android.content.res.Configuration
 import android.graphics.Typeface
-import android.widget.Toast
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import co.yml.charts.common.components.Legends
 import co.yml.charts.common.model.PlotType
 import co.yml.charts.common.utils.DataUtils
 import co.yml.charts.ui.piechart.charts.DonutPieChart
-import co.yml.charts.ui.piechart.charts.PieChart
 import co.yml.charts.ui.piechart.models.PieChartConfig
 import co.yml.charts.ui.piechart.models.PieChartData
 import com.example.balticbytebuccaneers.module.analysts.AnalysisData
@@ -31,7 +22,7 @@ import com.example.balticbytebuccaneers.module.analysts.AnalysisDummyData
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 
 @Composable
-fun PieChartAnalysisView (analysisData: AnalysisData) {
+fun PieChartAnalysisView(analysisData: AnalysisData) {
     AbstractChartView(
         chart = { PieChartView(dataPoints = analysisData.chart_data) },
         analysisData = analysisData
@@ -39,8 +30,7 @@ fun PieChartAnalysisView (analysisData: AnalysisData) {
 }
 
 @Composable
-fun PieChartView(dataPoints: ArrayList<ChartDataPoint>){
-    val context = LocalContext.current
+fun PieChartView(dataPoints: ArrayList<ChartDataPoint>) {
     val colors = listOf(
         MaterialTheme.colorScheme.primaryContainer,
         MaterialTheme.colorScheme.primary,
@@ -71,9 +61,11 @@ fun PieChartView(dataPoints: ArrayList<ChartDataPoint>){
         backgroundColor = Color.Transparent,
         chartPadding = 16
     )
-    Column () {
+    Column() {
         DonutPieChart(
-            modifier = Modifier.width(256.dp).align(Alignment.CenterHorizontally),
+            modifier = Modifier
+                .width(256.dp)
+                .align(Alignment.CenterHorizontally),
             pieChartData,
             pieChartConfig
         )
@@ -87,13 +79,15 @@ fun PieChartView(dataPoints: ArrayList<ChartDataPoint>){
     }
 }
 
-@Preview(showBackground = true,
+@Preview(
+    showBackground = true,
     uiMode = Configuration.UI_MODE_NIGHT_YES
 )
 @Composable
 fun PieChartViewPreview() {
     BalticByteBuccaneersTheme {
         PieChartAnalysisView(
-            analysisData = AnalysisDummyData().data[0])
+            analysisData = AnalysisDummyData().data[0]
+        )
     }
 }
