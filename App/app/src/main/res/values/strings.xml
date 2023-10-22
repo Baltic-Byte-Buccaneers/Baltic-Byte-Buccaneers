@@ -16,4 +16,12 @@
         One key principle to remember is to ease into this change. It\'s not about suddenly giving up meat altogether; rather, it\'s about making gradual shifts in your eating habits. A good starting point is to reduce your meat consumption. You could experiment with a \"Meatless Monday\" to initiate your journey towards a healthier diet.
         In your quest for healthier eating, embracing plant-based protein sources is essential. Foods like tofu, beans, lentils, and quinoa can serve as excellent alternatives to meat, ensuring you still get the protein your body needs. There are numerous recipes and cooking methods that can bring out their flavors and keep your palate engaged.
     </string>
+    <string name="analysis_receipt_mobility_headline">Your Mobility Expenses</string>
+    <string name="analysis_receipt_mobility_title">You\'re on a good way!</string>
+    <string name="analysis_receipt_mobility_description">
+        To lead a more eco-friendly lifestyle while reducing your dependence on your car, consider the following steps. Firstly, continue to use public transportation, and when possible, explore alternative transportation options like biking, walking, or carpooling to reduce your carbon footprint. Additionally, make a conscious effort to plan your car trips more efficiently by combining errands and using your car only when necessary.
+Another step is to consider car-sharing services or carpooling with others, as this can significantly reduce the number of vehicles on the road. If feasible, transitioning to an electric or hybrid vehicle can further minimize your environmental impact when driving. Remember to keep your car well-maintained to optimize fuel efficiency and reduce emissions.
+Incorporate flexibility into your daily routine, explore remote work options if your job allows, and support green initiatives such as investing in eco-friendly infrastructure or advocating for better public transportation and bike-friendly facilities in your community.
+When driving, practice eco-conscious habits like avoiding unnecessary idling, accelerating smoothly, and maintaining a steady speed to maximize fuel efficiency. Beyond transportation, consider reducing, reusing, and recycling to minimize your overall environmental impact. Lastly, stay informed about green transportation options, local public transport developments, and environmentally friendly practices, as continuous learning can help you make more eco-conscious choices.
+    </string>
 </resources>
