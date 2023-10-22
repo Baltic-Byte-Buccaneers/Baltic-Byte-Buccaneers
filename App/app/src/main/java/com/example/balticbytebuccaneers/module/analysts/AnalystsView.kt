@@ -77,7 +77,7 @@ private fun PaginationView() {
         ) {
             repeat(pageCount) { iteration ->
                 val color =
-                    if (pagerState.currentPage == iteration) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onPrimary
+                    if (pagerState.currentPage == iteration) MaterialTheme.colorScheme.onTertiaryContainer else MaterialTheme.colorScheme.tertiaryContainer
                 Box(
                     modifier = Modifier
                         .padding(2.dp)

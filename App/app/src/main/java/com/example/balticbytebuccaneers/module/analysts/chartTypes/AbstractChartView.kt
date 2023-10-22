@@ -60,20 +60,20 @@ fun AbstractChartView (chart: (@Composable () -> Unit)?, analysisData: AnalysisD
             Column(
                 Modifier
                     .clip(shape = RoundedCornerShape(20.dp))
-                    .background(MaterialTheme.colorScheme.onPrimary)
+                    .background(MaterialTheme.colorScheme.tertiaryContainer)
                     .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
             ) {
                 Text(
                     text = getString(LocalContext.current, analysisData.title),
-                    color = MaterialTheme.colorScheme.primary,
+                    color = MaterialTheme.colorScheme.onTertiaryContainer,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.fillMaxWidth().padding(16.dp)
                 )
                 Text(
                     text = getString(LocalContext.current, analysisData.description),
-                    color = MaterialTheme.colorScheme.primary,
+                    color = MaterialTheme.colorScheme.onTertiaryContainer,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.fillMaxWidth().padding(16.dp)
                 )

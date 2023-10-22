@@ -69,7 +69,6 @@ fun AnalyticsCarousel() {
         2
     })
     Column() {
-        Spacer(Modifier.height(8.dp))
         Text(
             text = "Your Last Purchases",
             color = MaterialTheme.colorScheme.primary,
@@ -80,7 +79,7 @@ fun AnalyticsCarousel() {
         HorizontalPager(
             pagerState, modifier = Modifier
                 .fillMaxWidth()
-                //.height(164.dp)
+                .height(256.dp)
         ) { page ->
             Row(
                 horizontalArrangement = Arrangement.Center,
@@ -103,7 +102,7 @@ fun AnalyticsCarousel() {
         ) {
             repeat(pagerState.pageCount) { iteration ->
                 val color =
-                    if (pagerState.currentPage == iteration) Color.DarkGray else Color.LightGray
+                    if (pagerState.currentPage == iteration) MaterialTheme.colorScheme.onTertiaryContainer else MaterialTheme.colorScheme.tertiaryContainer
                 Box(
                     modifier = Modifier
                         .padding(2.dp)
