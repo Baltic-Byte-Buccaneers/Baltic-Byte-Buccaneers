@@ -19,6 +19,7 @@ import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationIte
 import com.example.balticbytebuccaneers.module.analysts.AnalystsView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
+import com.example.balticbytebuccaneers.module.receiptList.ReceiptListScreen
 import com.example.balticbytebuccaneers.module.transactionList.TransactionListView
 import com.example.balticbytebuccaneers.module.transactionList.TransactionListViewModel
 import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
@@ -43,16 +44,31 @@ class HomeActivity : ComponentActivity() {
 @Composable
 fun MainNavigationView() {
     var navDestination by remember { mutableStateOf(NavigationItem.TRANSACTIONS) }
+    var receiptIdForDetailView by remember { mutableStateOf("") }
 
     Column(Modifier.fillMaxSize()) {
         Column(Modifier.weight(1f)) {
             when (navDestination) {
-                NavigationItem.RECEIPTS -> ReceiptsView("6533d1f8c91e3a690d412e4a")
-                NavigationItem.TRANSACTIONS -> TransactionListViewWrapper {}
-                NavigationItem.ANALYSIS -> AnalystsView()
+                NavigationItem.RECEIPTS -> {
+                    if (receiptIdForDetailView != "") {
+                        ReceiptDetailView(viewModel = ReceiptDetailViewModel(receiptIdForDetailView) { receiptIdForDetailView = "" })
+                    } else {
+                        ReceiptListScreen{ receiptId ->
+                            receiptIdForDetailView = receiptId
+                        }
+                    }
+                }
+                NavigationItem.TRANSACTIONS -> TransactionListViewWrapper { receiptId ->
+                    receiptIdForDetailView = receiptId
+                    navDestination = NavigationItem.RECEIPTS
+                }
+                NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
             }
         }
         AppNavigationBar { newSelectedNavigationItem ->
+            if (newSelectedNavigationItem == NavigationItem.RECEIPTS) {
+                receiptIdForDetailView = ""
+            }
             navDestination = newSelectedNavigationItem
         }
     }

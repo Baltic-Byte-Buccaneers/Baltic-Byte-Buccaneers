@@ -1,3 +1,5 @@
 package com.example.balticbytebuccaneers.module.receiptList
 
-data class Receipt(val description: String, val amount: String)
+import java.math.BigDecimal
+
+data class Receipt(val id: String, val description: String, val amount: BigDecimal)
