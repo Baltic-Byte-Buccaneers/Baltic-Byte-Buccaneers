@@ -16,6 +16,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigationBar
 import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
+import com.example.balticbytebuccaneers.module.analysts.AnalystsView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
 import com.example.balticbytebuccaneers.module.receiptList.ReceiptListScreen
@@ -61,7 +62,7 @@ fun MainNavigationView() {
                     receiptIdForDetailView = receiptId
                     navDestination = NavigationItem.RECEIPTS
                 }
-                NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
+                NavigationItem.ANALYSIS -> AnalystsView()
             }
         }
         AppNavigationBar(navDestination) { newSelectedNavigationItem ->
