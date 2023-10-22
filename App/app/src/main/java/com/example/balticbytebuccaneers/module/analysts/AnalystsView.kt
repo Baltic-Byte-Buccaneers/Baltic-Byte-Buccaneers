@@ -71,7 +71,7 @@ private fun PaginationView() {
         Spacer(modifier= Modifier.height(20.dp))
         Row(
             Modifier
-                .height(50.dp)
+                .height(19.dp)
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
@@ -83,8 +83,7 @@ private fun PaginationView() {
                         .padding(2.dp)
                         .clip(CircleShape)
                         .background(color)
-                        .size(20.dp)
-
+                        .size(15.dp)
                 )
             }
         }

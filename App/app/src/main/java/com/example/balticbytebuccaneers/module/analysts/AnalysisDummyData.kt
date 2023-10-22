@@ -38,15 +38,15 @@ class AnalysisDummyData {
             )
         ),
         AnalysisData(
-            R.string.analysis_receipt_category_composition_headline,
-            R.string.analysis_receipt_category_composition_title,
-            R.string.analysis_receipt_category_composition_description,
+            R.string.analysis_receipt_mobility_headline,
+            R.string.analysis_receipt_mobility_title,
+            R.string.analysis_receipt_mobility_description,
             arrayListOf(
-                ChartDataPoint("A", 2.0F),
-                ChartDataPoint("B", 5.0F),
-                ChartDataPoint("C", 7.0F),
-                ChartDataPoint("D", 12.0F),
-                ChartDataPoint("E", 8.0F),
+
+                ChartDataPoint("Train", 60.0F),
+                ChartDataPoint("Car", 45.0F),
+                ChartDataPoint("Car Sharing", 10.0F),
+                ChartDataPoint("E-Scooter", 4.0F)
             )
         ),
         AnalysisData(
