@@ -119,7 +119,7 @@ fun TransactionCard(transaction: Transaction, onTransactionClicked: () -> Unit) 
             .padding(horizontal = 16.dp)
             .clickable(
                 enabled = true,
-                onClick = onTransactionClicked
+                onClick = {  }
             )
     ) {
         Row(modifier = Modifier.padding(16.dp)) {
