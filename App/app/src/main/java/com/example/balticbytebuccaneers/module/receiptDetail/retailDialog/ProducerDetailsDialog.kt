@@ -123,6 +123,7 @@ private fun ProducerDetailsDialogDataContent(viewModel: ProducerDetailsDialogVie
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onBackground,
         )
+        Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = description.value,
             style = MaterialTheme.typography.bodyMedium,

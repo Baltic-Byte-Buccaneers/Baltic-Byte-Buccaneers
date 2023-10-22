@@ -69,13 +69,18 @@ fun AbstractChartView (chart: (@Composable () -> Unit)?, analysisData: AnalysisD
                     color = MaterialTheme.colorScheme.onTertiaryContainer,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.fillMaxWidth().padding(16.dp)
+                    modifier = Modifier.fillMaxWidth()
+                        .padding(horizontal = 16.dp)
+                        .padding(top = 16.dp)
                 )
                 Text(
                     text = getString(LocalContext.current, analysisData.description),
                     color = MaterialTheme.colorScheme.onTertiaryContainer,
                     style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.fillMaxWidth().padding(16.dp)
+                    modifier = Modifier.fillMaxWidth()
+                        .padding(horizontal = 16.dp)
+                        .padding(top = 8.dp)
+                        .padding(bottom = 16.dp)
                 )
                 Spacer(modifier = Modifier.height(8.dp))
             }
