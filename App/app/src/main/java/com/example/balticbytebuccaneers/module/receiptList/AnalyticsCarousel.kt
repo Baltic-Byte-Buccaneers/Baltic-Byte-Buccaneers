@@ -85,9 +85,7 @@ fun AnalyticsCarousel() {
             }
         }
         Row(
-            Modifier
-                .height(50.dp)
-                .fillMaxWidth()
+            Modifier.fillMaxWidth()
                 .align(CenterHorizontally),
             horizontalArrangement = Arrangement.Center
         ) {

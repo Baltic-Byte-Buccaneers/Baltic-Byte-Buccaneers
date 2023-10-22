@@ -36,7 +36,7 @@ class ReceiptListViewModel: ViewModel() {
 
     private fun mapServiceReceiptToDomainReceipt(receipt: com.example.balticbytebuccaneers.service.receipt.Receipt, retailers: List<Retailer>): Receipt {
         var amount = BigDecimal(0)
-        receipt.entries!!.forEach {
+        receipt.entries?.forEach {
             amount += it.amount ?: BigDecimal(0)
         }
 
