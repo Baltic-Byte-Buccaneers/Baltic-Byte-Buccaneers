@@ -7,7 +7,7 @@ object BalticByteBuccaneersService
 {
     val instance: BalticByteBuccaneersServiceInterface = Retrofit
         .Builder()
-        .baseUrl("http://10.0.2.2:8080/api/")
+        .baseUrl("http://172.16.220.104:8080/api/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(BalticByteBuccaneersServiceInterface::class.java)
