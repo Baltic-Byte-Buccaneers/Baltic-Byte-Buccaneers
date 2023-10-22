@@ -64,7 +64,7 @@ fun MainNavigationView() {
                 NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
             }
         }
-        AppNavigationBar { newSelectedNavigationItem ->
+        AppNavigationBar(navDestination) { newSelectedNavigationItem ->
             if (newSelectedNavigationItem == NavigationItem.RECEIPTS) {
                 receiptIdForDetailView = ""
             }
