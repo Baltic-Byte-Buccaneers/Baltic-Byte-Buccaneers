@@ -16,6 +16,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.balticbytebuccaneers.component.bottomNavigation.AppNavigationBar
 import com.example.balticbytebuccaneers.component.bottomNavigation.NavigationItem
+import com.example.balticbytebuccaneers.module.analysts.AnalystsView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailView
 import com.example.balticbytebuccaneers.module.receiptDetail.ReceiptDetailViewModel
 import com.example.balticbytebuccaneers.module.transactionList.TransactionListView
@@ -48,7 +49,7 @@ fun MainNavigationView() {
             when (navDestination) {
                 NavigationItem.RECEIPTS -> ReceiptsView("6533d1f8c91e3a690d412e4a")
                 NavigationItem.TRANSACTIONS -> TransactionListViewWrapper {}
-                NavigationItem.ANALYSIS -> Text(text = "ANALYSIS")
+                NavigationItem.ANALYSIS -> AnalystsView()
             }
         }
         AppNavigationBar { newSelectedNavigationItem ->
