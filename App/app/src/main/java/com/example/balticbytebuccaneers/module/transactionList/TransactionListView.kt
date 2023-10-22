@@ -187,8 +187,8 @@ private fun AmountLabel(amount: BigDecimal, modifier: Modifier = Modifier) {
 
     Card(
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-            contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface,
         ),
         shape = MaterialTheme.shapes.large,
         modifier = modifier.wrapContentHeight()
@@ -209,7 +209,7 @@ fun ColoredAmount(amount: BigDecimal){
     } else if (amount < BigDecimal.ZERO) {
         MaterialTheme.colorScheme.error
     } else {
-        MaterialTheme.colorScheme.onSurfaceVariant
+        MaterialTheme.colorScheme.onSurface
     }
 
     Text(
