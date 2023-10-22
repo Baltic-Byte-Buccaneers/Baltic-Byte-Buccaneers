@@ -33,13 +33,13 @@ import com.example.balticbytebuccaneers.ui.theme.BalticByteBuccaneersTheme
 @Composable
 fun PieChartAnalysisView (analysisData: AnalysisData) {
     AbstractChartView(
-        chart = { PieChartView(dataPoints = analysisData.chart_data) },
+        chart = { PieChartView(dataPoints = analysisData.chart_data, 256, 100f) },
         analysisData = analysisData
     )
 }
 
 @Composable
-fun PieChartView(dataPoints: ArrayList<ChartDataPoint>){
+fun PieChartView(dataPoints: ArrayList<ChartDataPoint>, size: Int, strokeWidth: Float){
     val context = LocalContext.current
     val colors = listOf(
         MaterialTheme.colorScheme.primaryContainer,
@@ -67,13 +67,13 @@ fun PieChartView(dataPoints: ArrayList<ChartDataPoint>){
         activeSliceAlpha = .9f,
         isAnimationEnable = true,
         animationDuration = 500,
-        strokeWidth = 120f,
+        strokeWidth = strokeWidth,
         backgroundColor = Color.Transparent,
         chartPadding = 16
     )
     Column () {
         DonutPieChart(
-            modifier = Modifier.width(256.dp).align(Alignment.CenterHorizontally),
+            modifier = Modifier.width(size.dp).align(Alignment.CenterHorizontally),
             pieChartData,
             pieChartConfig
         )
